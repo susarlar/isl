@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: isekai-fellow-advisor
+    runtime: python
+    region: oregon
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip &&
+      pip install torch --index-url https://download.pytorch.org/whl/cpu &&
+      pip install -r requirements.txt &&
+      python scripts/build_vector_db.py
+    startCommand: |
+      gunicorn server:app --preload --workers 1 --threads 2 --worker-class gthread --bind 0.0.0.0:$PORT --timeout 120 --log-level info
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: GROQ_API_KEY
+        sync: false          # set manually in Render dashboard
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: EMBEDDING_MODEL
+        value: all-MiniLM-L6-v2
+      - key: EMBEDDING_DIMENSION
+        value: "384"
+      - key: TOP_K_DOCUMENTS
+        value: "5"
+      - key: TEMPERATURE
+        value: "0.1"
+      - key: MAX_TOKENS
+        value: "1024"
+      - key: RANDOM_SEED
+        value: "42"
+      - key: VECTOR_STORE_PATH
+        value: data/vector_store
+      - key: LOG_LEVEL
+        value: INFO

@@ -1,0 +1,14 @@
+# Iron Loop State
+# ===============
+# Auto-managed by CTOC — do not edit manually
+
+session:
+  status: idle
+  phase: null
+  active_plan: null
+  started_at: null
+
+history:
+  - date: "2026-04-06"
+    phase: init
+    action: "CTOC project initialized"

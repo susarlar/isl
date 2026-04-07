@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(APP_ENV=test GROQ_API_KEY=test-key GROQ_MODEL=llama-3.1-70b-versatile python:*)",
+      "WebFetch(domain:render.com)",
+      "WebSearch",
+      "WebFetch(domain:community.render.com)",
+      "WebFetch(domain:rest-apis-flask.teclado.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://www.google.com/search?q=%22Isekai+Slow+Life%22+fellow+system+awakening+skill+pearls+guide\")",
+      "Bash(curl -s \"https://www.google.com/search?q=%22Isekai+Slow+Life%22+fellow+power+calculation+stella+costume+levels\")",
+      "Bash(curl -s \"https://www.google.com/search?q=%22Isekai+Slow+Life%22+fish+system+fishing+mechanics+guide\")",
+      "WebFetch(domain:isekai-slow-life-mgame.fandom.com)",
+      "WebFetch(domain:www.bluestacks.com)",
+      "WebFetch(domain:isekai-slow-life.fandom.com)",
+      "WebFetch(domain:isekai.wiki)",
+      "WebFetch(domain:now.gg)",
+      "WebFetch(domain:www.talkandroid.com)",
+      "WebFetch(domain:gameplay.tips)",
+      "WebFetch(domain:www.game.guide)",
+      "WebFetch(domain:www.ldplayer.net)",
+      "WebFetch(domain:www.mrguider.org)",
+      "WebFetch(domain:www.mumuplayer.com)",
+      "WebFetch(domain:arceusx.net)",
+      "WebFetch(domain:medievalfun.com)",
+      "WebFetch(domain:isekai-power-planner.lovable.app)",
+      "WebFetch(domain:yfgaw.com)",
+      "WebFetch(domain:xp97.com)",
+      "WebFetch(domain:www.facebook.com)"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+# Development & testing dependencies (not installed on Render)
+-r requirements.txt
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.23.0
+
+# Code quality
+black==24.2.0
+flake8>=7.0.0
+
+# Optional extras used in dev
+pandas>=2.0.0
+scikit-learn>=1.4.0
+httpx>=0.26.0
+ipython>=8.0.0

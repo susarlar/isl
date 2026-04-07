@@ -1,0 +1,45 @@
+# CTOC Settings
+# ==============
+
+project:
+  name: isekaichattybot
+  display_name: "Policy Corpus RAG"
+  root: quanticaiengineering
+
+detection:
+  languages:
+    - python
+  frameworks:
+    - flask
+    - faiss
+    - sentence-transformers
+    - groq
+  testing:
+    - pytest
+  ci:
+    - github-actions
+  deployment:
+    - render
+
+quality_gates:
+  lint:
+    enabled: true
+    command: "flake8 app/ scripts/ tests/ config.py"
+    working_dir: quanticaiengineering
+
+  test:
+    enabled: true
+    command: "APP_ENV=test pytest tests/ -v --tb=short"
+    working_dir: quanticaiengineering
+
+  secrets:
+    enabled: true
+    patterns:
+      - "*.env"
+      - "credentials*"
+      - "*secret*"
+
+iron_loop:
+  auto_review: true
+  require_tests_before_merge: true
+  require_lint_before_merge: true

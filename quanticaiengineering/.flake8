@@ -1,0 +1,16 @@
+[flake8]
+max-line-length = 120
+extend-ignore =
+    # E402: module level import not at top — intentional sys.path.insert pattern
+    E402,
+    # E501: line too long — pre-existing code; black handles length
+    E501,
+    # W503/E203: line break style — black compatibility
+    W503,
+    E203,
+    # W291: trailing whitespace — handled by editor
+    W291,
+    # F401: unused imports — pre-existing files keep them for re-export / future use
+    F401,
+    # F541: f-string without placeholders — pre-existing code
+    F541,
