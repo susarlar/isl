@@ -18,7 +18,7 @@
             position: fixed;
             inset: 0;
             background-image: url("/static/background.png");
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             opacity: 0.5;
@@ -264,14 +264,40 @@
             </form>
 
             <div id="resultArea"></div>
+
+            <!-- Followup chat: appears after the intake answer lands -->
+            <div id="followupArea" style="display:none; margin-top: 24px;">
+                <div style="font-size: 12px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                    Follow-up questions
+                </div>
+                <div id="followupMessages"></div>
+                <form id="followupForm" style="display: flex; gap: 10px; margin-top: 12px;">
+                    <input
+                        type="text"
+                        id="followupInput"
+                        placeholder="Ask a follow-up about your plan…"
+                        autocomplete="off"
+                        style="flex: 1; padding: 11px 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 14px; outline: none;"
+                    >
+                    <button type="submit" id="followupBtn" style="padding: 11px 22px;">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <script src="/static/markdown.js?v=3"></script>
+    <script src="/static/markdown.js?v=4"></script>
     <script>
         const form = document.getElementById('intakeForm');
         const btn = document.getElementById('submitBtn');
         const resultArea = document.getElementById('resultArea');
+        const followupArea = document.getElementById('followupArea');
+        const followupMessages = document.getElementById('followupMessages');
+        const followupForm = document.getElementById('followupForm');
+        const followupInput = document.getElementById('followupInput');
+        const followupBtn = document.getElementById('followupBtn');
+
+        // Store the original intake context so follow-ups can reference it
+        let intakeContext = "";
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -300,6 +326,18 @@
                             data.sources.map(s => escapeHtml(s.filename)).join(', ') + '</div>';
                     }
                     resultArea.innerHTML = html;
+
+                    // Remember what the user submitted + the initial answer so
+                    // follow-up questions have context on the same player.
+                    const summary = Object.entries(payload)
+                        .filter(([k, v]) => v && k !== 'resources')
+                        .map(([k, v]) => `${k}: ${v}`)
+                        .join("; ");
+                    intakeContext = "Player intake context — " + summary + ". Initial action plan was already provided; follow-up questions refer to that same player's situation.";
+
+                    // Reveal the follow-up chat input
+                    followupArea.style.display = 'block';
+                    followupInput.focus();
                 }
             } catch (err) {
                 resultArea.innerHTML = '<div class="result" style="border-left-color:#dc3545;">Could not reach server.</div>';
@@ -314,6 +352,74 @@
             d.textContent = s;
             return d.innerHTML;
         }
+
+        function appendFollowupMessage(role, contentHtml) {
+            const wrap = document.createElement('div');
+            wrap.style.margin = '12px 0';
+            wrap.style.padding = '12px 14px';
+            wrap.style.borderRadius = '8px';
+            if (role === 'user') {
+                wrap.style.background = 'rgba(45, 27, 105, 0.08)';
+                wrap.style.borderLeft = '3px solid #2d1b69';
+            } else {
+                wrap.style.background = '#f8f9fa';
+                wrap.style.borderLeft = '3px solid #11998e';
+            }
+            const label = document.createElement('div');
+            label.style.fontSize = '11px';
+            label.style.fontWeight = '600';
+            label.style.textTransform = 'uppercase';
+            label.style.color = role === 'user' ? '#2d1b69' : '#0d6b63';
+            label.style.marginBottom = '6px';
+            label.textContent = role === 'user' ? 'You' : 'Advisor';
+            wrap.appendChild(label);
+            const body = document.createElement('div');
+            body.className = 'result';
+            body.style.background = 'transparent';
+            body.style.border = 'none';
+            body.style.padding = '0';
+            body.style.margin = '0';
+            body.innerHTML = contentHtml;
+            wrap.appendChild(body);
+            followupMessages.appendChild(wrap);
+            wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        followupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const question = followupInput.value.trim();
+            if (!question) return;
+
+            appendFollowupMessage('user', escapeHtml(question));
+            followupInput.value = '';
+            followupBtn.disabled = true;
+            followupInput.disabled = true;
+
+            // Prepend the intake context so the RAG system scopes retrieval
+            // and the LLM answer to this specific player's setup.
+            const contextualQuestion = intakeContext + "\n\nFollow-up question: " + question;
+
+            try {
+                const resp = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: contextualQuestion })
+                });
+                const data = await resp.json();
+                if (data.status === 'error') {
+                    appendFollowupMessage('assistant', '<div style="color:#721c24;">Error: ' + escapeHtml(data.error || 'unknown') + '</div>');
+                } else {
+                    const answerHtml = window.renderMarkdown ? window.renderMarkdown(data.answer) : escapeHtml(data.answer);
+                    appendFollowupMessage('assistant', answerHtml);
+                }
+            } catch (err) {
+                appendFollowupMessage('assistant', '<div style="color:#721c24;">Could not reach server.</div>');
+            } finally {
+                followupBtn.disabled = false;
+                followupInput.disabled = false;
+                followupInput.focus();
+            }
+        });
     </script>
 </body>
 </html>

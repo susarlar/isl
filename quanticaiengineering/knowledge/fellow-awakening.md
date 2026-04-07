@@ -68,7 +68,7 @@ First Awakening (0→1★) for a UR fellow like Orivita costs 3 Acquaint Stones.
 Each fellow has 2-3 awakening skills that unlock/improve with each star:
 
 ### Skill Priority
-- **INVEST IN:** Combat skills, Fellow Power boosts, Aptitude-scaling skills
+- **INVEST IN:** Fellow Power boosts and Aptitude-scaling skills (these are the only combat-relevant skill categories — there is no separate "combat skill" tree in this game)
 - **AVOID:** "Student EXP" and "Student Earnings" awakening skills — these have significantly smaller impact on power progression
 
 ### Strategy for 4★+ Gates
