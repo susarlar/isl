@@ -2,28 +2,46 @@
 
 > All data in this document is from in-game verification. The Fandom wiki is incomplete and partially incorrect.
 
-## Three Stella Patterns Confirmed
+## Four Stella Patterns Confirmed
 
-| Pattern | Groups | Personal/Lvl | Group Boost Pattern | Currency |
-|---------|--------|-------------|---------------------|----------|
-| **A: Premium UR** | Empyrean Sound, Ancient Magi, Divine Gospel | +3M→+5M→+10M | Multi-type (apt/%/earnings), unlocks slots | Character Fragments (most), Magi Shards (Magi only) |
-| **B: SSR High** | Archdemon, Otherworld, Elites, Diligent Dynamo, Moonlit Visitor | +1.5M→+2M→+3M | Alternating: group +10% / fellow +30% | Purple Stars (Archdemon), Insignias (Otherworld), Character Fragments (others) |
-| **C: SSR Low** | Followers | +1M | Alternating: group +5% / fellow +15% | Character Fragments |
+| Pattern | Groups/Fellows | Personal/Lvl | Boost Pattern | Currency |
+|---------|---------------|-------------|---------------|----------|
+| **A: Premium UR Group** | Empyrean Sound, Ancient Magi, Divine Gospel | +3M→+5M→+10M | Multi-type (apt/%/earnings), unlocks slots | Character Fragments (most), Magi Shards (Magi only) |
+| **B: SSR High Group** | Archdemon, Otherworld, Elites, Diligent Dynamo, Moonlit Visitor, Uncrowned, Greyrat Family, Dungeon Challenger | +1.5M→+2M→+3M | Alternating: group +10% / fellow +30% | Purple Stars (Archdemon), Insignias (Otherworld), Character Fragments (others) |
+| **C: SSR Low Group** | Followers | +1M | Alternating: group +5% / fellow +15% | Character Fragments |
+| **D: SR Standalone** | Rani, Elise, Liz, Angie | +500K | +3% to ALL of category | Character Fragments |
 
 **Note:** Mammon, Trady, Mescal, Shlomo are in **Divine Gospel** group (not "The Prominent"). Only Neptune has a Stella unlocked currently in this group.
 
-## Stella Currencies
+**Note:** SR Standalone Stellas (Rani/Elise/Liz/Angie) are NOT part of any group — they boost an entire aptitude category. Brave and Unfettered have no equivalent.
 
-Different groups use different upgrade currencies:
+## Stella Currencies — Critical Mechanic
 
-| Group | Currency | Source |
-|-------|----------|--------|
-| Ancient Magi | **Magi Shards** | Random from chests (you choose which Magi Shard from a pool) |
-| Otherworld Valiants | **Insignias** | Event/gacha rewards |
-| Archdemon | **Purple Stars** | Event/gacha rewards |
-| Empyrean Sound, Divine Gospel, Followers, Elites, Diligent Dynamo, Moonlit Visitor | **Character-specific Fragments** | Gacha duplicates, character shop, event rewards |
+**ALL fellows have group Stella.** Every fellow improves their group Stella with their **own personal character shards** — except for two groups that share a common currency.
 
-Character-specific Fragments are unique to each fellow (e.g., Amaterasu Fragments only upgrade Amaterasu's Stella). Duplicate gacha pulls automatically convert to 100 Fragments of that character.
+| Group | Currency | Source | How It Works |
+|-------|----------|--------|--------------|
+| **Archdemon** | **Purple Stars** | Event/gacha rewards | SHARED — any Purple Star upgrades any Archdemon Stella |
+| **Otherworld Valiants** | **Insignias** | Event/gacha rewards | SHARED — any Insignia upgrades any Otherworld Stella |
+| **Ancient Magi** | **Magi Shards** | Random from chests | SHARED but RANDOM — you pick which Magi to apply each shard to |
+| **All other groups** | **Character-specific Fragments** | Gacha duplicates, character shop, event rewards | NOT SHARED — Amaterasu's Stella requires Amaterasu Fragments specifically |
+
+### Key Implications
+
+**For Archdemon and Otherworld Valiants:**
+- You can dump all shared currency into one fellow's Stella for max efficiency
+- 5 fellows in each group = 5x more Stella levels available from same currency pool
+
+**For all other groups (Empyrean, Magi, Followers, Elites, Dynamo, Moonlit, Divine Gospel, Uncrowned, Greyrat Family, Dungeon Challenger):**
+- Each fellow's Stella is bottlenecked by THEIR specific fragments
+- Duplicate gacha pulls of that character = 100 fragments
+- Want to push Amaterasu's Stella? You need Amaterasu dupes
+- This makes "saving fragments for Stella" the main long-term goal of every gacha pull
+
+**For Ancient Magi:**
+- Magi Shards are SHARED across all 5 Magi (Phanes, Nemetona, Andras, Ao Li, Hermes)
+- But they come randomly from chests — you can choose which Magi to apply each shard to
+- Investing in ALL Magi simultaneously is feasible because the currency is shared
 
 ---
 
@@ -182,6 +200,44 @@ Same alternating pattern as Pattern B but with **half the values** (+1M personal
 
 ---
 
+## Pattern D: SR Category Stella (Standalone Fellows)
+
+**+3% per level to ALL fellows of an aptitude category, +500K personal power per level.** No group affiliation — these fellows are standalone Category boosters.
+
+| Level | Personal Power | Category Fellow Boost |
+|-------|---------------|----------------------|
+| 1 | +500K | +3% |
+| 2 | +500K | +3% |
+| 3 | +500K | +3% |
+| 4 | +500K | +3% |
+| 5 | +500K | +3% |
+| 6 | +500K | +3% |
+| 7 | +500K | +3% |
+| 8 | +500K | +3% |
+| 9 | +500K | +3% |
+| 10 | +500K | +3% |
+
+**Total at Lv10:** +5M personal power, +30% Category Fellow Power.
+
+### Standalone Category Stella Fellows
+
+| Fellow | Rarity | Boosts |
+|--------|--------|--------|
+| **Rani** | SR | ALL Inspiring Fellows |
+| **Elise** | SR | ALL Inspiring Fellows |
+| **Liz** | SR | ALL Diligent Fellows |
+| **Angie** | SR | ALL Informed Fellows |
+
+### Critical Notes
+
+- **Brave and Unfettered have NO Category Stella booster** — confirmed gap in the game. If you main Brave or Unfettered, you do NOT get this +30% category-wide bonus.
+- These fellows are **standalone** — NOT in any Stella group (no Empyrean Sound, Followers, etc.)
+- They use **character-specific fragments** like other personal-shard fellows
+- The +30% category boost stacks with all group Stellas, awakening, artifacts, and Advanced Blessing
+- These are SR rarity, easier to obtain than UR/SSR fellows
+
+---
+
 ## Stella Groups & Members (Verified)
 
 ### Empyrean Sound (UR fellows)
@@ -303,11 +359,30 @@ Currently only Neptune has a Stella unlocked. Others may unlock in future update
 
 ### Uncrowned
 
-**Members: NEEDS DATA**
+| Fellow | Type |
+|--------|------|
+| Gabrael | Informed (UR+) |
+| Dionysia | Brave |
+| Mushimi | Inspiring |
+| (more members TBD) | |
 
-### Greyrat Family
+### Greyrat Family (Mushoku Tensei Collab)
 
-**Members: NEEDS DATA** (likely Mushoku Tensei collab)
+| Fellow | Type |
+|--------|------|
+| Rudeus Greyrat | Brave |
+| Aisha Greyrat | Inspiring |
+| Roxy Migurdia | Informed |
+
+**Note:** Sylphiette is a family member (Greyrat family head), not a fellow. Families have no types.
+
+### Dungeon Challenger (DanMachi Collab)
+
+| Fellow | Type |
+|--------|------|
+| Ais Wallenstein | Unfettered |
+| Bell Cranel | Diligent |
+| Ryu Lion | Unfettered |
 
 ---
 

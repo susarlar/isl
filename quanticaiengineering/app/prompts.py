@@ -71,7 +71,7 @@ Document Chunk:
 Relevance Score (0-10):"""
 
 
-def format_context(chunks: List[Chunk], max_chunks: int = 5) -> str:
+def format_context(chunks: List[Chunk], max_chunks: int = 10) -> str:
     """
     Format retrieved chunks into context for the prompt.
 
@@ -102,7 +102,7 @@ def format_context(chunks: List[Chunk], max_chunks: int = 5) -> str:
     return "\n".join(context_parts)
 
 
-def format_query_prompt(question: str, chunks: List[Chunk], max_chunks: int = 5) -> str:
+def format_query_prompt(question: str, chunks: List[Chunk], max_chunks: int = 10) -> str:
     """
     Format the complete query prompt with context.
 
@@ -122,7 +122,7 @@ def format_query_prompt(question: str, chunks: List[Chunk], max_chunks: int = 5)
 
 
 def format_messages(
-    question: str, chunks: List[Chunk], max_chunks: int = 5
+    question: str, chunks: List[Chunk], max_chunks: int = 10
 ) -> List[Dict[str, str]]:
     """
     Format messages for chat completion API (Groq format).

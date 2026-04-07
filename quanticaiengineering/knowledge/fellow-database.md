@@ -9,6 +9,14 @@
 - **R** — Rare
 - **N** — Normal (lowest)
 
+## Rarity Upgrade Mechanic
+
+Some fellows can be **upgraded from one rarity to another**, which can also change their group affiliation:
+- **Lokia** — SSR Diligent → UR Empyrean Sound (when upgraded)
+- **Ixtchel** — SSR → UR
+
+This is unique to certain fellows and tied to specific upgrade requirements.
+
 ## Base Aptitude Rankings
 
 Born Aptitude is the primary innate aptitude stat. UR Empyrean Sound fellows have Born Aptitude of 100 (+5 per level). Community tier lists cite total innate aptitude including all starting skills.
@@ -28,308 +36,317 @@ Born Aptitude is the primary innate aptitude stat. UR Empyrean Sound fellows hav
 
 ## Inspiring Fellows
 
-### UR
-| Fellow | Group | Born Apt | Notes |
-|--------|-------|----------|-------|
-| Amaterasu | Empyrean Sound | 100 | Top tier, Kami/Tenshi race |
-| Kerr & Bel & Ross | — | — | Triple character |
-| Phanes | Ancient Magi | — | "Magnus of Inspiring", Stella bonds with Kosuzu |
-| Phinphinx | — | — | |
-| Tamamo | — | — | |
-
-### SSR
+### UR / UR+
 | Fellow | Group | Notes |
 |--------|-------|-------|
-| Avril | Otherworld Heroes | Stone Summoned |
-| Black | — | |
-| Kanna | — | Collab character (Dragon Maid) |
-| Loya | Stone Summoned | Perpetual Secretary, Tier SS combat |
-| Lux | Archdemons | Archdemon of Lust, 75 apt |
-| Mio | — | TSUKIMICHI collab |
-| Mulberry | — | |
-| Onikiri | — | |
-| Shlomo | VIP 7 | ~110 apt, high investment value |
+| Amaterasu | Empyrean Sound | Top tier (~120 apt), Kami/Tenshi |
+| Kerr & Bel & Ros | Empyrean Sound | Triple character |
+| Phanes | Ancient Magi | "Magnus of Inspiring" |
+| Phinphynx | Empyrean Sound | |
+| Tamamo | Empyrean Sound | |
+| Ixtchel | Empyrean Sound | (SSR upgradeable to UR) |
+
+### SSR / SSR+
+| Fellow | Group | Notes |
+|--------|-------|-------|
+| Avril | Otherworld Valiants | |
+| Black | The Elites | Island event |
+| Kanna | — | Dragon Maid collab |
+| Loya | Followers | Perpetual Secretary, Tier SS combat (~70 apt) |
+| Lux | Archdemons | Archdemon of Lust (~75 apt) |
+| Mio | Moonlit Visitor | TSUKIMICHI collab |
+| Mulberry | Followers | |
+| Onikiri | Diligent Dynamo | |
+| Shlomo | Divine Gospel | VIP 7 (~110 apt) |
+| Mushimi | Uncrowned | |
+| Justitia | — | |
 
 ### SR
-| Fellow | Group | Notes |
-|--------|-------|-------|
-| Elise | VIP 1 | Stella boosts all Inspiring fellows |
-| Grayce | Quest | |
-| Nalu | — | |
-| Rani | Stone Summoned | |
+| Fellow | Notes |
+|--------|-------|
+| Elise | VIP 1, Category Stella for Inspiring |
+| Rani | Category Stella for Inspiring |
+| Grayce | Quest |
+| Nalu | |
+| Mirac | |
 
 ### R
-| Fellow | Notes |
-|--------|-------|
-| Lincale | |
-| Meaden | |
-| Mirac | |
-| Woolf | |
+| Fellow |
+|--------|
+| Mr Woolf |
+| Lincale |
+| Meaden |
 
 ### N
-| Fellow | Notes |
-|--------|-------|
-| Fifi | |
-| Reir | |
+| Fellow |
+|--------|
+| Reir |
+| Fifi (note: actually Diligent — TBD which list is correct) |
 
 ---
 
 ## Diligent Fellows
 
-### UR
-| Fellow | Group | Born Apt | Notes |
-|--------|-------|----------|-------|
-| Sunna | Empyrean Sound | 100 | Top tier, ~120 community apt |
-| Anpu | Ancient Magi | — | Stella bonds with Sadako |
-| Hakuren | — | — | |
-| Master Tongxuan | — | — | |
-| Nemetona | Ancient Magi | — | "Magus of Diligent", Stella bonds with Baity |
-| Tohru | — | — | Collab character (Dragon Maid) |
-
-### SSR
+### UR / UR+
 | Fellow | Group | Notes |
 |--------|-------|-------|
-| Acedia | Archdemons | Archdemon of Sloth, 75 apt |
+| Sunna | Empyrean Sound | Top tier (~120 apt) |
+| Anpu | Ancient Magi | |
+| Hakuren | — | |
+| Master Tongxuan | Empyrean Sound | |
+| Nemetona | Ancient Magi | "Magus of Diligent" |
+| Tohru | — | Dragon Maid collab |
+| Kuku | Empyrean Sound | |
+| Lokia | Empyrean Sound | (SSR upgradeable — see Rarity Upgrade above) |
+
+### SSR / SSR+
+| Fellow | Group | Notes |
+|--------|-------|-------|
+| Acedia | Archdemons | Archdemon of Sloth (~75 apt) |
 | Allucia | — | |
-| Crysta | — | Also has SSR+ version |
-| Hakuren | — | Also has UR version |
-| Ida | Goal/Achievement | ~70 apt |
-| Jewlry | Stone Summoned | ~70 apt, Stella-based flexible blessing slots |
-| Kaye | Otherworld Heroes | Summoned Shield, 75 apt, defensive meta |
-| Lula | — | |
-| Thalia | — | |
-| Trady | VIP 4 | ~90 apt |
+| Crysta | The Elites | Golemore Mine |
+| Hakuren | — | |
+| Ida | Followers | (~70 apt) |
+| Jewlry | Followers | (~70 apt), Stella-based flexible blessing slots |
+| Kaye | Otherworld Valiants | Summoned Shield (~75 apt) |
+| Lula | The Elites | Dungeon event |
+| Thalia | The Elites | Raphael's Stage |
+| Trady | Divine Gospel | VIP 4 (~90 apt) |
+| Lokia | (Empyrean when upgraded) | SSR Diligent |
+| Natsu | — | |
+| Emma the Ork | — | |
 
 ### SR
-| Fellow | Group | Notes |
-|--------|-------|-------|
-| Carrotte | — | |
-| Denisa | Quest | |
-| Emma | — | TSUKIMICHI collab |
-| Liz | Stone Summoned | |
-| Spipi | Quest | |
+| Fellow |
+|--------|
+| Liz (Category Stella for Diligent) |
+| Denisa |
+| Spipi |
+| Carrotte |
 
 ### R
-| Fellow | Notes |
-|--------|-------|
-| Arake | |
-| Belle | |
-| Geast | |
-| Prim | |
+| Fellow |
+|--------|
+| Arake |
+| Geast |
+| Belle |
 
 ### N
-| Fellow | Notes |
-|--------|-------|
-| Fifi | |
-| Maxim | |
+| Fellow |
+|--------|
+| Fifi |
 
 ---
 
 ## Brave Fellows
 
-### UR
-| Fellow | Group | Born Apt | Notes |
-|--------|-------|----------|-------|
-| Leon | Empyrean Sound | 100 | Top tier, ~120 community apt |
-| Andras | Ancient Magi | — | Stella booster for Ancient Magi |
-| Freesia | — | — | |
-| Heracles | — | — | Blessed by Athena |
-| Nyar | — | — | |
+### UR / UR+
+| Fellow | Group | Notes |
+|--------|-------|-------|
+| Leon | Empyrean Sound | Top tier (~120 apt) |
+| Andras | Ancient Magi | |
+| Freesia | Empyrean Sound | |
+| Heracles | — | |
+| Nyar | Empyrean Sound | |
+| Beryl | — | UR+ |
 
-### UR+
-| Fellow | Notes |
-|--------|-------|
-| Beryl | Highest rarity Brave fellow |
-
-### SSR
+### SSR / SSR+
 | Fellow | Group | Notes |
 |--------|-------|-------|
 | Benimaru | — | Slime collab |
-| Emosen | Goal/Achievement | Polar Explorer, ~70 apt |
-| Fafnir | — | |
-| Healora | — | |
-| Ira | Archdemons | Archdemon of Wrath, 75 apt, beginner recommended |
-| Mammon | VIP 2 | ~80 apt, universal building operator |
-| Paat | Northrealm Guardian | ~80 apt |
-| Salvo | Otherworld Heroes | Summoned Bravery, 75 apt, Tier SS combat |
+| Emosen | Followers | Polar Explorer (~70 apt) |
+| Fafnir | — | Dragon Maid collab |
+| Healora | The Elites | Frantic Forest event |
+| Ira | Archdemons | Archdemon of Wrath (~75 apt) |
+| Mammon | Divine Gospel | VIP 2 (~80 apt), universal operator |
+| Paat | Diligent Dynamo | Northrealm Guardian (~80 apt) |
+| Salvo | Otherworld Valiants | Summoned Bravery (~75 apt), Tier SS |
 | Surena | — | |
-| Tigirl | World Tree Cup | ~80 apt |
+| Tigirl | Diligent Dynamo | World Tree Cup (~80 apt) |
+| Dionysia (Dyonisia) | Uncrowned | |
 
 ### SR
-| Fellow | Group | Notes |
-|--------|-------|-------|
-| Brotein | Quest | |
-| Huowang Dade | — | |
-| Quenchy | — | |
-| Scorion | — | |
+| Fellow | Notes |
+|--------|-------|
+| Brotein | |
+| Huowang Dade | |
+| Quenchy | |
+| Scorion | |
+| Fawna | No set (SRs don't have sets) |
 
 ### R
-| Fellow | Notes |
-|--------|-------|
-| Björnson | |
-| Boatter | |
-| Guarg | |
-| Hawker | |
-
-### N
-| Fellow | Notes |
-|--------|-------|
-| Knivi | |
+| Fellow |
+|--------|
+| Bjornson |
+| Guarg |
+| Hawker |
+| Knivi |
 
 ---
 
 ## Informed Fellows
 
-### UR
-| Fellow | Group | Born Apt | Notes |
-|--------|-------|----------|-------|
-| Neptune | VIP 8 | 100 | Top tier, ~120 community apt, best all-around |
-| Aegle | — | — | |
-| Ao Li | Ancient Magi | — | |
-| Nierus | — | — | Blessed by Athena |
-
-### UR+
-| Fellow | Notes |
-|--------|-------|
-| Gabrael | Highest rarity Informed fellow |
-
-### SSR
+### UR / UR+
 | Fellow | Group | Notes |
 |--------|-------|-------|
-| Augustine | Stone Summoned | ~70 apt |
-| Bubo | — | |
-| Eter & NAL | Guild Trade Festival | |
-| Flos | — | |
-| Rimuru Tempest | — | Slime collab, also has SSR+/UR+ versions |
-| Shiki | — | TSUKIMICHI collab |
-| Stephanie | Otherworld Heroes | Summoned Magic, 75 apt |
-| Stheno | — | Blessed by Athena |
-| Super | Archdemons | Archdemon of Pride, 75 apt, Tier SS combat |
-| Tigris | — | |
+| Neptune | Divine Gospel | Top tier (~120 apt), VIP 8 |
+| Aegle | Empyrean Sound | |
+| Ao Li | Ancient Magi | |
+| Nierus | Empyrean Sound | |
+| Athena | Empyrean Sound | |
+| Umbra | Empyrean Sound | |
+| Gabrael | Uncrowned | UR+ |
+
+### SSR / SSR+
+| Fellow | Group | Notes |
+|--------|-------|-------|
+| Augustine | Followers | (~70 apt) |
+| Bubo | Followers | |
+| Eter & NAL | Diligent Dynamo | Guild Trade Festival |
+| Flos | Diligent Dynamo | |
+| Rimuru Tempest | — | Slime collab |
+| Shiki | Moonlit Visitor | TSUKIMICHI collab |
+| Stephanie | Otherworld Valiants | Summoned Magic (~75 apt) |
+| Stheno | The Elites | Cloud event |
+| Super | Archdemons | Archdemon of Pride (~75 apt), Tier SS |
+| Tigris | The Elites | Penglai event |
+| Roxy Migurdia | Greyrat Family | Mushoku Tensei collab |
+| Liona | — | |
 
 ### SR
-| Fellow | Group | Notes |
-|--------|-------|-------|
-| Angie | Stone Summoned | |
-| Barbara | — | |
-| Cimitir | Rank Up | |
-| Floaty | — | |
-| Lucoa | — | |
+| Fellow |
+|--------|
+| Angie (Category Stella for Informed) |
+| Barbara |
+| Cimitir |
+| Floaty |
+| Lucoa |
 
 ### R
-| Fellow | Notes |
-|--------|-------|
-| Dr. Dotor | |
-| Kaity | Fishing character |
-| Rogile | |
+| Fellow |
+|--------|
+| Dr Dotor |
+| Kaity |
+| Rogile / Rogier |
 
 ### N
-| Fellow | Notes |
-|--------|-------|
-| Maxim | |
+| Fellow |
+|--------|
+| Maxim |
 
 ---
 
 ## Unfettered Fellows
 
-### UR
-| Fellow | Group | Born Apt | Notes |
-|--------|-------|----------|-------|
-| Orivita | Empyrean Sound | 100 | Top tier, ~120 community apt |
-| Hermes | Ancient Magi | — | ~100 apt, economic growth boost |
-| Beelsebub | — | — | |
-| Gale | — | — | Also has SSR+ version |
-| Tomoe | — | — | TSUKIMICHI collab, also has SSR version |
-
-### UR+
-| Fellow | Notes |
-|--------|-------|
-| Rimuru Tempest | Slime collab, highest rarity |
-
-### SSR
+### UR / UR+
 | Fellow | Group | Notes |
 |--------|-------|-------|
-| Anne | Stone Summoned | Gorgon Captain, ~70 apt, Tier SS combat |
-| Avar | Archdemons | Archdemon of Greed, 75 apt |
-| Elma | — | |
-| Frogella | — | |
-| Iori | Touno Island Story | ~80 apt |
-| Mescal | VIP 5 | Dragonfather, ~100 apt, Tier SS combat |
+| Orivita | Empyrean Sound | Top tier (~120 apt) |
+| Hermes | Ancient Magi | (~100 apt), economic boost |
+| Beelzebub | Empyrean Sound | |
+| Gale | Empyrean Sound | |
+| Tomoe | Moonlit Visitor | TSUKIMICHI collab |
+| Thora | Empyrean Sound | |
+| Rimuru Tempest | — | UR+ Slime collab |
+
+### SSR / SSR+
+| Fellow | Group | Notes |
+|--------|-------|-------|
+| Anne | Followers | Gorgon Captain (~70 apt), Tier SS |
+| Avar | Archdemons | Archdemon of Greed (~75 apt) |
+| Frogella | The Elites | |
+| Iori | Diligent Dynamo | Touno Island Story (~80 apt) |
+| Mescal | Divine Gospel | VIP 5 (~100 apt), Dragonfather, Tier SS |
 | Milim Nava | — | Slime collab |
-| Myner | — | |
-| Nip | Otherworld Heroes | Summoned Arrow, 75 apt |
+| Myner | The Elites | Mines event |
+| Nip | Otherworld Valiants | Summoned Arrow (~75 apt) |
+| Elma | — | Dragon Maid collab (NOT Emma — different fellow) |
+| Gaye | — | "Bike lady" |
 
 ### SR
-| Fellow | Group | Notes |
-|--------|-------|-------|
-| Adeline | Special Offers | Universal building operator |
-| Eros | — | |
-| Moork | Guild Trade Festival | |
-| Searin | — | |
-| Witty | Northrealm Guardian | |
+| Fellow |
+|--------|
+| Adeline | (universal operator) |
+| Eros |
+| Moork |
+| Searin |
+| Witty |
 
 ### R
-| Fellow | Notes |
-|--------|-------|
-| Boatter | |
-| Kaity | |
-| Prim | |
+| Fellow |
+|--------|
+| Boatter |
+| Prim |
 
 ### N
-| Fellow | Notes |
-|--------|-------|
-| Pump | |
+| Fellow |
+|--------|
+| Pump |
 
 ---
 
-## Fellow Groups
+## Greyrat Family (Mushoku Tensei Collab)
 
-| Group | Members | Stella Booster | Notes |
-|-------|---------|---------------|-------|
-| Empyrean Sound | Amaterasu, Sunna, Leon, Orivita | — | All UR, ~120 apt, one per category except Informed |
-| Ancient Magi | Phanes, Nemetona, Andras, Ao Li, Hermes | Andras | Mix of UR |
-| Archdemons | Lux, Acedia, Ira, Super, Avar | — | All SSR, 75 apt, one per category |
-| Otherworld Heroes | Avril, Kaye, Salvo, Stephanie, Nip | — | All SSR, 75 apt, Stone Summoned |
-| Stone Summoned | Loya, Jewlry, Augustine, Anne, + SR | — | Mix of SSR/SR |
-| VIP Fellows | Elise, Mammon, Trady, Mescal, Shlomo, Neptune | — | Requires VIP levels |
+| Fellow | Type |
+|--------|------|
+| Rudeus Greyrat | Brave |
+| Aisha Greyrat | Inspiring |
+| Roxy Migurdia | Informed |
+
+**Note:** Sylphiette is a **family member**, not a fellow. Families don't have types. She's the head of the Greyrat Family in-game.
+
+These form their own Stella group called **Greyrat Family**.
+
+## Dungeon Challenger (DanMachi Collab)
+
+| Fellow | Type |
+|--------|------|
+| Ais Wallenstein | Unfettered |
+| Bell Cranel | Diligent |
+| Ryu Lion | Unfettered |
+
+These form their own Stella group called **Dungeon Challenger**.
+
+## Dragon Maid Collab
+
+| Fellow | Type |
+|--------|------|
+| Tohru | Diligent (UR) |
+| Kanna | Inspiring (SSR) |
+| Elma | Unfettered (SSR) |
+| Fafnir | Brave (SSR) |
+| Lucoa | Informed (SR) |
+
+## TSUKIMICHI Collab (Moonlit Visitor)
+
+| Fellow | Type |
+|--------|------|
+| Tomoe | Unfettered (UR) |
+| Mio | Inspiring |
+| Shiki | Informed |
+| Emma the Ork | Diligent (NOT Elma — different from Dragon Maid Elma) |
+
+---
+
+## Stella Groups Quick Reference
+
+| Group | Members |
+|-------|---------|
+| **Empyrean Sound** | Amaterasu, Sunna, Leon, Orivita, Kerr & Bel & Ros, Nierus, Beelzebub, Anpu (also Magi), Freesia, Aegle, Phynx, Master Tongxuan, Tamako, Nyar, Athena, Gale, Kuku, Lokia (when UR), Umbra, Ixtchel, Thora, Phinphynx |
+| **Ancient Magi** | Phanes, Nemetona, Andras, Ao Li, Hermes |
+| **Divine Gospel** | Neptune, Mammon, Trady, Mescal, Shlomo |
+| **Archdemons** | Lux, Acedia, Ira, Super, Avar |
+| **Otherworld Valiants** | Avril, Kaye, Salvo, Stephanie, Nip |
+| **The Elites** | Thalia, Myner, Black, Healora, Frogella, Lula, Crysta, Magellan, Stheno, Tigris |
+| **Diligent Dynamo** | Tigirl, Iori, Paat, Eter & NAL, Onikiri, Flos |
+| **Followers** | Emosen, Jewlry, Anne, Loya, Augustine, Mulberry, Ida, Bubo |
+| **Moonlit Visitor** | Tomoe, Mio, Shiki, Emma the Ork |
+| **Uncrowned** | Gabrael, Dionysia, Mushimi, (more TBD) |
+| **Greyrat Family** | Rudeus, Aisha, Sylphiette, Roxy Migurdia |
+| **Dungeon Challenger** | Ais Wallenstein, Bell Cranel, Ryu Lion |
 
 ## Universal Building Operators
 
 These fellows can operate ANY building regardless of type:
 - **Mammon** (SSR, Brave, VIP 2)
 - **Adeline** (SR, Unfettered)
-
-## Collaboration Characters
-
-| Collab | Fellows | Rarity |
-|--------|---------|--------|
-| That Time I Got Reincarnated as a Slime | Rimuru Tempest, Benimaru, Milim Nava | SSR–UR+ |
-| TSUKIMICHI: Moonlit Fantasy | Tomoe, Mio, Shiki, Emma | SSR–UR |
-| Miss Kobayashi's Dragon Maid | Kanna, Tohru | SSR–UR |
-
-## Investment Priority for Level 45+ Players
-
-### Must-Invest (Main Carry Candidates)
-1. Any 120-apt Empyrean Sound UR matching your category
-2. Neptune (UR Informed, best all-around)
-3. Hermes (UR Unfettered, 100 apt, economic boost)
-4. Shlomo (SSR Inspiring, 110 apt)
-5. Mescal (SSR Unfettered, 100 apt, Tier SS combat)
-
-### Invest for Awakening Gate (Need 15 at 3★)
-- All 5 Archdemons (75 apt, common in gacha, good skills)
-- All 5 Otherworld Heroes (75 apt)
-- Your highest-aptitude SSR fellows
-
-### Avoid Heavy Investment
-- R and N fellows (low ceiling)
-- SR fellows unless they're building operators (Elise, Adeline)
-- Any fellow below 60 base aptitude for endgame
-
-### Category Coverage for Buildings
-Ensure you have strong fellows for each aptitude type to cover all building slots:
-- Inspiring: Amaterasu, Lux, Shlomo, Loya, Avril
-- Diligent: Sunna, Acedia, Jewlry, Kaye, Trady
-- Brave: Leon, Ira, Mammon, Salvo, Paat
-- Informed: Neptune, Super, Augustine, Stephanie
-- Unfettered: Orivita, Hermes, Avar, Mescal, Anne, Nip

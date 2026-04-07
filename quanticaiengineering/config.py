@@ -148,8 +148,8 @@ EMBEDDING_MODELS = {
 
 # Document Processing Configuration
 # ==================================
-CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1000"))
-CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "200"))
+CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "1500"))
+CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "300"))
 MAX_CHUNKS_PER_DOC = int(os.getenv("MAX_CHUNKS_PER_DOC", "100"))
 
 # Supported document types
@@ -157,7 +157,7 @@ SUPPORTED_EXTENSIONS = [".md", ".txt", ".pdf", ".html"]
 
 # Retrieval Configuration
 # =======================
-TOP_K_DOCUMENTS = int(os.getenv("TOP_K_DOCUMENTS", "5"))
+TOP_K_DOCUMENTS = int(os.getenv("TOP_K_DOCUMENTS", "10"))
 SIMILARITY_THRESHOLD = float(os.getenv("SIMILARITY_THRESHOLD", "0.7"))
 RERANK_ENABLED = os.getenv("RERANK_ENABLED", "false").lower() == "true"
 

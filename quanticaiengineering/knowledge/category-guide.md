@@ -28,7 +28,7 @@ Push Elise's Stella as high as possible — every level multiplies your entire I
 | Kosuzu | Avar, **Orivita**, **Neptune** | Blesses two 120-apt URs |
 | Kagura | Iori, Salvo, **Orivita** | Orivita coverage |
 | Lilith | Leon, Acedia, **Sunna** | Sunna coverage |
-| Bren (4x) | Paat, Stephanie, **Hermes**, **Sunna** | Only 4x family, blesses both Hermes and Sunna |
+| Bren (SSR) | Hermes, Sunna, Aegle, Crysta, Mushimi, Paat, Stephanie, Ixtchel | Strong 8-fellow coverage |
 | Sera | **Amaterasu**, Stephanie, Acedia | If you run Amaterasu |
 | Baity | Salvo, Anne, **Hermes** | Hermes coverage |
 
