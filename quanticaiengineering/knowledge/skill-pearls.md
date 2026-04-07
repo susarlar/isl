@@ -1,8 +1,12 @@
 # Skill Pearls — Advanced Guide
 
+> **Heads up:** "Skill Pearls" here means the gold-tier Skill Pearls used on fellow Talent skills. The game also has **White Pearls** (bait production speed) and **Black Pearls** (account-wide % boosts) — those are completely different currencies. See `pearls.md` for the full three-pearl reference.
+
 ## What Skill Pearls Do
 
-Skill Pearls upgrade **Talent-based Aptitude skills**, directly increasing a fellow's Aptitude stat. Since Base Power = Aptitude x Level Multiplier, every point of Aptitude scales with your level.
+Skill Pearls upgrade **Talent-based Aptitude skills** on individual fellows, directly increasing a fellow's Aptitude stat. Since Base Power = Aptitude × Level Multiplier, every point of Aptitude scales with your level.
+
+**Skill Pearls are fellow-only.** You cannot spend them on buildings, artifacts, fish, or any other system. Buildings are Gold-gated (see `buildings.md`).
 
 ## Three Talent Tiers
 

@@ -2,6 +2,12 @@
 
 Buildings are a major, often underrated source of fellow power. Every building in your village has a **single typing assignment** (Brave, Diligent, Unfettered, Inspiring, or Informed) and contributes power **only to fellows matching that typing**. Push buildings whose typing matches your main carry.
 
+## ⚠️ Skill Pearls Are NOT Used On Buildings
+
+**Skill Pearls only unlock fellow aptitude talents** (Supreme / Outstanding / Ordinary Talent). You cannot spend Skill Pearls on any building system. Buildings are powered exclusively by **Gold** and **Building Upgrade Blueprints**.
+
+If you see a recommendation telling you to "spend Skill Pearls on buildings", it's wrong — Skill Pearls belong on fellows.
+
 ## The Three Building-Sourced Power Contributions
 
 Each building provides up to three distinct bonuses to fellows of its matching typing:
@@ -35,6 +41,31 @@ A **second gacha track**, mechanically identical to Building Training but target
 - Same gold-cost scaling (higher level = more gold per press)
 - Same RNG pattern — lucky roll-ups beat pity
 - **Appears in the power breakdown as:** `Building Appearance +X%` (and/or under Building Training %, depending on which track)
+
+## Other Gold Sinks on Buildings
+
+Beyond Service Level / Training / Appearance, each building also has two more gold-consuming investment tracks. Both have diminishing returns — the higher you push, the more gold per marginal point — but both are still worth pushing on typing-matching buildings.
+
+### Hiring Employees (Gold)
+You can hire additional employees at each building using Gold. More employees means more throughput on whatever the building does (income, aptitude generation, event support, etc.), and contributes indirectly to fellow power for that building's typing.
+
+- Cost scales per employee hire (diminishing returns)
+- Max employees per building depends on the building's upgrade level
+- Purely Gold-gated — no RNG, no pity mechanic
+
+### Building Upgrade Blueprints (Gold + Blueprints)
+Buildings level up by consuming **Building Upgrade Blueprints** (a resource obtained from events, village quests, and shop purchases) plus Gold. Each upgrade level raises the building's caps — including how many employees it can hold, how high Service Level / Training / Appearance can go, and the base flat contribution to matching-typing fellows.
+
+- Gold cost per upgrade scales steeply (diminishing returns)
+- Blueprint requirement scales even more steeply at higher levels
+- Prioritize upgrades on buildings whose typing matches your main carry
+- Unlocking higher caps on the gacha tracks is usually the biggest payoff of an upgrade
+
+### Priority When Spending Gold On a Building
+1. **Hire any missing employees** — cheap at current level, deterministic gain
+2. **Max Service Level at the current building tier** — deterministic, no RNG
+3. **Push Building Training / Appearance gachas** — RNG-gated but high scaling
+4. **Save Blueprints + Gold to upgrade the building** — unlocks higher caps on all of the above
 
 ## Typing Matchmaking
 

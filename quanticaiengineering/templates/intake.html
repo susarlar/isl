@@ -8,25 +8,41 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+            background: #1a1333;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url("/static/background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
         }
         .container {
             max-width: 720px;
             margin: 0 auto;
-            background: white;
+            background: transparent;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
         }
         .header {
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+            background: linear-gradient(135deg, rgba(45, 27, 105, 0.85) 0%, rgba(17, 153, 142, 0.85) 100%);
             color: white;
             padding: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(6px);
         }
         .header h1 { font-size: 22px; font-weight: 600; }
         .header .nav a {
@@ -37,9 +53,13 @@
             opacity: 0.9;
         }
         .header .nav a:hover { opacity: 1; text-decoration: underline; }
-        .body { padding: 28px; }
+        .body {
+            padding: 28px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(6px);
+        }
         .intro {
-            background: #f0f9f8;
+            background: rgba(240, 249, 248, 0.9);
             border-left: 4px solid #11998e;
             padding: 14px 16px;
             border-radius: 6px;
@@ -83,14 +103,40 @@
         button:disabled { opacity: 0.6; cursor: not-allowed; }
         .result {
             margin-top: 28px;
-            padding: 20px;
+            padding: 20px 24px;
             background: #f8f9fa;
             border-radius: 8px;
             border-left: 4px solid #11998e;
-            white-space: pre-wrap;
             font-size: 14px;
             line-height: 1.6;
             color: #333;
+        }
+        .result h1, .result h2, .result h3, .result h4 {
+            margin: 14px 0 8px;
+            color: #2d1b69;
+        }
+        .result h1 { font-size: 19px; }
+        .result h2 { font-size: 17px; }
+        .result h3 { font-size: 15px; }
+        .result h4 { font-size: 14px; }
+        .result p { margin: 8px 0; }
+        .result ul, .result ol { margin: 8px 0 8px 22px; }
+        .result li { margin: 4px 0; }
+        .result strong { color: #11998e; }
+        .result code {
+            background: rgba(17, 153, 142, 0.12);
+            color: #0d6b63;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: 0.92em;
+            font-family: ui-monospace, Menlo, Consolas, monospace;
+        }
+        .result blockquote {
+            border-left: 3px solid #11998e;
+            padding: 4px 12px;
+            margin: 8px 0;
+            color: #555;
+            font-style: italic;
         }
         .spinner {
             border: 3px solid #f3f3f3;
@@ -201,6 +247,7 @@
         </div>
     </div>
 
+    <script src="/static/markdown.js"></script>
     <script>
         const form = document.getElementById('intakeForm');
         const btn = document.getElementById('submitBtn');
@@ -224,12 +271,13 @@
                 const data = await resp.json();
 
                 if (data.status === 'error') {
-                    resultArea.innerHTML = '<div class="result" style="border-left-color:#dc3545;background:#f8d7da;color:#721c24;">Error: ' + (data.error || 'Unknown') + '</div>';
+                    resultArea.innerHTML = '<div class="result" style="border-left-color:#dc3545;background:#f8d7da;color:#721c24;">Error: ' + escapeHtml(data.error || 'Unknown') + '</div>';
                 } else {
-                    let html = '<div class="result">' + escapeHtml(data.answer) + '</div>';
+                    const answerHtml = window.renderMarkdown ? window.renderMarkdown(data.answer) : escapeHtml(data.answer);
+                    let html = '<div class="result">' + answerHtml + '</div>';
                     if (data.sources && data.sources.length) {
                         html += '<div class="sources"><strong>Sources:</strong> ' +
-                            data.sources.map(s => s.filename).join(', ') + '</div>';
+                            data.sources.map(s => escapeHtml(s.filename)).join(', ') + '</div>';
                     }
                     resultArea.innerHTML = html;
                 }

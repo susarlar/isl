@@ -294,13 +294,24 @@ Each spot specializes in specific UR fish crowns. Concentrating on one spot push
 
 ## Bait Types
 
-### Regular Fishing
-| Bait | Effect | Unlock |
-|------|--------|--------|
-| Normal Bait | Standard catches | Available from start |
-| Advanced Bait | Attracts rarer fish | Complete 50 fishing attempts |
+There are **two kinds of fishing bait**, and they behave very differently:
 
-### Advanced Bait Sources
+### Normal Bait — Unlimited, Any Rarity
+- Use freely throughout the day
+- Can catch fish of **any rarity** from the spot's pool (including top-tier fish, just at lower hit rates)
+- Main production resource — this is what your Bait Production buildings output
+- **Bait production speed is improved with White Pearls** from the shop — see `pearls.md`
+
+### Advanced Bait — Once Per Day, Higher Rarity
+- You get **one Advanced Bait per day** (hard daily cap)
+- Catches a fish with **significantly higher rarity bias** — the single best fish-catch attempt you'll make each day
+- Never skip your daily Advanced Bait — it's the main driver of your rare fish income
+- Additional Advanced Bait can sometimes be purchased from event shops
+
+### Why This Matters
+Because Advanced Bait is hard-capped at one per day, the rarity of the fish you get from it sets the ceiling on your endgame fish progression. Make sure you're burning your Advanced Bait at whichever spot is currently your priority pond (see the spot rotation strategy below).
+
+### Event-Shop Advanced Bait (Supplemental)
 - Events: 1,200 Flower Tickets/unit (Blossoming Wealth)
 - Events: 50 Camp Coupons/unit (Camping with A Slime)
 
