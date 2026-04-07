@@ -12,7 +12,7 @@ Only **SSR, SSR+, UR, and UR-star** fellows can be awakened. Lower rarities cann
 | 1★    | +10%           | +400K              | Level 300         | 3              | — |
 | 2★    | +20%           | +800K              | Level 300         | (TBD)          | — |
 | 3★    | +30%           | +1.5M              | Level 400         | (TBD)          | — |
-| 4★    | Higher         | Higher             | **Level 550**     | (TBD)          | **15× 3★ fellows** |
+| 4★    | Higher         | Higher             | **Level 550**     | **15 stones**  | **15× 3★ fellows** |
 | 5★    | Higher         | Higher             | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
 | 6★    | Highest        | Highest            | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
 
