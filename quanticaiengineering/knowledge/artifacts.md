@@ -1,5 +1,34 @@
 # Artifacts — Complete Guide
 
+## Artifact Hierarchy (Best to Worst)
+
+### Tier 1: UR+ Artifacts (with Aura)
+**Best in slot.** UR+ artifacts have:
+- A power boost specifically for the equipped fellow
+- An **extra materia slot**
+- An **aura** mechanic — upgradable with pieces just like fellow Stella
+
+This makes them dramatically more powerful than base UR artifacts. The aura system means you can scale them long-term with character pieces.
+
+### Tier 2: Support-tagged Artifacts
+The second-best artifacts. Look for the **SUPPORT tag**:
+- Give a bonus power boost to "the equipped fellow" (not just a specific fellow)
+- Stuck at a fixed percentage (no aura upgrade)
+- Universally usable
+
+The only thing UR+ artifacts have over Support is the aura upgrade path.
+
+### Tier 3: Echo Artifacts
+**ECHO** artifacts give a boost only to **specific fellows**.
+- Examples: **Milim artifact** (Unfettered), **Allucia artifact** (Diligent)
+- Only worth upgrading if the artifact belongs to your main fellow typing
+- Otherwise these are wasted slots
+
+### Tier 4: Base UR Artifacts
+The standard pool: **Magic Lamp, Kanna Plush, Dragon Summon Horn, Horn of Plenty, Golden Apple, Sapphire Crown, Mermaid's Tear, Mask of Nobility, Cloak of Levitation, Meowna Lisa**.
+
+These are still useful but lack the aura/support/echo bonuses.
+
 ## What Artifacts Do
 
 Artifacts provide **three stacking power sources** to the fellow they're equipped on:
@@ -160,6 +189,35 @@ At specific materia levels, you unlock **additional power boost slots** on the m
 - **Without artifact:** 882,243,836
 - **Increase:** +50,426,613 (**+5.7%**)
 - Setup: 8 skills (140%), +35 apt, Lv 0 materia
+
+## Quench (New Resource)
+
+**Quench** is a separate resource (different from Magic Ore and Reforge Essential Oil) used to:
+- **Awaken new skill slots** on artifacts
+- Some artifacts give materia slots themselves through quench-awakening
+
+There are **diminishing returns** on quench stones — early awakenings are cheap and high-value, late awakenings cost more for less.
+
+## Artifact Assignment Strategy (Guild Guide)
+
+### Step 1: UR+ and Support Artifacts First
+Assign any UR+ (with aura) and Support-tagged artifacts to your fellows.
+
+### Step 2: Apples on Main Typing
+Assign **Golden Apples** to your main typing fellows.
+
+### Step 3: Lamps Replace Apples
+If you get **Magic Lamps**, use them in place of Apples (Lamps have 4 materia slots vs Apples' 3).
+
+### Step 4: Boost ONE Artifact at a Time
+**Do NOT spread out Magic Ore.** Concentrate all leveling on ONE artifact at a time.
+
+If you've already spread Magic Ore across multiple artifacts, **break them down and replace with Lv 1 artifacts** so you can re-concentrate properly.
+
+### Materia Boosting Order
+1. First: **Unlock Materia slots** by boosting them to **+2**
+2. Then: After all your main typing fellows have +2 materia slots, start boosting to **+5**
+3. Use excess Quench for slot awakenings on artifacts that benefit your main typing
 
 ## Strategic Notes
 

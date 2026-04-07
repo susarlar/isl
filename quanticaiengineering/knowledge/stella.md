@@ -35,7 +35,9 @@ This means Archdemons and Otherworld Valiants are far more efficient to push to 
 | **C: SSR Low** | +25% (alternates group/fellow) | Followers |
 | **D: SR Standalone** | +30% to ALL of category | Rani, Elise, Liz, Angie (no group affiliation) |
 
-## The 12 Known Stella Groups
+## Known Stella Categories (12 Groups + 4 Standalone)
+
+### Groups (fellows belong to a shared group)
 
 1. **Empyrean Sound** (UR, Pattern A) — 22+ members across all types
 2. **Ancient Magi** (UR, Pattern A) — Phanes, Nemetona, Andras, Ao Li, Hermes
@@ -50,7 +52,14 @@ This means Archdemons and Otherworld Valiants are far more efficient to push to 
 11. **Greyrat Family** (SSR, Pattern B) — Rudeus, Aisha, Roxy Migurdia
 12. **Dungeon Challenger** (SSR, Pattern B) — Ais Wallenstein, Bell Cranel, Ryu Lion
 
-Plus 4 standalone SR Category Stella fellows: **Rani, Elise** (Inspiring), **Liz** (Diligent), **Angie** (Informed).
+### Standalone SR Category Stella Fellows (Pattern D — NOT in any group)
+These fellows have personal Stella that boosts an entire aptitude category, but they aren't part of any group.
+- **Rani** (SR, Inspiring booster)
+- **Elise** (SR, Inspiring booster)
+- **Liz** (SR, Diligent booster)
+- **Angie** (SR, Informed booster)
+
+**Brave and Unfettered have NO standalone Category Stella fellow.**
 
 ## Critical Strategic Insight
 

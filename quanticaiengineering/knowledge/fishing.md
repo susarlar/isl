@@ -260,6 +260,38 @@ The user's concern about diminishing returns is valid but nuanced:
 - **Aptitude fish: Good investment** up to mid-levels, then shift focus to % fish
 - **Flat fish: Low priority** — level them passively, don't chase catches
 
+## Fishing Spots — Updated Guild Guide
+
+There are **7 fishing locations**, each with typing affinities determined by what their UR fish boosts:
+
+| Location | Primary Typing(s) |
+|----------|-------------------|
+| **Village River** | Inspiring |
+| **Drakenburg River Bank** | Informed |
+| **Drakenburg Lake Center** | Unfettered / Brave |
+| **Drakenburg Inner Lake** | Diligent |
+| **Crushed Ice** | Unfettered |
+| **Glacier Bay** | Brave / Informed |
+| **Unfrozen Sea Cave** | Inspiring / Diligent |
+
+### Sub-Typing Synergy
+
+When choosing a spot, you can also look at **sub-typings** — many spots have two typing affinities, so even if you main one, your secondary typing gets passively boosted at the same time.
+
+**Example:** If you main **Inspiring**, fishing in **Unfrozen Sea Cave** also passively boosts your **Diligent** fellows.
+
+### Spot Rotation Strategy
+
+1. Pick **one spot matching your main typing**
+2. Stay there until your upgrades on the **gold crown version of your main typing's UR fish are too high** (diminishing returns kick in)
+3. Then **swap to the OTHER pond for your typing** and do the same
+4. Continue rotating between your typing's spots
+
+**Bait priority:** Only upgrade **bait speed** for a very long time — at least up to **level 30**. Don't upgrade other bait stats early.
+
+### Why Stay In One Spot
+Each spot specializes in specific UR fish crowns. Concentrating on one spot pushes your highest-impact fish skills further before you spread investment to the second spot.
+
 ## Bait Types
 
 ### Regular Fishing

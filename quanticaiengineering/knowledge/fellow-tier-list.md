@@ -118,11 +118,18 @@ Bjornson, Lincale, Woolf, Kaity, Boatter, Hawker, Belle, etc. — don't invest p
 4. **Other Pattern B groups** — bottlenecked by personal dupes
 5. **Pattern C Followers** — lowest priority
 
-### Why 120 Aptitude Matters Endgame
-At Level 700 with heavy investment:
-- 120 apt fellow: 120 × 13,680 = 1,641,600 base (before multipliers)
-- 75 apt fellow: 75 × 13,680 = 1,026,000 base (before multipliers)
-- The 120 apt fellow has **60% more base power**, and that gap WIDENS with every multiplier applied
+### Why 120 Base Aptitude Matters Endgame
+
+**Important:** "120 apt" refers to the BASE aptitude component, not total aptitude. Total aptitude includes Skill Pearls, Artifacts, Costumes, Fish, Family, etc. and can reach 32,000+ on a fully invested fellow.
+
+Real verified comparison:
+- **Amaterasu (Base 120, fully invested):** Total aptitude 32,823, Total Power 48.47B
+- **Black (Base 80, well invested):** Total aptitude 6,274, Total Power ~4.25B
+- **Power gap: ~11x**, primarily from Amaterasu's massive aptitude investment
+
+The 120 base only adds 45 points more than Black's 80 — the real gap comes from concentrated investment. But that base 120 IS the foundation that all the aptitude sources stack on top of.
+
+**Bottom line:** A 120 base fellow with full investment will always beat an 80 base fellow with full investment, but only if you commit the same level of investment to both. The gap is meaningful but not insurmountable.
 
 ### Type Comparison for Max Power
 | Type | Best Carry | Has Cat Stella? | Multiplier Sources | Verdict |

@@ -32,6 +32,8 @@ These families are gold for endgame because you can stack them all on your main 
 ### Phantanyl (UR)
 Amaterasu, Kerr & Bel & Ros, Phanes, Gabrael, Kanna (Inspiring fellow), Ether & NAL
 
+(Note: Sometimes spelled "Pthahnil" in shorthand. Same family.)
+
 ### Tsukuyomi (UR)
 Amaterasu, Ao Li, Tamamo, Rimuru, Iori, Tomoe
 
@@ -189,6 +191,15 @@ Kuku, Nyar, Gaye, Thora, Dionysia, Tigris, Liona
 
 ### Mercuria (SSR)
 Hermes, Tigris, Nyar (Stella-based), Athena, Stheno
+
+### Loo (SSR)
+Sunna, Hakuren, Jewlry, Tamamo
+
+### Shuna (SSR — Slime Collab Family)
+Rimuru Tempest, Beelzebub, Milim Nava
+
+### Hanamiya Rica (SSR → UR upgradable)
+Anpu, Orivita, plus **custom fellow boosts unlocked when upgraded to UR** — you choose the fellows. Streamer collab character.
 
 ### Bullety (SR — note user listed as SR but with 3 fellows)
 Mammon, Super, Black

@@ -4,17 +4,24 @@
 
 Only **SSR, SSR+, UR, and UR-star** fellows can be awakened. Lower rarities cannot.
 
-## Star Progression (Player-Verified)
+## Star Progression (Player-Verified Gates, % Numbers Need Verification)
 
-| Stars | Power Bonus (%) | Power Bonus (Flat) | Level Requirement | Acquaint Stones | Other Requirements |
-|-------|----------------|--------------------|-------------------|----------------|--------------------|
-| 0★    | +0%            | +0                 | —                 | —              | Default state |
-| 1★    | +10%           | +400K              | Level 300         | 3              | — |
-| 2★    | +20%           | +800K              | Level 300         | (TBD)          | — |
-| 3★    | +30%           | +1.5M              | Level 400         | (TBD)          | — |
-| 4★    | Higher         | Higher             | **Level 550**     | **15 stones**  | **15× 3★ fellows** |
-| 5★    | Higher         | Higher             | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
-| 6★    | Highest        | Highest            | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
+| Stars | Power Bonus (%) | Level Requirement | Acquaint Stones | Other Requirements |
+|-------|----------------|-------------------|----------------|--------------------|
+| 0★    | +0%            | —                 | —              | Default state |
+| 1★    | +10% [unverified] | Level 300         | 3              | — |
+| 2★    | +20% [unverified] | Level 300         | (TBD)          | — |
+| 3★    | +30% [unverified] | Level 400         | (TBD)          | — |
+| 4★    | (unknown)      | **Level 550**     | **15 stones**  | **15× 3★ fellows** |
+| 5★    | (unknown)      | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
+| 6★    | up to +50% total observed | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
+
+**[NEEDS VERIFICATION]:** From verified Amaterasu data (likely 6★), Stars contributes only +50% total to the Σ% pool. This contradicts the original "+10% per star linear" assumption (which would give +60% at 6★). Either:
+1. The percentage scales non-linearly past 3★
+2. Amaterasu is at 5★ not 6★
+3. The original 10/20/30 numbers were wrong
+
+The level/stone gates are confirmed. The exact percentage per star is uncertain.
 
 **Key insight:** Awakening provides BOTH a percentage multiplier AND a flat addend. The percentage component is what makes it so powerful — it multiplies with all other multipliers.
 

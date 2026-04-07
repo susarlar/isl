@@ -228,6 +228,8 @@ Same alternating pattern as Pattern B but with **half the values** (+1M personal
 | **Liz** | SR | ALL Diligent Fellows |
 | **Angie** | SR | ALL Informed Fellows |
 
+**[NEEDS VERIFICATION]:** Inspiring uniquely has TWO Category Stella fellows (Rani + Elise). It is unconfirmed whether their bonuses STACK additively (giving +60% to all Inspiring at Lv10 each) or only one applies at a time (capped at +30%). All current strategy advice assumes they stack — if they don't, Inspiring loses ~30% of category bonus and falls roughly equal to Diligent/Informed.
+
 ### Critical Notes
 
 - **Brave and Unfettered have NO Category Stella booster** — confirmed gap in the game. If you main Brave or Unfettered, you do NOT get this +30% category-wide bonus.

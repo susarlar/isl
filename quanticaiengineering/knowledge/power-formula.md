@@ -148,13 +148,15 @@ Added to the final power AFTER the percentage multiplication. Still additive amo
 ### 5. Final Multiplier (applied AFTER everything)
 
 A separate multiplier at the very end. Only certain sources appear here:
-- Resonance Power (appears in both % and final)
+- Resonance Power (appears in both % and final) **[NEEDS VERIFICATION — possible double-count]**
 - Familiar (final bonus)
 
 Formula:
 ```
 Total = (Base × (1 + Σ%) + ΣFlat) × (1 + FinalMultiplier%)
 ```
+
+**[NEEDS VERIFICATION]:** Amaterasu's data shows "Resonance Power +10%" in BOTH the regular Power Percentage Bonus list AND the Final Power Bonus (%) list. The verified math (48.47B) only matches if Resonance Power is counted in BOTH places. Either the game really applies it twice or the OCR captured the same field twice. Needs in-game verification.
 
 ## Strategic Implications
 
@@ -195,6 +197,8 @@ Amaterasu has 804M flat bonuses which add to her 41.7B percentage-multiplied bas
 ### 5. Building Service Level Is a Hidden Massive Flat Source
 
 Notice how 4 of the 7 fellows show **+157.1M** in "Building Service Level" — this is a PASSIVE flat bonus given to ALL fellows based on your village development. It's additive across all fellows. Push your buildings.
+
+**[NEEDS VERIFICATION]:** The exact mechanic for Building Service Level is undocumented. It appears tied to total building development level (sum of all building levels?) or village rank. Same for the "Item" flat bonus (+467M on Amaterasu) — likely a consumable or permanent item buff but the source is unconfirmed.
 
 ## Quick Power Calculation Examples
 

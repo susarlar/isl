@@ -19,18 +19,31 @@ This is unique to certain fellows and tied to specific upgrade requirements.
 
 ## Base Aptitude Rankings
 
-Born Aptitude is the primary innate aptitude stat. UR Empyrean Sound fellows have Born Aptitude of 100 (+5 per level). Community tier lists cite total innate aptitude including all starting skills.
+**Base Aptitude** is a fixed innate stat per fellow, shown as "Base+X" in the in-game aptitude breakdown. Verified examples from real account data:
+- Amaterasu: Base+120
+- Neptune: Base+120
+- Sunna: Base+120
+- Leon: Base+120
+- Orivita: Base+120
+- Black: Base+80
+- Stephanie: Base+75
+- Kaye: Base+75
+- Woolf: Base+35 (R rarity)
+- Fifi: Base+20 (N rarity)
+
+This base value is multiplied through the entire power formula, so higher = better long-term ceiling.
 
 | Tier | Base Apt | Fellows |
 |------|----------|---------|
-| Highest | ~120 | Amaterasu, Sunna, Leon, Neptune, Orivita |
+| Highest | 120 | Amaterasu, Sunna, Leon, Neptune, Orivita |
 | High | ~110 | Shlomo |
 | High | ~100 | Hermes, Mescal |
 | Mid | ~90 | Trady |
-| Mid | ~80 | Mammon, Iori, Tigirl, Paat |
+| Mid | ~80 | Mammon, Iori, Tigirl, Paat, Black |
 | Standard | ~75 | Avar, Lux, Super, Ira, Acedia, Kaye, Stephanie, Nip, Salvo, Avril |
 | Standard | ~70 | Emosen, Ida, Jewlry, Augustine, Anne, Loya |
-| Low | ~60 and below | Remaining fellows |
+| Low R | ~35 | Woolf and similar R fellows |
+| Low N | ~20 | Fifi and similar N fellows |
 
 ---
 

@@ -17,7 +17,9 @@
 
 ## Limit Break Schedule
 
-Limit breaks are the **most impactful level-gated upgrade** because they act as multipliers, not addends.
+Limit breaks raise the fellow's **level cap** AND contribute flat **aptitude bonuses** (~+50 to +65 per maxed limit break, observed from real data). They are NOT a separate multiplier in the power formula.
+
+**Why they matter:** Each level past a previous cap multiplies aptitude by a higher level multiplier (e.g., Lv 700 = 13,680/apt vs Lv 750 = ~15,500/apt). So breaking a limit unlocks higher base power per aptitude point. Plus the limit break itself adds a flat ~50 aptitude.
 
 ### Crystal Ore Requirements (Levels 150–300)
 
@@ -58,14 +60,15 @@ These are passive boosts to building operations — important for Gold income sc
 ## Advanced Leveling Strategy
 
 ### For Your Main Carry
-1. Push to next limit break ASAP — the multiplier matters more than individual levels
+1. Push to next limit break ASAP — unlocks higher level multiplier per aptitude point
 2. Always have enough crystals banked for the next break before spending EXP
-3. The power-per-aptitude acceleration means levels 500+ give dramatically more power per level than early levels
+3. The power-per-aptitude acceleration means levels 500+ give dramatically more power per level than early levels (Lv 100 = 925/apt, Lv 750 = ~15,500/apt)
 
 ### For Your Roster
-1. Get all fellows to at least Level 200 for the Village Earning Bonus
-2. Spread EXP Stones evenly — the additive nature means you get more total power from leveling 10 fellows from 100→200 than pushing one fellow from 500→600
-3. Prioritize fellows that match your building types for economic returns
+1. **Concentrate EXP on your main carry first** — single carry meta wins because each level multiplies their aptitude pool (which is also bigger from concentrated investment) through the percentage formula
+2. Get supporting fellows to at least Level 200 for the Village Earning Bonus (passive economy)
+3. Push roster fellows toward awakening gate requirements (15× 3★ for the 4★ gate, etc.)
+4. Prioritize fellows that match your building types for economic returns
 
 ### Crystal Farming Priority
 - **Event shops** — Usually the cheapest source
@@ -85,4 +88,6 @@ A fellow with 120 Aptitude at the same levels:
 - Level 300: 120 x 3,362 = **403,440** (+20% over 100 apt)
 - Level 700: 120 x 13,680 = **1,641,600** (+20% over 100 apt)
 
-**Higher base aptitude compounds with everything else.** This is why UR fellows with 120 aptitude (Amaterasu, Sunna, Leon, Neptune, Orivita) are the best long-term investments.
+**Higher base aptitude is multiplied by every aptitude source** (skill pearls, artifacts, costumes, fish, etc.) which all add together, then by the level multiplier, then by the Σ% pool. This is why UR fellows with **120 base aptitude** (Amaterasu, Sunna, Leon, Neptune, Orivita) are the best long-term investments — that base 120 starts the cascade.
+
+**Important clarification:** "120 apt" is just the BASE component. Fully invested fellows have TOTAL aptitude in the tens of thousands. Amaterasu's verified total is 32,823 (with 120 base + 20,965 from skill pearls + 3,515 from artifacts + many other sources).
