@@ -24,6 +24,13 @@ The only thing UR+ artifacts have over Support is the aura upgrade path.
 - Only worth upgrading if the artifact belongs to your main fellow typing
 - Otherwise these are wasted slots
 
+### Tier 3b: Fellow-Specific Unique Artifacts
+A small set of artifacts are **hard-bound to a single named fellow** and exist outside the standard UR/SSR/SR pool. The most notable example is **Mio's Fan**, which is a Mio-specific artifact (not obtainable from the Magic Lamp / Kanna Plush pool) that grants Mio a dedicated power/aptitude bonus. These behave like Echo artifacts but for one named fellow rather than a whole typing.
+
+- Only useful to upgrade if you main the fellow it belongs to
+- Treat them like Echo artifacts for prioritization purposes
+- If you see an artifact that doesn't appear in any of the UR/SSR/SR tables above but shows up on a specific fellow's equipment, it's almost certainly a fellow-specific unique artifact
+
 ### Tier 4: Base UR Artifacts
 The standard pool: **Magic Lamp, Kanna Plush, Dragon Summon Horn, Horn of Plenty, Golden Apple, Sapphire Crown, Mermaid's Tear, Mask of Nobility, Cloak of Levitation, Meowna Lisa**.
 

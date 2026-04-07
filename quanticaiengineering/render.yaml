@@ -3,7 +3,10 @@ services:
     name: isekai-fellow-advisor
     runtime: python
     region: oregon
-    plan: starter
+    # Standard ($25/mo, 2 GB RAM) — required because the RAG boot loads
+    # sentence-transformers + torch CPU (~900 MB resident) + FAISS index.
+    # Starter (512 MB) OOMs during model load.
+    plan: standard
     buildCommand: |
       pip install --upgrade pip &&
       pip install torch --index-url https://download.pytorch.org/whl/cpu &&
@@ -17,16 +20,25 @@ services:
         value: production
       - key: DEBUG
         value: "false"
-      - key: GROQ_API_KEY
+      # LLM provider — Claude (cheapest = haiku)
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_API_KEY
         sync: false          # set manually in Render dashboard
-      - key: GROQ_MODEL
-        value: llama-3.3-70b-versatile
+      - key: ANTHROPIC_MODEL
+        value: claude-haiku-4-5-20251001
+      # Auth — set both in Render dashboard so they're not committed
+      - key: SECRET_KEY
+        generateValue: true
+      - key: APP_PASSWORD
+        sync: false
+      # Embeddings / retrieval
       - key: EMBEDDING_MODEL
         value: all-MiniLM-L6-v2
       - key: EMBEDDING_DIMENSION
         value: "384"
       - key: TOP_K_DOCUMENTS
-        value: "5"
+        value: "10"
       - key: TEMPERATURE
         value: "0.1"
       - key: MAX_TOKENS
@@ -37,3 +49,5 @@ services:
         value: data/vector_store
       - key: LOG_LEVEL
         value: INFO
+      - key: CHAT_HISTORY_FILE
+        value: logs/chat_history.jsonl

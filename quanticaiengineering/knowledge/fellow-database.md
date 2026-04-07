@@ -160,7 +160,7 @@ This base value is multiplied through the entire power formula, so higher = bett
 | Leon | Empyrean Sound | Top tier (~120 apt) |
 | Andras | Ancient Magi | |
 | Freesia | Empyrean Sound | |
-| Heracles | — | |
+| Heracles | Empyrean Sound | UR, Brave |
 | Nyar | Empyrean Sound | |
 | Beryl | — | UR+ |
 
@@ -346,8 +346,8 @@ These form their own Stella group called **Dungeon Challenger**.
 
 | Group | Members |
 |-------|---------|
-| **Empyrean Sound** | Amaterasu, Sunna, Leon, Orivita, Kerr & Bel & Ros, Nierus, Beelzebub, Anpu (also Magi), Freesia, Aegle, Phynx, Master Tongxuan, Tamako, Nyar, Athena, Gale, Kuku, Lokia (when UR), Umbra, Ixtchel, Thora, Phinphynx |
-| **Ancient Magi** | Phanes, Nemetona, Andras, Ao Li, Hermes |
+| **Empyrean Sound** | Amaterasu, Sunna, Leon, Orivita, Heracles, Kerr & Bel & Ros, Nierus, Beelzebub, Anpu (also Magi), Freesia, Aegle, Phynx, Master Tongxuan, Tamako, Nyar, Athena, Gale, Kuku, Lokia (when UR), Umbra, Ixtchel, Thora, Phinphynx |
+| **Ancient Magi** | Phanes, Nemetona, Andras, Ao Li, Hermes (Unfettered) |
 | **Divine Gospel** | Neptune, Mammon, Trady, Mescal, Shlomo |
 | **Archdemons** | Lux, Acedia, Ira, Super, Avar |
 | **Otherworld Valiants** | Avril, Kaye, Salvo, Stephanie, Nip |

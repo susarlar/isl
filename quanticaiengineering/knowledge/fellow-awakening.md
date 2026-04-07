@@ -4,24 +4,21 @@
 
 Only **SSR, SSR+, UR, and UR-star** fellows can be awakened. Lower rarities cannot.
 
-## Star Progression (Player-Verified Gates, % Numbers Need Verification)
+## Star Progression (Verified)
 
 | Stars | Power Bonus (%) | Level Requirement | Acquaint Stones | Other Requirements |
 |-------|----------------|-------------------|----------------|--------------------|
 | 0★    | +0%            | —                 | —              | Default state |
-| 1★    | +10% [unverified] | Level 300         | 3              | — |
-| 2★    | +20% [unverified] | Level 300         | (TBD)          | — |
-| 3★    | +30% [unverified] | Level 400         | (TBD)          | — |
-| 4★    | (unknown)      | **Level 550**     | **15 stones**  | **15× 3★ fellows** |
-| 5★    | (unknown)      | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
-| 6★    | up to +50% total observed | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
+| 1★    | +10%           | Level 300         | 3              | — |
+| 2★    | +20%           | Level 300         | (TBD)          | — |
+| 3★    | +30%           | Level 400         | (TBD)          | — |
+| 4★    | +40%           | **Level 550**     | **15 stones**  | **15× 3★ fellows** |
+| 5★    | +50%           | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
+| 6★    | +60%           | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
 
-**[NEEDS VERIFICATION]:** From verified Amaterasu data (likely 6★), Stars contributes only +50% total to the Σ% pool. This contradicts the original "+10% per star linear" assumption (which would give +60% at 6★). Either:
-1. The percentage scales non-linearly past 3★
-2. Amaterasu is at 5★ not 6★
-3. The original 10/20/30 numbers were wrong
+**The +10% per star is linear across all 6 stars.** This was confirmed via Amaterasu's real in-game data: she's **5★ at Lv750** and her Stars bonus shows **+50%** in the Σ% breakdown — exactly 5 × 10%. A 6★ fellow gets +60% total.
 
-The level/stone gates are confirmed. The exact percentage per star is uncertain.
+Note that Lv750 is the game level cap and is achievable at 5★ — you don't need 6★ to reach Lv750. 6★ gives an additional +10% plus any sub-skill unlocks, but the level ceiling is the same.
 
 **Key insight:** Awakening provides BOTH a percentage multiplier AND a flat addend. The percentage component is what makes it so powerful — it multiplies with all other multipliers.
 
@@ -98,7 +95,7 @@ Pick ONE 120 base aptitude UR matching your main typing:
 These give whole-account benefits regardless of your typing:
 - **Aegle** — Unlocks artifact level caps (massive — affects every artifact on every fellow)
 - **Mio** — Boosts blessing points per family date
-- **Mulberry** — Familiar tower combat power
+- **Mulberry** — Boosts familiar tower combat. The familiar tower is where you earn items used to power up your familiars (which themselves feed aptitude/power bonuses into your fellows via the Familiar system). Pushing Mulberry's awakening improves tower combat → more tower items → stronger familiars → more power on every fellow that has those familiars bound.
 - **Crysta** — All SSR fellows power
 - **Kaye** — Banquet popularity bonus
 - **Magi's** fellow / Rimuru — Also unlock artifact caps
@@ -126,4 +123,4 @@ Example: Neptune at Level 500 with 120 Aptitude:
 
 The percentage bonus ADDS to the total Σ% pool along with Artifacts, Advanced Blessing, Stella, Fish, Family, and all other % sources. All % bonuses sum together, then multiply Base Power.
 
-**Important caveat:** At endgame, Awakening's maximum of +50% (at 5★-6★) is a small fraction of the total Σ% sum (which can reach 8,000%+ on top fellows). This means Awakening is a rounding error at endgame compared to Fish (+2,624%) or Family Stella (+2,019%). Push Awakening for the gate unlocks and sub-skills, not primarily for the % bonus.
+**Important caveat:** At endgame, Awakening's maximum of +60% (at 6★) is a small fraction of the total Σ% sum (which can reach 8,000%+ on top fellows). This means Awakening is a rounding error at endgame compared to Fish (+2,624%) or Family Stella (+2,019%). Push Awakening for the gate unlocks and sub-skills, not primarily for the % bonus.

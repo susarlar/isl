@@ -83,16 +83,31 @@ def set_seeds(seed: Optional[int] = None) -> None:
 # Initialize seeds on import
 set_seeds()
 
-# Groq Configuration
-# ==================
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-if not GROQ_API_KEY and os.getenv("APP_ENV") != "test":
-    raise ValueError(
-        "GROQ_API_KEY not found in environment variables. "
-        "Please set it in your .env file or environment."
-    )
+# LLM Provider Configuration
+# ==========================
+# Choose LLM provider: "anthropic" (Claude) or "groq" (Llama)
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "anthropic").lower()
 
+# Anthropic / Claude Configuration
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5-20251001")
+
+# Groq Configuration (legacy/fallback)
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+
+# Validate API key based on selected provider
+if os.getenv("APP_ENV") != "test":
+    if LLM_PROVIDER == "anthropic" and not ANTHROPIC_API_KEY:
+        raise ValueError(
+            "LLM_PROVIDER=anthropic but ANTHROPIC_API_KEY not set. "
+            "Add it to your .env file or set LLM_PROVIDER=groq to use Groq instead."
+        )
+    elif LLM_PROVIDER == "groq" and not GROQ_API_KEY:
+        raise ValueError(
+            "LLM_PROVIDER=groq but GROQ_API_KEY not set. "
+            "Add it to your .env file or set LLM_PROVIDER=anthropic to use Claude instead."
+        )
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0.1"))
 MAX_TOKENS = int(os.getenv("MAX_TOKENS", "1024"))
 TOP_P = float(os.getenv("TOP_P", "0.9"))

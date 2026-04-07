@@ -48,7 +48,7 @@ If these were multiplicative, the result would be ~10^20 power. It's not. They'r
 - **Actual: 2,555,195,661**
 - **Accuracy: 99.995%**
 
-### Amaterasu (UR, Empyrean Sound, Lv 750, 6★)
+### Amaterasu (UR, Empyrean Sound, Lv 750, 5★)
 - Base: 508.7M
 - Σ%: 8,099.15%
 - ΣFlat: 804.464M
@@ -148,7 +148,7 @@ Added to the final power AFTER the percentage multiplication. Still additive amo
 ### 5. Final Multiplier (applied AFTER everything)
 
 A separate multiplier at the very end. Only certain sources appear here:
-- Resonance Power (appears in both % and final) **[NEEDS VERIFICATION — possible double-count]**
+- Resonance Power (top-tier fellows with Resonance unlocked)
 - Familiar (final bonus)
 
 Formula:
@@ -156,7 +156,7 @@ Formula:
 Total = (Base × (1 + Σ%) + ΣFlat) × (1 + FinalMultiplier%)
 ```
 
-**[NEEDS VERIFICATION]:** Amaterasu's data shows "Resonance Power +10%" in BOTH the regular Power Percentage Bonus list AND the Final Power Bonus (%) list. The verified math (48.47B) only matches if Resonance Power is counted in BOTH places. Either the game really applies it twice or the OCR captured the same field twice. Needs in-game verification.
+Resonance Power appears in the Final multiplier bracket for fellows with Resonance unlocked — it's a niche top-tier mechanic and only matters once your main carry has Resonance enabled.
 
 ## Strategic Implications
 
@@ -196,9 +196,13 @@ Amaterasu has 804M flat bonuses which add to her 41.7B percentage-multiplied bas
 
 ### 5. Building Service Level Is a Hidden Massive Flat Source
 
-Notice how 4 of the 7 fellows show **+157.1M** in "Building Service Level" — this is a PASSIVE flat bonus given to ALL fellows based on your village development. It's additive across all fellows. Push your buildings.
+Notice how 4 of the 7 fellows show **+157.1M** in "Building Service Level" — this is a PASSIVE flat bonus given to all fellows whose typing matches a building's typing. Every building has a single typing assignment and boosts only fellows of that typing. Building Service Level comes from leveling up the building through normal gold purchases (diminishing returns per tap). See `buildings.md` for the full breakdown.
 
-**[NEEDS VERIFICATION]:** The exact mechanic for Building Service Level is undocumented. It appears tied to total building development level (sum of all building levels?) or village rank. Same for the "Item" flat bonus (+467M on Amaterasu) — likely a consumable or permanent item buff but the source is unconfirmed.
+### 6. "Item" Flat Power Is From Consumables
+
+The "Item" row (+467M on Amaterasu) is the stacked contribution from **consumable items** — event rewards like wrestling towels, fish tank buffs, and similar flat-power consumables. The key insight: an item label may say something small like "+100 Fellow Power", but when you apply it to a well-developed fellow the actual contribution is **much larger** because the item's flat bonus goes through the full power pipeline — it gets amplified by the Σ% pool and Final multiplier on that fellow.
+
+**Practical rule:** Always use your consumable items on your main carry. Items applied to low-investment fellows waste most of their potential value.
 
 ## Quick Power Calculation Examples
 

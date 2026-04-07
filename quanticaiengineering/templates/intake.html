@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake — Fellow Power Advisor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .header {
+            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+            color: white;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 { font-size: 22px; font-weight: 600; }
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: 16px;
+            opacity: 0.9;
+        }
+        .header .nav a:hover { opacity: 1; text-decoration: underline; }
+        .body { padding: 28px; }
+        .intro {
+            background: #f0f9f8;
+            border-left: 4px solid #11998e;
+            padding: 14px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .field { margin-bottom: 18px; }
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus { border-color: #11998e; }
+        textarea { resize: vertical; min-height: 70px; }
+        button {
+            padding: 13px 28px;
+            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .result {
+            margin-top: 28px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #11998e;
+            white-space: pre-wrap;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #11998e;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .sources {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #666;
+        }
+        .sources strong { color: #11998e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fellow Power Intake</h1>
+            <div class="nav">
+                <span style="opacity:0.9;font-size:13px;">{{ username }}</span>
+                <a href="/">← Chat</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="body">
+            <div class="intro">
+                Quick onboarding for guild members new to Fellow Power optimization.
+                Fill this out and you'll get a prioritized action plan based on your current account.
+                Takes ~1 minute. This assumes you're already level 45+.
+            </div>
+
+            <form id="intakeForm">
+                <div class="field">
+                    <label for="account_level">Account level</label>
+                    <input type="number" id="account_level" name="account_level" min="45" max="200" required placeholder="e.g., 58">
+                </div>
+                <div class="field">
+                    <label for="main_typing">Main typing focus</label>
+                    <select id="main_typing" name="main_typing" required>
+                        <option value="">-- Select --</option>
+                        <option value="Brave">Brave</option>
+                        <option value="Diligent">Diligent</option>
+                        <option value="Unfettered">Unfettered</option>
+                        <option value="Inspiring">Inspiring</option>
+                        <option value="Informed">Informed</option>
+                        <option value="Unsure">Not sure yet</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="top_fellow">Your most powerful fellow (name)</label>
+                    <input type="text" id="top_fellow" name="top_fellow" required placeholder="e.g., Amaterasu, Neptune, Mio">
+                </div>
+                <div class="field">
+                    <label for="current_power">Approximate Fellow Power of your top fellow</label>
+                    <input type="text" id="current_power" name="current_power" required placeholder="e.g., 12B, 250M, 1.4T">
+                </div>
+                <div class="field">
+                    <label for="awakening_stars">Awakening stars on your top fellow</label>
+                    <select id="awakening_stars" name="awakening_stars" required>
+                        <option value="">-- Select --</option>
+                        <option value="0">0★ (not awakened)</option>
+                        <option value="1">1★</option>
+                        <option value="2">2★</option>
+                        <option value="3">3★</option>
+                        <option value="4">4★</option>
+                        <option value="5">5★</option>
+                        <option value="6">6★</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="stella_level">Stella level on your top fellow (approximate)</label>
+                    <input type="text" id="stella_level" name="stella_level" required placeholder="e.g., Lv 5, Lv 10, Lv 20, not unlocked">
+                </div>
+                <div class="field">
+                    <label for="goal">What are you trying to improve?</label>
+                    <select id="goal" name="goal" required>
+                        <option value="">-- Select --</option>
+                        <option value="Fellow Power (overall)">Fellow Power (overall)</option>
+                        <option value="Single-carry power">Single-carry power</option>
+                        <option value="Village earnings">Village earnings</option>
+                        <option value="Siege Warfare ranking">Siege Warfare ranking</option>
+                        <option value="Expo / Negotiation income">Expo / Negotiation income</option>
+                        <option value="Banquet popularity">Banquet popularity</option>
+                        <option value="Fishing rewards">Fishing rewards</option>
+                        <option value="Event rankings">Event rankings</option>
+                        <option value="Family blessings output">Family blessings output</option>
+                        <option value="Not sure">Not sure — general advice</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="goal_detail">Extra context on your goal (optional)</label>
+                    <textarea id="goal_detail" name="goal_detail" placeholder="e.g., want to hit 1T fellow power, cracking top 10 in next siege, stuck at 2M/day village earnings..."></textarea>
+                </div>
+                <div class="field">
+                    <label for="resources">Resources you have stockpiled (optional)</label>
+                    <textarea id="resources" name="resources" placeholder="e.g., 500 EXP stones, 200 Skill Pearls, 50 Stella fragments..."></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Generate Action Plan</button>
+            </form>
+
+            <div id="resultArea"></div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('intakeForm');
+        const btn = document.getElementById('submitBtn');
+        const resultArea = document.getElementById('resultArea');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.textContent = 'Generating…';
+            resultArea.innerHTML = '<div class="spinner"></div>';
+
+            const payload = {};
+            new FormData(form).forEach((v, k) => { payload[k] = v; });
+
+            try {
+                const resp = await fetch('/intake', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await resp.json();
+
+                if (data.status === 'error') {
+                    resultArea.innerHTML = '<div class="result" style="border-left-color:#dc3545;background:#f8d7da;color:#721c24;">Error: ' + (data.error || 'Unknown') + '</div>';
+                } else {
+                    let html = '<div class="result">' + escapeHtml(data.answer) + '</div>';
+                    if (data.sources && data.sources.length) {
+                        html += '<div class="sources"><strong>Sources:</strong> ' +
+                            data.sources.map(s => s.filename).join(', ') + '</div>';
+                    }
+                    resultArea.innerHTML = html;
+                }
+            } catch (err) {
+                resultArea.innerHTML = '<div class="result" style="border-left-color:#dc3545;">Could not reach server.</div>';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Generate Action Plan';
+            }
+        });
+
+        function escapeHtml(s) {
+            const d = document.createElement('div');
+            d.textContent = s;
+            return d.innerHTML;
+        }
+    </script>
+</body>
+</html>

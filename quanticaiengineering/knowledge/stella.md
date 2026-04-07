@@ -65,7 +65,17 @@ These fellows have personal Stella that boosts an entire aptitude category, but 
 
 **Brave and Unfettered have NO SR Category Stella booster.** This is a permanent ~30% multiplier gap if you main these types.
 
-Inspiring uniquely has TWO Category Stella boosters (Rani + Elise), giving Inspiring carries the most multiplier sources of any type.
+Inspiring uniquely has TWO Category Stella boosters (Rani + Elise), and **they stack fully** — both Rani's +30% and Elise's +30% add to the Σ% pool independently for **+60% total** to all Inspiring fellows. This is verified in-game: there is no cap on having multiple Category Stella boosters active for the same type. Inspiring carries therefore have the strongest SR-sourced multiplier stack of any typing.
+
+## Data Gaps — Higher Stella Levels
+
+Our verified data covers:
+- **Pattern A (UR groups):** Levels 1–20
+- **Pattern B (SSR high):** Levels 1–20 (Archdemon extends to Lv 40)
+- **Pattern C (Followers):** Levels 1–10
+- **Pattern D (SR Category):** Levels 1–10
+
+**Beyond these levels the exact values are not in this knowledge base.** If you have information about higher Stella levels (Pattern C above Lv 10, Pattern D above Lv 10, or Pattern A/B max caps), contact **Su** to get it added. Do not trust wiki numbers for high Stella — they're often wrong or outdated.
 
 ## Investment Priority
 

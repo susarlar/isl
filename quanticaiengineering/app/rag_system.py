@@ -30,6 +30,9 @@ from app.prompts import (
     SYSTEM_PROMPT,
 )
 from config import (
+    LLM_PROVIDER,
+    ANTHROPIC_API_KEY,
+    ANTHROPIC_MODEL,
     GROQ_API_KEY,
     GROQ_MODEL,
     TOP_K_DOCUMENTS,
@@ -49,39 +52,50 @@ class IsekaiRAGSystem:
     def __init__(
         self,
         vector_db_path: str = str(VECTOR_STORE_PATH),
-        model_name: str = GROQ_MODEL,
+        model_name: Optional[str] = None,
         api_key: Optional[str] = None,
         top_k: int = TOP_K_DOCUMENTS,
         enable_reranking: bool = False,
         temperature: float = 0.1,
         max_tokens: int = 1024,
+        provider: Optional[str] = None,
     ):
         """
         Initialize the RAG system.
 
         Args:
             vector_db_path: Path to vector database
-            model_name: Groq model name
-            api_key: Groq API key (if not set in environment)
+            model_name: Model name (overrides provider default)
+            api_key: API key (overrides env var)
             top_k: Number of chunks to retrieve
             enable_reranking: Whether to enable re-ranking
             temperature: LLM temperature
             max_tokens: Maximum tokens in response
+            provider: 'anthropic' or 'groq' (defaults to LLM_PROVIDER env var)
         """
         self.vector_db_path = vector_db_path
-        self.model_name = model_name
+        self.provider = (provider or LLM_PROVIDER).lower()
         self.top_k = top_k
         self.enable_reranking = enable_reranking
         self.temperature = temperature
         self.max_tokens = max_tokens
 
-        # Set API key
-        self.api_key = api_key or GROQ_API_KEY or os.getenv("GROQ_API_KEY")
-        if not self.api_key:
-            raise ValueError("Groq API key not provided")
+        # Set model and API key based on provider
+        if self.provider == "anthropic":
+            self.model_name = model_name or ANTHROPIC_MODEL
+            self.api_key = api_key or ANTHROPIC_API_KEY or os.getenv("ANTHROPIC_API_KEY")
+            if not self.api_key:
+                raise ValueError("Anthropic API key not provided")
+        elif self.provider == "groq":
+            self.model_name = model_name or GROQ_MODEL
+            self.api_key = api_key or GROQ_API_KEY or os.getenv("GROQ_API_KEY")
+            if not self.api_key:
+                raise ValueError("Groq API key not provided")
+        else:
+            raise ValueError(f"Unknown provider: {self.provider}. Use 'anthropic' or 'groq'.")
 
         # Initialize components
-        logger.info("Initializing RAG system...")
+        logger.info(f"Initializing RAG system with provider: {self.provider}, model: {self.model_name}")
         self._load_components()
         logger.info("✓ RAG system ready")
 
@@ -107,11 +121,15 @@ class IsekaiRAGSystem:
         else:
             self.vector_store.load(self.vector_db_path)
 
-        # Initialize Groq client
-        logger.info("Initializing Groq client...")
-        from groq import Groq
-
-        self.client = Groq(api_key=self.api_key)
+        # Initialize LLM client based on provider
+        if self.provider == "anthropic":
+            logger.info("Initializing Anthropic client...")
+            from anthropic import Anthropic
+            self.client = Anthropic(api_key=self.api_key)
+        else:
+            logger.info("Initializing Groq client...")
+            from groq import Groq
+            self.client = Groq(api_key=self.api_key)
 
         logger.info(f"✓ Loaded {len(self.vector_store.chunks)} chunks")
 
@@ -287,27 +305,40 @@ class IsekaiRAGSystem:
     def _generate(
         self, question: str, chunks_with_scores: List[Tuple[Chunk, float]]
     ) -> Tuple[str, float]:
-        """Generate answer using Groq LLM."""
+        """Generate answer using the configured LLM provider."""
         start_time = time.time()
 
         # Extract just the chunks
         chunks = [chunk for chunk, score in chunks_with_scores]
 
-        # Format messages
+        # Format messages (returns OpenAI/Groq-style with system in messages array)
         messages = format_messages(question, chunks, max_chunks=self.top_k)
 
         try:
-            # Call Groq API
-            response = self.client.chat.completions.create(
-                model=self.model_name,
-                messages=messages,
-                temperature=self.temperature,
-                max_tokens=self.max_tokens,
-                top_p=0.95,
-                stream=False,
-            )
+            if self.provider == "anthropic":
+                # Anthropic Messages API: separate system from user/assistant messages
+                system_msg = next((m["content"] for m in messages if m["role"] == "system"), "")
+                user_messages = [m for m in messages if m["role"] != "system"]
 
-            answer = response.choices[0].message.content.strip()
+                response = self.client.messages.create(
+                    model=self.model_name,
+                    system=system_msg,
+                    messages=user_messages,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens,
+                )
+                answer = response.content[0].text.strip()
+            else:
+                # Groq / OpenAI-compatible API
+                response = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens,
+                    top_p=0.95,
+                    stream=False,
+                )
+                answer = response.choices[0].message.content.strip()
 
             generation_time = time.time() - start_time
 
@@ -391,7 +422,23 @@ class IsekaiRAGSystem:
         messages = format_messages(question, chunks, max_chunks=self.top_k)
 
         try:
-            # Call Groq API with streaming
+            if self.provider == "anthropic":
+                # Anthropic streaming
+                system_msg = next((m["content"] for m in messages if m["role"] == "system"), "")
+                user_messages = [m for m in messages if m["role"] != "system"]
+
+                with self.client.messages.stream(
+                    model=self.model_name,
+                    system=system_msg,
+                    messages=user_messages,
+                    temperature=self.temperature,
+                    max_tokens=self.max_tokens,
+                ) as stream:
+                    for text in stream.text_stream:
+                        yield text
+                return
+
+            # Groq / OpenAI-compatible streaming
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=messages,

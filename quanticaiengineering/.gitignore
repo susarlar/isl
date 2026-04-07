@@ -195,6 +195,10 @@ fastembed_cache/
 # Vector store (rebuilt on each deploy via buildCommand)
 data/vector_store/
 
+# Runtime logs — contain per-user chat history
+logs/
+
+
 # Ruff stuff:
 .ruff_cache/
 
