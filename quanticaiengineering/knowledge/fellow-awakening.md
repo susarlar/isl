@@ -4,17 +4,44 @@
 
 Only **SSR, SSR+, UR, and UR-star** fellows can be awakened. Lower rarities cannot.
 
-## Star Progression
+## Star Progression (Player-Verified)
 
-| Stars | Power Bonus (%) | Power Bonus (Flat) | Level Requirement | Additional Requirements |
-|-------|----------------|--------------------|-------------------|------------------------|
-| 0★    | +0%            | +0                 | —                 | Default state          |
-| 1★    | +10%           | +400K              | Level 300         | 3 Acquaint Stones      |
-| 2★    | +20%           | +800K              | Level 300         | Acquaint Stones        |
-| 3★    | +30%           | +1.5M              | Level 400         | Acquaint Stones        |
-| 4★    | Higher         | Higher             | Level 550         | 15 three-star fellows  |
-| 5★    | Higher         | Higher             | Level 650+        | Multiple four-star fellows |
-| 6★    | Highest        | Highest            | Level 750         | Multiple five-star fellows |
+| Stars | Power Bonus (%) | Power Bonus (Flat) | Level Requirement | Acquaint Stones | Other Requirements |
+|-------|----------------|--------------------|-------------------|----------------|--------------------|
+| 0★    | +0%            | +0                 | —                 | —              | Default state |
+| 1★    | +10%           | +400K              | Level 300         | 3              | — |
+| 2★    | +20%           | +800K              | Level 300         | (TBD)          | — |
+| 3★    | +30%           | +1.5M              | Level 400         | (TBD)          | — |
+| 4★    | Higher         | Higher             | **Level 550**     | (TBD)          | **15× 3★ fellows** |
+| 5★    | Higher         | Higher             | **Level 700**     | **30 stones**  | **20× 4★ fellows** |
+| 6★    | Highest        | Highest            | **Level 750**     | **50 stones**  | **25× 5★ fellows** |
+
+**Key insight:** Awakening provides BOTH a percentage multiplier AND a flat addend. The percentage component is what makes it so powerful — it multiplies with all other multipliers.
+
+## Awakening Gate Planning (Critical for Endgame)
+
+The 4★→5★→6★ progression has **brutal sub-fellow requirements** because each level needs multiple lower-tier awakened fellows ALSO at high awakening:
+
+### Gate Math
+| Target | Sub-fellows needed at... | Fellow level needed |
+|--------|-------------------------|---------------------|
+| **4★** main carry | 15 fellows at 3★ | Main carry Lv 550 |
+| **5★** main carry | 20 fellows at 4★ | Main carry Lv 700 |
+| **6★** main carry | 25 fellows at 5★ | Main carry Lv 750 |
+
+### Compound Cost
+To get ONE main carry to 6★, you effectively need:
+- 25 fellows at 5★ each (which means each of those 25 needs 20 fellows at 4★)
+- 20 × 25 = **500 fellows at 4★** (with massive overlap, but still requires sustained investment)
+- Each 4★ requires 15 fellows at 3★
+
+In practice, this means a deeply developed account where most of your roster is awakened to mid-tier. The 6★ gate is a long-term endgame goal, not a quick push.
+
+### Acquaint Stone Investment
+- **5★ push: 30 stones** for the main carry alone
+- **6★ push: 50 stones** for the main carry alone
+- Plus all the stones needed to push your sub-fellows to 4★ and 5★ first
+- **Total stones to take ONE fellow from 0★ to 6★ via the gate path: hundreds**
 
 **Key insight:** Awakening provides BOTH a percentage multiplier AND a flat addend. The percentage component is what makes it so powerful — it multiplies with all other multipliers.
 

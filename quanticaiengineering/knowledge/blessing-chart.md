@@ -4,13 +4,26 @@
 
 ## How Blessings Work
 
-Each family member blesses a specific list of fellows. Some families have **fixed slots** (predetermined fellows), others have **flexible/Stella-based slots** that you choose. The blessing tier (1x–4x) doesn't determine power — it determines how many fellows are covered.
+Each family member blesses a specific list of fellows. There are **three distinct slot types** to understand:
 
-**Special families with flexible slots (you choose fellows):**
-- Lancelot (SSR→UR, fully flexible Stella-based)
-- Magellan (Stella-based)
-- Jewlry (Stella-based)
-- Some specific fellow positions on UR/SSR families unlock with fellow Stella progression
+### 1. Fixed Slots
+The family always blesses these specific fellows. No way to change them.
+
+### 2. Fellow Stella-Based Slots (Conditional)
+The slot is filled with a SPECIFIC FELLOW that activates when YOU level THAT FELLOW'S OWN Stella to a certain point. Example: "Hermes (Stella-based)" in Denier's list means Hermes will bless from Denier once you progress Hermes' personal Stella.
+
+These are noted as "(Stella-based)" or "(Stella-based unlock)" next to a specific fellow name.
+
+### 3. Family Stella-Based Custom Slots ⭐ (Most Flexible)
+The family has EMPTY slots that YOU choose which fellow to fill in, unlocked by leveling THE FAMILY'S OWN Stella. These are the most valuable because you can assign them to your main carry regardless of category.
+
+**Families with Family-Stella-Based Custom Slots:**
+- **Lancelot** (SSR→UR) — fully custom; advance Lancelot's family Stella to unlock more slots
+- **Hestia** (SSR→UR) — has custom slots; advance Hestia's family Stella to unlock more
+- **Magellan** — custom slots via family Stella
+- **Jewlry** — custom slots via family Stella
+
+These are gold for endgame because you can stack them all on your main carry.
 
 ---
 
@@ -57,7 +70,7 @@ Freesia, Phinphynx, Master Tongxuan, Rimuru, Dionysia, Umbra, Lula, Paat
 ## SSR Families
 
 ### Lancelot (SSR→UR, fully flexible)
-**Magellan, Jewlry, Stella-based fellows you choose** (advance Lancelot's Stella to choose more)
+**Fully custom — every slot is family-Stella-based.** You choose all the fellows. Advance Lancelot's family Stella to unlock more slots. The most flexible family in the game.
 
 ### Vlad (SSR)
 Kerr & Bel & Ros, Ether & NAL, Avar, Black, Aisha, Freesia (Stella-based unlock)
@@ -141,7 +154,7 @@ Andras, Leon, Stephanie, Flos, Tohru, Dionysia (Stella-based)
 Hermes, Phinphynx, Black, Lux, Ixtchel, Umbra
 
 ### Hestia (SSR→UR)
-Gabrael, Aegle, Ais Wallenstein, Bell Cranel
+Gabrael, Aegle, Ais Wallenstein, Bell Cranel + **custom slots unlocked via family Stella** (you choose which fellows to fill)
 
 ### Lunaria (SSR)
 Phinphynx, Thalia, Augustine, Lula, Kuku (Stella-based)
@@ -255,10 +268,23 @@ Bell Cranel
 - **Namiko (UR)** — 8 fellows across all types including Orivita, Anne, Onikiri
 - **Bren (SSR)** — 8 fellows including Hermes, Sunna, Aegle, Stephanie
 
-### Stella-Based Slot Families (Choose Fellows)
-These families have flexible blessing slots that unlock with their Stella progression — you assign them to fellows of your choice:
-- **Lancelot, Magellan, Jewlry** — fully flexible
-- Many SSR families have 1-2 Stella-based slots in addition to fixed slots
+### Family Stella-Based Custom Slots (Choose Fellows)
+These families have **empty blessing slots** that unlock as you level THEIR family Stella. You choose which fellows to put in those slots — perfect for stacking on your main carry:
+
+| Family | Custom Slots |
+|--------|--------------|
+| **Lancelot** (SSR→UR) | All slots are custom (fully flexible) |
+| **Hestia** (SSR→UR) | Custom slots in addition to fixed (Gabrael, Aegle, Ais Wallenstein, Bell Cranel) |
+| **Magellan** | Custom slots via family Stella |
+| **Jewlry** | Custom slots via family Stella |
+
+**This is different from Fellow-Stella-based unlocks** (e.g., "Hermes (Stella-based)" in another family's list), where the slot is already assigned to a specific fellow but only activates after you level THAT fellow's Stella.
+
+### Strategy: Custom Slot Families = Carry Multiplier Stack
+
+Each maxed Family Stella adds +120% power and +220 aptitude to its blessed fellow (UR Family Stella). If you have **Lancelot, Hestia, Magellan, AND Jewlry** all assigning their custom slots to your main carry, that's potentially **4 × +120% = +480%** stackable power buff that ANY type can use, regardless of category.
+
+This is the only way Brave/Unfettered carries can partially compensate for missing the SR Category Stella (Rani/Elise/Liz/Angie).
 
 ### Greyrat Family (Mushoku Tensei Collab) Connections
 **Sylphiette Greyrat is a FAMILY MEMBER, not a fellow.** Families don't have aptitude types. She's the head of the Greyrat Family in-game and her family Stella blesses the Greyrat Family fellows: Nemetona, Roxy Migurdia, Aisha Greyrat, Rudeus Greyrat, Beryl.
