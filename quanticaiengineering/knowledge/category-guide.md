@@ -35,7 +35,7 @@ Push Elise's Stella as high as possible — every level multiplies your entire I
 **Blessing strategy:** Get Advanced Blessing to ~200 on the family that blesses your main carry first, then spread to others. Remember: costs double every ~50 levels.
 
 ### Fish Priority
-**% Power fish (multiplicative — do these first):**
+**% Power fish (biggest % contribution — do these first):**
 1. Ocean top 5: Sperm Whale, Giant Squid, Helicoprion, Smooth Hammerhead, Mosasaurus (All Fellow %)
 2. Barreleye Fish (Northrealm) — Inspiring %
 3. Axolotl (Village) — Inspiring %
@@ -213,18 +213,40 @@ Check blessing chart for families that bless your specific Unfettered fellows.
 3. **Push Advanced Blessing to ~200 on your carry's family** before spreading
 4. **Stack Stella on the character that boosts your main category**
 
-### The Multiplier Stack
-For maximum Fellow Power on your carry, you want ALL of these compounding:
-1. **Awakening stars** — +10% per star (multiplicative)
-2. **Stella** — Category-wide multiplier
-3. **Artifacts** — Multiplicative (matched type, reforged)
-4. **Advanced Blessing** — % from family blessings
-5. **Fish % bonuses** — From category + All Fellow % fish
-6. **Skill Pearls** — Aptitude feeds base power
-7. **Costumes** — Passive aptitude
-8. **Fish aptitude** — Feeds base power
+### The Power Stack (Additive, Verified)
+For maximum Fellow Power on your carry, you want to pile up all these sources. **They all ADD together into one big percentage**, then multiply Base:
 
-Example compound: 3★ Awakening (1.3x) × Stella (1.15x) × Artifacts (1.2x) × Advanced Blessing (1.12x) × Fish % bonuses (combined) = massive total multiplier on base power.
+**Ranked by actual contribution (from Amaterasu's verified data):**
+1. **Fish %** — up to +2,624% (the biggest single source — fish is king)
+2. **Family Stella %** — up to +2,019% (biggest after fish)
+3. **Artifacts %** — up to +788% (Magic Lamp/Kanna Plush preferred)
+4. **Demon's Blessing %** — up to +706%
+5. **Museum %** — up to +519%
+6. **Skill %** — up to +501%
+7. **Familiar %** — up to +310%
+8. **Compendium %** — up to +280%
+9. **Figure %** — up to +140%
+10. **Building Training %** — up to +125%
+11. **Awakening stars** — only +50% at 6★ (small but free)
+12. **Stella group %** — if it gives % (Empyrean Sound Pattern A gives up to +175%)
+13. **Expo %** — up to +25%
+
+**Aptitude sources (multiply through the whole percentage sum):**
+- Skill Pearls (biggest — up to +20,965 observed)
+- Artifacts (up to +3,515 from Diablo Doll Lv80 materia)
+- Fish (+1,817)
+- Costume (+1,000 from activations)
+- Museum (+994)
+- Family Stella (+689)
+- Demon's Blessing (+656)
+- Building Training (+258)
+- Familiar (+216)
+- Stella (+140 from Pattern A Group Stella)
+
+**Real example math:** Amaterasu's 8,099% total × 508.7M base = 41.7B (plus 804M flat, × 1.14 final = 48.47B total)
+
+### Brave/Unfettered Aren't Permanently Behind
+Missing the SR Category Stella (+30%) costs Brave/Unfettered carries about 0.4% of total endgame power when added to a total of ~8,000%. Not trivial but also not a dealbreaker. Lancelot and Hestia family-Stella-based custom slots can compensate (adding 120% per maxed UR Family Stella directly to your carry, regardless of category).
 
 ### Flexible Blessing Families
-If you have **Lancelot, Magellan, or Jewlry** with Stella-based flexible blessing slots, always assign these to your main carry — they work for any category.
+**Lancelot** and **Hestia** are the only families with family-Stella-based custom blessing slots. Always assign these slots to your main carry. Each maxed UR Family Stella adds +120% power, +220 aptitude, +50 apt cap to the blessed fellow.

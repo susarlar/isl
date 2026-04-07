@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fishing provides three types of permanent Fellow boosts through the Fish Tank system. For advanced players, the **percentage power fish are multiplicative bonuses** — among the strongest passive boosts in the game.
+Fishing provides three types of permanent Fellow boosts through the Fish Tank system. **Fish is the #1 source of power percentage in the entire game** — on endgame Amaterasu, Fish contributes +2,624.5% to the total Σ% pool, beating Family (+2,019.5%), Artifacts (+788.25%), and every other source.
 
 Fishing characters: **Kaity**, **Chihaya**, **Jin Yu**.
 
@@ -169,7 +169,7 @@ This means **efficiency (bonus per fish catch) decreases at higher levels**, eve
 | Sea Anemone | Unfettered Fellow (flat) |
 | Tubuca Arcuata | All Fellow (flat) |
 
-**Ocean MVPs:** The top 5 ocean fish are the best in the entire game — **All Fellow Power %** on both skills. These boost your ENTIRE roster with a multiplicative bonus.
+**Ocean MVPs:** The top 5 ocean fish are the best in the entire game — **All Fellow Power %** on both skills. They boost EVERY fellow in your roster with a big % contribution to each fellow's Σ% pool.
 
 ## Complete Fish Data — Northrealm (25 Fish)
 
@@ -222,8 +222,8 @@ This means **efficiency (bonus per fish catch) decreases at higher levels**, eve
 
 ## Fish Priority Hierarchy
 
-### Tier 1: % Power Fish (Multiplicative — Highest Value)
-These compound with Awakening, Artifacts, Advanced Blessing, and Stella:
+### Tier 1: % Power Fish (Highest Value)
+These add to your fellow's Σ% pool along with Awakening, Artifacts, Advanced Blessing, Stella, Museum, Family, and all other % sources. Fish is the single biggest category:
 
 | Location | Fish | Target |
 |----------|------|--------|
@@ -232,7 +232,7 @@ These compound with Awakening, Artifacts, Advanced Blessing, and Stella:
 | Drakenberg | Pirarucu, Gold Pirarucu, Star Anglerfish, Drakenberg Monster | Category-specific |
 | Village | Axolotl | Inspiring |
 
-**The 5 ocean % fish are the single most valuable fish in the game** — they boost ALL fellows with a multiplicative bonus.
+**The 5 ocean % fish are the single most valuable fish in the game** — they add a huge % to EVERY fellow in your roster (not just one category).
 
 ### Tier 2: Aptitude Fish (Feeds Base Power)
 Aptitude increases feed into Base Power = Aptitude × Level Multiplier, which then gets multiplied by everything. Valuable but additive at the aptitude stage.
@@ -250,12 +250,13 @@ The user's concern about diminishing returns is valid but nuanced:
 - **Rarity-targeted bonuses** (SR, R, N) become less useful as your roster shifts to SSR+/UR
 
 ### Where Returns DON'T Diminish
-- **% power fish bonuses are multiplicative** — a fish giving 555% Inspiring Fellow Power is a 5.55x multiplier that compounds with everything else
-- **Aptitude fish bonuses scale with level** — +470 aptitude at Level 700 = +470 × 13,680 = +6.4M base power, before multipliers
+- **% power fish bonuses add to the Σ% pool** — a fish giving +555% Inspiring Fellow Power adds 555 to the total percentage sum, which then multiplies Base Power
+- **Aptitude fish bonuses scale with level and total %** — +470 aptitude at Level 700 = +470 × 13,680 = +6.4M base, and then that base gets multiplied by the whole Σ% sum (potentially 8,000%+)
 - **The per-level bonus is constant** (+5% per level for % fish, +5 aptitude per level for category aptitude fish)
+- **Aptitude from fish double-dips** — it feeds Base (multiplied by % sum) AND never diminishes because it's pre-multiplication
 
 ### Bottom Line for Level 45+ Players
-- **% fish: Always worth leveling** — diminishing cost efficiency, but the multiplicative value is permanent
+- **% fish: Always worth leveling** — diminishing cost efficiency, but the percentage contribution is permanent and the #1 source in the game
 - **Aptitude fish: Good investment** up to mid-levels, then shift focus to % fish
 - **Flat fish: Low priority** — level them passively, don't chase catches
 

@@ -104,4 +104,6 @@ Example: Neptune at Level 500 with 120 Aptitude:
 - **2★:** (910,800 x 1.20) + 800,000 = 1,892,960 (+35% over 1★)
 - **3★:** (910,800 x 1.30) + 1,500,000 = 2,684,040 (+42% over 2★)
 
-The percentage bonus compounds with Artifacts, Advanced Blessing, and Stella — making each star exponentially more valuable the more multipliers you have.
+The percentage bonus ADDS to the total Σ% pool along with Artifacts, Advanced Blessing, Stella, Fish, Family, and all other % sources. All % bonuses sum together, then multiply Base Power.
+
+**Important caveat:** At endgame, Awakening's maximum of +50% (at 5★-6★) is a small fraction of the total Σ% sum (which can reach 8,000%+ on top fellows). This means Awakening is a rounding error at endgame compared to Fish (+2,624%) or Family Stella (+2,019%). Push Awakening for the gate unlocks and sub-skills, not primarily for the % bonus.

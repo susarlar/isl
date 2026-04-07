@@ -26,11 +26,11 @@ Family members provide two distinct blessing types to fellows. Understanding the
 
 ## Why Advanced Blessing Matters More Late-Game
 
-Fellow Blessing (+112K flat at max) is significant early but becomes a rounding error when your main carry has millions of base power.
+Fellow Blessing (flat power) adds to the ΣFlat bucket that's summed after the % multiplication. Even at max levels with millions of flat bonus, the flat contribution typically represents 1-5% of total power on an endgame fellow.
 
-Advanced Blessing (+12.5% at max) **compounds with every other multiplier** — awakening, artifacts, Stella. It scales infinitely with your power growth.
+Advanced Blessing (+% power) adds to the Σ% bucket along with Fish, Artifacts, Museum, etc. All % sources ADD together into one big percentage, which then multiplies Base Power. Each Advanced Blessing level adds +0.5% to that sum.
 
-**For level 45+ players:** Prioritize Advanced Blessing levels over Fellow Blessing levels.
+**For level 45+ players:** Fellow Blessing and Advanced Blessing both matter, but Advanced Blessing scales with Base (which is enormous on endgame fellows) while Fellow Blessing is just a fixed addition. Prioritize Advanced Blessing for your main carry.
 
 ## Blessing Power vs Intimacy
 

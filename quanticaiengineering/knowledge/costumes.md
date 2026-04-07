@@ -26,7 +26,7 @@ Costumes are **typed by the fellow's aptitude category** (Inspiring, Diligent, B
 | **Essence track** | +5 aptitude per step to ALL of type | All of type | 15 Fellow Costume Essences per step |
 | **Essence cap** | 30 levels base (can raise with dupes) | All of type | 30→60→etc. with costume upgrades |
 
-**5-star costumes give a 30% multiplicative power boost to an entire category.** This is huge — it compounds with Awakening, Stella, Artifacts, and Advanced Blessing.
+**5-star costumes give a +30% power boost to an entire category.** This adds to the Σ% pool along with Awakening, Stella, Artifacts, Fish, Family, and all other % sources.
 
 ### 4-Star Costumes
 
@@ -99,12 +99,18 @@ Since Blessing Points = Blessing Power × 4.52 per date, a 3-star family costume
 ## Costume Strategy for Level 45+ Players
 
 ### Priority 1: 5-Star Costumes on Your Main Type
-The +30% Fellow Power is multiplicative and category-wide. If you main Inspiring and get a 5-star Inspiring costume, it boosts your ENTIRE Inspiring roster by 30%. This compounds with:
+The +30% Fellow Power is category-wide. If you main Inspiring and get a 5-star Inspiring costume, it adds +30% to every Inspiring fellow's Σ% pool. All these sources add together in the same pool:
 - Awakening stars
 - Stella category boost
 - Artifacts
 - Advanced Blessing
 - Fish % bonuses
+- Demon's Blessing %
+- Museum %
+- Familiar %
+- Compendium %
+- Figure %
+- Building Training %
 
 ### Priority 2: 4-Star Costumes on Your Main Type
 +10% Fellow Power category-wide is still a meaningful multiplier.

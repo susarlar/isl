@@ -4,7 +4,7 @@
 
 Artifacts provide **three stacking power sources** to the fellow they're equipped on:
 1. **Artifact Aptitude** — Flat aptitude bonus (feeds into base power formula)
-2. **Artifact Skills** — Percentage power boosts (multiplicative)
+2. **Artifact Skills** — Percentage power boosts (added to Σ% pool)
 3. **Materia bonuses** — Additional random fellow attribute boosts per materia slot
 
 ## Artifact Rarity & Base Stats
@@ -82,7 +82,7 @@ The total skill % scales with the number of slots filled AND the artifact level.
 | Mescal Cape (Cloak of Levitation, UR) | 8 | +139% | +27 | 1 | 1 |
 | Mermaid's Tear (UR) | 8 | +140% | +35 | 0 | 0 |
 
-**Key observation:** Skill count scales with artifact level/materia progression. A Lv1 artifact has fewer/weaker skills than Lv436. The gap between 8 skills (140%) and 23 skills (595%) is 455% more multiplicative power.
+**Key observation:** Skill count scales with artifact level/materia progression. A Lv1 artifact has fewer/weaker skills than Lv436. The gap between 8 skills (140%) and 23 skills (595%) is +455% added to the fellow's total Σ% pool, which is then multiplied with Base Power.
 
 ## Materia System
 
@@ -167,7 +167,7 @@ At specific materia levels, you unlock **additional power boost slots** on the m
 - **Early artifact (Lv1, Lv0 materia):** +5–8% fellow power
 - **Mid investment (Lv30–60, Lv10–40 materia):** +9–16% fellow power
 - **Endgame (Lv400+, Lv80 materia):** +21–22% fellow power
-- The gap between early and endgame artifact investment is roughly **4x** the multiplicative bonus
+- The gap between early and endgame artifact investment is roughly **4x** the total power contribution
 
 ### Magic Lamp + Kanna Plush Priority
 These are the two UR artifacts with **4 materia slots** (vs 3 or 1 for others). More materia slots = more stacked power sources. Prioritize these for your main carry.
@@ -189,24 +189,51 @@ These are the two UR artifacts with **4 materia slots** (vs 3 or 1 for others). 
 - Plus artifact leveling costs
 - **Magic Ore is a long-term grind** — budget carefully
 
-## Cross-System Interactions
+## Cross-System Interactions (Additive Math)
 
-Artifact bonuses stack with:
+Artifact bonuses ADD to the percentage sum that multiplies Base Power. All these sources pool together:
+
+**Artifact % adds alongside:**
 - Awakening stars (%)
 - Stella group bonuses (%)
-- SR Category Stella (%)
-- Advanced Blessing (%)
-- Family Stella power % (%)
-- Costume % bonuses
+- Family Stella power %
+- Costume % bonuses (from activation)
 - Fish % bonuses
+- Demon's Blessing %
+- Museum %
+- Familiar %
+- Compendium %
+- Figure %
+- Building Training %
 
-Artifact aptitude stacks with:
+**All these sum into one Σ%**, which then multiplies Base.
+
+**Artifact aptitude adds alongside:**
 - Born Aptitude (base)
 - Skill Pearls (Supreme/Outstanding/Ordinary Talent)
-- Expertise / Trading skill aptitude
 - Costume essence track aptitude
 - Family Stella aptitude
 - Stella group aptitude bonuses
 - Fish aptitude bonuses
+- Museum aptitude
+- Demon's Blessing aptitude
+- Familiar aptitude
+- Compendium aptitude
+- Building Training aptitude
+- Limit Break aptitude
+- Expo aptitude
 
-The +21.5% from Diablo Doll on Amaterasu is **multiplicative** with Empyrean Sound Stella (+175%), Advanced Blessing (+12.5%), Awakening (+60% at 6★), etc. These compound — not add.
+All these sum, then get a final × (1 + aptitude familiar% + aptitude skill%).
+
+### Real Example (Amaterasu)
+
+Diablo Doll contributes:
+- **+788.25% to Σ%** (part of her 8,099.15% total)
+- **+3,515 to aptitude** (part of her 30,488 flat aptitude)
+
+The "with artifact: 48.47B / without: 39.88B" gap of +8.59B represents how much those contributions add when plugged through the formula:
+- Aptitude gap: 3,515 points × 15,500 level multiplier × 82 percentage sum = ~4.47B from the aptitude side
+- Percentage gap: 508.7M base × 7.88 = ~4.01B from the % side
+- Total: ~8.48B (matches the +8.59B observed within rounding)
+
+**Artifacts contribute to BOTH aptitude and percentage sources, which is why they're so valuable — they multiply through the formula twice.**
