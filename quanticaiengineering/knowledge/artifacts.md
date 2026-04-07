@@ -1,58 +1,212 @@
-# Artifacts — Advanced Guide
+# Artifacts — Complete Guide
 
 ## What Artifacts Do
 
-Artifacts are equippable items that provide **Aptitude bonuses** and **multiplicative power boosts**. They are one of the strongest multiplier sources in the game.
+Artifacts provide **three stacking power sources** to the fellow they're equipped on:
+1. **Artifact Aptitude** — Flat aptitude bonus (feeds into base power formula)
+2. **Artifact Skills** — Percentage power boosts (multiplicative)
+3. **Materia bonuses** — Additional random fellow attribute boosts per materia slot
 
-## Critical Rule: Reforging
+## Artifact Rarity & Base Stats
 
-**Artifact bonuses do NOT activate until the artifact is Reforged.** Many players equip artifacts and wonder why they see no power increase — they forgot to reforge.
+Higher rarity = higher base aptitude, more skill slots, more materia slots.
 
-- Use **Reforge Essential Oil** to activate artifact skills
-- Always reforge before equipping
+### UR Artifacts
 
-## Artifact Skill Types
+| Artifact | Base Apt | Skill Slots | Max Materia Slots |
+|----------|---------|-------------|-------------------|
+| Magic Lamp | 60 | 10 | **4** |
+| Kanna Plush | 50 | 10 | **4** |
+| Dragon Summon Horn | 55 | 10 | 3 |
+| Horn of Plenty | 55 | 10 | 3 |
+| Golden Apple | 50 | 10 | 3 |
+| Sapphire Crown | 45 | 8 | 1 |
+| Mermaid's Tear | 35 | 8 | 1 |
+| Mask of Nobility | 30 | 8 | 1 |
+| Cloak of Levitation | 25 | 8 | 1 |
+| Meowna Lisa | 20 | 8 | 1 |
 
-Artifact skills have aptitude types: **Brave, Diligent, Informed, Inspiring, Unfettered**
+**Note:** Magic Lamp and Kanna Plush are the top UR artifacts — highest aptitude + 4 materia slots.
 
-**The artifact's skill type must match the fellow's aptitude type** for maximum benefit. A Brave artifact on an Inspiring fellow wastes the type-specific bonus.
+### SSR Artifacts
 
-## Leveling Artifacts
+| Artifact | Base Apt | Skill Slots |
+|----------|---------|-------------|
+| Psychical Orbuculum | 16 | 6 |
+| Lucky Horseshoe | 14 | 6 |
+| Magic Pendant | 12 | 6 |
+| Master Key | 10 | 6 |
 
-- Use **Magic Ore** to level artifacts
-- Higher-tier artifacts cost more Magic Ore per level
-- **Every 10 Magic Ore spent creates +1 Aptitude point**
-- Higher level = higher multiplier bonus
+### SR Artifacts (8 known)
 
-## Artifact Strategy for Level 45+ Players
+| Tier | Artifacts | Base Apt | Skill Slots |
+|------|-----------|---------|-------------|
+| Higher SR | Invigorating Harp, Ancient Slate, Infinite Quiver, Craftsman Goggles | 8 | 5 |
+| Lower SR | Maid's Bell, Refined Anvil, Preliminary Textbook, Nocturnal Lantern | 6 | 4 |
 
-### Priority
-1. **Best artifacts on your main carry** — multiplicative, compounds with everything
-2. **Match types** — Brave artifacts on Brave fellows, etc.
-3. **Reforge immediately** — No reforge = no bonus
-4. **Level aggressively** — Each level increases the multiplier
+### R Artifacts
 
-### How Artifacts Interact with Other Systems
-Artifacts are multipliers, so they compound with:
-- Awakening % bonus
-- Advanced Blessing %
-- Stella category boost
+| Artifact | Base Apt | Skill Slots |
+|----------|---------|-------------|
+| Snow Boots | 4 | 3 |
+| Herbalist's Mortar | 4 | 3 |
+| Feeling Axe | 4 | 3 |
 
-Example: If your main carry has:
-- 1.3x from Awakening (3★)
-- 1.1x from Advanced Blessing
-- 1.15x from Artifacts
-- 1.2x from Stella
+### N Artifacts
 
-Total multiplier: 1.3 x 1.1 x 1.15 x 1.2 = **1.974x** (nearly double base power)
+| Artifact | Base Apt | Skill Slots |
+|----------|---------|-------------|
+| Kemono Drum | 2 | 2 |
+| Dwarf Hammer | 2 | 2 |
+| Goblin Club | 2 | 2 |
 
-Improving artifacts from 1.15x to 1.25x:
-New total: 1.3 x 1.1 x 1.25 x 1.2 = **2.145x**
+## Artifact Skills
 
-That single artifact improvement added +17% to your total multiplied power.
+Artifacts have multiple **skill slots** that provide percentage power boosts. You fill these slots by gambling with **oils**:
 
-### Artifact Sources
-- Adventure stage drops
-- Event rewards
-- Crafting from Unprocessed Druse
-- Guild Exchange Shop
+- Each skill slot rolls a random attribute (e.g., "SR Fellow Power %", "SSR Fellow Aptitude", "Inspiring Fellow Power %")
+- You have to gamble/reroll with oils until you get the attributes you want
+- Higher number of skill slots = more potential stacked bonuses
+
+### Skill Percentage Scaling
+
+The total skill % scales with the number of slots filled AND the artifact level. Examples from real accounts:
+
+| Artifact | Skills Filled | Total % | Aptitude Bonus | Artifact Lvl | Materia Lvl |
+|----------|--------------|---------|----------------|--------------|-------------|
+| Diablo Doll (UR) | 23 | +595% | +3,515K | 436 | 80 |
+| Magic Lamp (UR) | 16 | +388% | +3,425K | 436 | 80 |
+| Mio's Fan (UR, supp boost) | 11 | +276% | — | 61 | 40 |
+| Golden Apple (UR) | 10 | +233% | +300 | 31 | 10 |
+| Eter & Nal's Golden Apple (UR) | 10 | +232% | +124 | 11 | 1 |
+| Mescal Cape (Cloak of Levitation, UR) | 8 | +139% | +27 | 1 | 1 |
+| Mermaid's Tear (UR) | 8 | +140% | +35 | 0 | 0 |
+
+**Key observation:** Skill count scales with artifact level/materia progression. A Lv1 artifact has fewer/weaker skills than Lv436. The gap between 8 skills (140%) and 23 skills (595%) is 455% more multiplicative power.
+
+## Materia System
+
+Materias are separate items equipped into the artifact's materia slots. Each materia provides **random fellow attributes** when placed:
+- SR attributes (e.g., "+X% to SR Fellows")
+- SSR aptitude boosts
+- Category-specific boosts (Inspiring/Brave/Diligent/Informed/Unfettered)
+- Other random modifiers
+
+### Materia Leveling
+
+- **40 Magic Ores per materia level** (standard rate)
+- At very high artifact levels, cost increases (e.g., 70 ores/level at artifact Lv 436)
+- Each materia level improves the random bonus values
+
+### Materia Power Boost Unlocks
+
+At specific materia levels, you unlock **additional power boost slots** on the materia:
+
+| Materia Level | Unlock |
+|---------------|--------|
+| 10 | 1 random power boost (free roll) |
+| 20 | 2 random power boosts (must activate with Breakthrough Materia) |
+
+### Breakthrough Materia
+- **Activates** the Lv20 power boost slots
+- The power boost is **random** — you get whatever rolls
+- Used after materia reaches Lv20
+
+### Refine Materia
+- Obtained from **events only**
+- Gives **better power boosts** than Breakthrough alone
+- Used to reroll for higher-quality bonuses at the Lv10/Lv20 slots
+
+## Real Account Examples — Fellow Power Impact
+
+### Diablo Doll on Amaterasu (top-tier setup)
+- **With artifact:** 48,471,403,770
+- **Without artifact:** 39,884,181,012
+- **Increase:** +8,587,222,758 (**+21.5% total fellow power**)
+- Setup: 23 skills (595%), +3.5M aptitude, Lv 80 materia, artifact Lv 436
+
+### Magic Lamp on Kerr Bell and Ros
+- **With artifact:** 29,593,616,128
+- **Without artifact:** 24,309,553,921
+- **Increase:** +5,284,062,207 (**+21.7% total fellow power**)
+- Setup: 16 skills (388%), +3.4M aptitude, Lv 80 materia, artifact Lv 436
+
+### Mio's Fan on Mio (mid-investment)
+- **With artifact:** 4,820,520,706
+- **Without artifact:** 4,156,623,513
+- **Increase:** +663,897,193 (**+16%**)
+- Setup: 11 skills (276%), Lv 40 materia, Lv 61
+
+### Golden Apple on Ira (early-mid investment)
+- **With artifact:** 3,746,939,292
+- **Without artifact:** 3,427,525,513
+- **Increase:** +319,413,779 (**+9.3%**)
+- Setup: 10 skills (233%), +300 apt, Lv 10 materia, Lv 31
+
+### Eter & Nal's Golden Apple (minimal investment)
+- **With artifact:** 2,457,128,236
+- **Without artifact:** 2,275,719,102
+- **Increase:** +181,409,134 (**+8.0%**)
+- Setup: 10 skills (232%), +124 apt, Lv 1 materia, Lv 11
+
+### Mescal Cape / Cloak of Levitation (Lv1 baseline)
+- **With artifact:** 1,986,231,860
+- **Without artifact:** 1,897,339,727
+- **Increase:** +88,892,133 (**+4.7%**)
+- Setup: 8 skills (139%), +27 apt, Lv 1 materia, Lv 1
+
+### Mermaid's Tear / Pearl (Lv0 minimal)
+- **With artifact:** 932,670,449
+- **Without artifact:** 882,243,836
+- **Increase:** +50,426,613 (**+5.7%**)
+- Setup: 8 skills (140%), +35 apt, Lv 0 materia
+
+## Strategic Notes
+
+### Investment Scaling
+- **Early artifact (Lv1, Lv0 materia):** +5–8% fellow power
+- **Mid investment (Lv30–60, Lv10–40 materia):** +9–16% fellow power
+- **Endgame (Lv400+, Lv80 materia):** +21–22% fellow power
+- The gap between early and endgame artifact investment is roughly **4x** the multiplicative bonus
+
+### Magic Lamp + Kanna Plush Priority
+These are the two UR artifacts with **4 materia slots** (vs 3 or 1 for others). More materia slots = more stacked power sources. Prioritize these for your main carry.
+
+### Skill Gambling Strategy
+- Save Reforge Essential Oils for your main carry's artifact
+- Reroll skills until you get **matching category bonuses** for your carry's type
+- Inspiring carry? Target "Inspiring Fellow Power %" rolls
+- Don't waste oils on non-main fellows
+
+### Refine Materia Priority
+- Only use Refine Materia (event-exclusive) on your main carry's equipped artifact
+- Breakthrough Materia is for general use (still random but more common)
+
+### Cost Budget
+- **40 Magic Ores per materia level** (standard)
+- Endgame materia Lv 80 = ~3,200+ Magic Ores per materia on main carry
+- With 4 materia slots (Magic Lamp/Kanna Plush): ~12,800+ Magic Ores just for materias
+- Plus artifact leveling costs
+- **Magic Ore is a long-term grind** — budget carefully
+
+## Cross-System Interactions
+
+Artifact bonuses stack with:
+- Awakening stars (%)
+- Stella group bonuses (%)
+- SR Category Stella (%)
+- Advanced Blessing (%)
+- Family Stella power % (%)
+- Costume % bonuses
+- Fish % bonuses
+
+Artifact aptitude stacks with:
+- Born Aptitude (base)
+- Skill Pearls (Supreme/Outstanding/Ordinary Talent)
+- Expertise / Trading skill aptitude
+- Costume essence track aptitude
+- Family Stella aptitude
+- Stella group aptitude bonuses
+- Fish aptitude bonuses
+
+The +21.5% from Diablo Doll on Amaterasu is **multiplicative** with Empyrean Sound Stella (+175%), Advanced Blessing (+12.5%), Awakening (+60% at 6★), etc. These compound — not add.

@@ -60,6 +60,7 @@ Born Aptitude is the primary innate aptitude stat. UR Empyrean Sound fellows hav
 | Shlomo | Divine Gospel | VIP 7 (~110 apt) |
 | Mushimi | Uncrowned | |
 | Justitia | — | |
+| Magellan | The Elites | Casino event |
 
 ### SR
 | Fellow | Notes |
@@ -107,7 +108,7 @@ Born Aptitude is the primary innate aptitude stat. UR Empyrean Sound fellows hav
 | Crysta | The Elites | Golemore Mine |
 | Hakuren | — | |
 | Ida | Followers | (~70 apt) |
-| Jewlry | Followers | (~70 apt), Stella-based flexible blessing slots |
+| Jewlry | Followers | (~70 apt) |
 | Kaye | Otherworld Valiants | Summoned Shield (~75 apt) |
 | Lula | The Elites | Dungeon event |
 | Thalia | The Elites | Raphael's Stage |

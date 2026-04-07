@@ -19,11 +19,11 @@ The family has EMPTY slots that YOU choose which fellow to fill in, unlocked by 
 
 **Families with Family-Stella-Based Custom Slots:**
 - **Lancelot** (SSR→UR) — fully custom; advance Lancelot's family Stella to unlock more slots
-- **Hestia** (SSR→UR) — has custom slots; advance Hestia's family Stella to unlock more
-- **Magellan** — custom slots via family Stella
-- **Jewlry** — custom slots via family Stella
+- **Hestia** (SSR→UR) — has custom slots in addition to fixed Gabrael/Aegle/Ais Wallenstein/Bell Cranel
 
-These are gold for endgame because you can stack them all on your main carry.
+**Note:** Magellan and Jewlry are FELLOWS (Elites and Followers groups respectively), not families. Lancelot has them in her fixed blessing slots as fellows.
+
+These families are gold for endgame because you can stack them all on your main carry.
 
 ---
 
@@ -69,8 +69,9 @@ Freesia, Phinphynx, Master Tongxuan, Rimuru, Dionysia, Umbra, Lula, Paat
 
 ## SSR Families
 
-### Lancelot (SSR→UR, fully flexible)
-**Fully custom — every slot is family-Stella-based.** You choose all the fellows. Advance Lancelot's family Stella to unlock more slots. The most flexible family in the game.
+### Lancelot (SSR→UR)
+Fixed: Magellan (fellow, Elites), Jewlry (fellow, Followers)
+Plus **custom slots unlocked via family Stella** — you choose more fellows as you advance Lancelot's family Stella.
 
 ### Vlad (SSR)
 Kerr & Bel & Ros, Ether & NAL, Avar, Black, Aisha, Freesia (Stella-based unlock)
@@ -273,16 +274,14 @@ These families have **empty blessing slots** that unlock as you level THEIR fami
 
 | Family | Custom Slots |
 |--------|--------------|
-| **Lancelot** (SSR→UR) | All slots are custom (fully flexible) |
+| **Lancelot** (SSR→UR) | Custom slots via family Stella (fixed slots: Magellan, Jewlry as fellows) |
 | **Hestia** (SSR→UR) | Custom slots in addition to fixed (Gabrael, Aegle, Ais Wallenstein, Bell Cranel) |
-| **Magellan** | Custom slots via family Stella |
-| **Jewlry** | Custom slots via family Stella |
 
 **This is different from Fellow-Stella-based unlocks** (e.g., "Hermes (Stella-based)" in another family's list), where the slot is already assigned to a specific fellow but only activates after you level THAT fellow's Stella.
 
 ### Strategy: Custom Slot Families = Carry Multiplier Stack
 
-Each maxed Family Stella adds +120% power and +220 aptitude to its blessed fellow (UR Family Stella). If you have **Lancelot, Hestia, Magellan, AND Jewlry** all assigning their custom slots to your main carry, that's potentially **4 × +120% = +480%** stackable power buff that ANY type can use, regardless of category.
+Each maxed Family Stella adds +120% power and +220 aptitude to its blessed fellow (UR Family Stella). If you have **Lancelot AND Hestia** both assigning their custom slots to your main carry, that's potentially **2 × +120% = +240%** stackable power buff that ANY type can use, regardless of category.
 
 This is the only way Brave/Unfettered carries can partially compensate for missing the SR Category Stella (Rani/Elise/Liz/Angie).
 
