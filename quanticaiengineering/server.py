@@ -132,7 +132,8 @@ def chat():
         return jsonify({"error": str(exc), "status": "error", "timestamp": datetime.now().isoformat()}), 503
 
     try:
-        top_k = int(data.get("top_k", 5))
+        from config import TOP_K_DOCUMENTS
+        top_k = int(data.get("top_k", TOP_K_DOCUMENTS))
         t0 = time.time()
         result = rag.query(question=question, top_k=top_k, return_metadata=True)
         elapsed = round(time.time() - t0, 3)

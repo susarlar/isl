@@ -37,7 +37,11 @@
       "Bash(curl -s http://localhost:5000/ping)",
       "Bash(pip install:*)",
       "Bash(curl -s http://localhost:5000/health)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill:*)",
+      "Bash(APP_ENV=development PYTHONIOENCODING=utf-8 python -X utf8 server.py)",
+      "Bash(xargs -I {} taskkill //PID {} //F)"
     ]
   }
 }

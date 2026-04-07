@@ -180,6 +180,46 @@
 
 **Any family with more than 2 fellows of your main typing is a good investment**, regardless of whether they bless your main carry directly.
 
+## Quick Cross-System Summaries (Per Typing)
+
+These summaries combine fish + family + museum antique + Stella in one place for each typing.
+
+### Brave Quick Reference (Heracles, Leon, Freesia, Nyar, Beryl)
+**Best Brave Family Blessings:** Lina (Leon), Lilith (Leon, Andras), Holly (Leon, Tigirl), Mia (Leon, Mammon), Willo (Leon, Andras, Ira), Pengia (Leon, Andras), Curren (Freesia, Beryl), Mors (Freesia, Healora), Lud (Freesia, Heracles), Wadjetta (Freesia, Paat), Vlad (Freesia, Surena), Sylthel (Nyar), Athena (Heracles, Nyar), Mercuria (Heracles, Nyar), Nyar family (Heracles, Nyar, Freesia), Cranelia (Heracles).
+**Best Brave Museum Antique:** Sledge — gives Brave fellow aptitude, awake effect: per 500 educations gives % boost on Brave power.
+**Best Brave Fishing Spots:** Drakenberg Lake Center (Unfettered/Brave), Glacier Bay (Brave/Informed), and ocean top 5 fish (All Fellow %) for everyone.
+**Best Brave Fish:** Narwhal (double % Brave), Gold Pirarucu (double % Brave), Sea Butterfly (Brave aptitude → Brave %), Hermit Crab (Brave aptitude → Brave %).
+**Brave Stella Groups:** Empyrean Sound (Leon, Freesia, Nyar), Ancient Magi (Andras), Archdemons (Ira), Otherworld Valiants (Salvo), Diligent Dynamo (Tigirl, Paat), Followers (Emosen).
+**No SR Category Stella for Brave** — Brave loses the +30% category bonus that Inspiring/Diligent/Informed get.
+
+### Inspiring Quick Reference (Amaterasu, Tamamo, Kerr, Phinphynx)
+**Best Inspiring Family Blessings:** Phantanyl/Pthahnil (UR — Ama, Kerr, Phanes, Kanna, Gabrael), Sera (Ama, Kanna), Bridget (Ama, Elise), Kagura (Ama, Tamamo), Tsukuyomi (Ama, Tamamo), Futaba (Ama, Tamamo, Avril), Skogul (Tamamo), Loo (Tamamo, Sunna shared), Raphael (Tamamo), Vlad (Kerr, Black), Willo (Kerr), Phetia (Kerr, Phanes), Curren (Kerr), Mors (Phinphynx, Phanes), Lunaria (Phinphynx), Wadjetta (Phinphynx), Connie (Phinphynx), Cranelia (Phinphynx, Onikiri), Chitana (Phinphynx, Black, Lux).
+**Best Inspiring Museum Antique:** Oyster Trap — gives Inspiring fellow aptitude, awake effect: per 30 guild donations gives % boost on Inspiring power.
+**Best Inspiring Fishing Spots:** Village River (Inspiring), Unfrozen Sea Cave (Inspiring/Diligent), and ocean top 5 fish.
+**Best Inspiring Fish:** Axolotl (double % Inspiring), Barreleye Fish (double % Inspiring), Megakarp (Inspiring apt → %), Bonefish (Inspiring apt → %).
+**Inspiring SR Category Stella:** Rani AND Elise (the only typing with TWO).
+
+### Diligent Quick Reference (Sunna, Anpu, Master Tongxuan, Nemetona)
+**Best Diligent Family Blessings:** Sadako (Sunna, Jewlry), Bridget (Sunna, Nemetona), Bren (Sunna, Crysta), Loo (Sunna, Hakuren, Jewlry), Leopolda (Sunna, Nemetona), Lilith (Sunna, Acedia), Skogul (Anpu), Raphael (Anpu), Lina (Anpu, Jewlry), Usuri (Anpu), Alanna (Anpu), Hanamiya Rica (Anpu, Orivita), Wadjetta (Tongxuan, Lula), Pan Pan (Tongxuan, Lula), Bathery (Tongxuan), Cranelia (Tongxuan), Athena (Tongxuan).
+**Best Diligent Museum Antique:** Narwhal — gives Diligent fellow aptitude, awake effect: per 300 trade post opponents defeated gives % boost on Diligent power.
+**Best Diligent Fishing Spots:** Drakenberg Inner Lake (Diligent), Unfrozen Sea Cave (Inspiring/Diligent), and ocean top 5 fish.
+**Best Diligent Fish:** Snow Leopard Fish (double % Diligent), Pirarucu (double % Diligent), Comb Jelly (Diligent apt → %), Alligator Snapping Turtle (Diligent apt → %).
+**Diligent SR Category Stella:** Liz.
+
+### Informed Quick Reference (Neptune, Aegle, Ao Li, Nierus, Athena, Gabrael)
+**Best Informed Family Blessings:** Namiko (Aegle, Flos), Curren (Aegle), Squaky/Squeaky (Aegle), Bren (Aegle, Stephanie), Jin Yu (Aegle, Bubo), Alanna (Nierus), Baity (Nierus), Usuri (Nierus, Gabrael), Devileer (Nierus, Flos), Puffair (Nierus), Athena (Nierus, Stheno), Nirvana (UR — Neptune, Phanes, Shlomo).
+**Best Informed Museum Antique:** Bear-Eared Seal — gives Informed fellow aptitude, awake effect: per 100 field trips gives % boost on Informed power.
+**Best Informed Fishing Spots:** Drakenburg River Bank (Informed), Glacier Bay (Brave/Informed), and ocean top 5 fish.
+**Best Informed Fish:** Fin Whale (double % Informed), Star Anglerfish (double % Informed), Bloodbelly Comb Jelly (Informed apt → %), Anglerfish (Informed apt → %).
+**Informed SR Category Stella:** Angie.
+
+### Unfettered Quick Reference (Orivita, Hermes, Beelzebub, Mescal, Tomoe, Gale, Thora)
+**Best Unfettered Family Blessings:** Kosuzu (Avar, Orivita), Kagura (Orivita, Iori, Myner), Namiko (Orivita, Anne, Milim Nava), Puffair (Orivita, Avar), Holly (Orivita), Hanamiya Rica (Orivita, Anpu), Phetia (Beelzebub, Nip), Denier (Beelzebub, Hermes), Mia (Beelzebub, Elma), Curren (Beelzebub, Myner), Shuna (Rimuru, Beelzebub, Milim Nava), Devileer (Beelzebub).
+**Best Unfettered Museum Antique:** Mammoth — gives Unfettered fellow aptitude, awake effect: per X study tour rewards claimed gives % boost on Unfettered power.
+**Best Unfettered Fishing Spots:** Drakenberg Lake Center (Unfettered/Brave), Crushed Ice (Unfettered), and ocean top 5 fish.
+**Best Unfettered Fish:** Sea Angel (double % Unfettered), Drakenberg Monster (double % Unfettered), Goddess Sponge (Unfettered apt → %).
+**No SR Category Stella for Unfettered** — Unfettered loses the +30% category bonus.
+
 ## Newly Documented Families
 
 | Family | Rarity | Blesses |
