@@ -99,6 +99,30 @@ Dates consume **Date Chances**, and the game offers several distinct ways to spe
 ### Child Encounters and the School Task
 Meeting children on dates is the main way to supply the School building's orphan task requirements. Plane Tickets (2 guaranteed) and crystal travel (1 guaranteed) are the reliable sources; Succubus Tonic dates only occasionally yield children. If you're bottlenecked on School orphans, prioritize Plane Tickets over Succubus Tonic.
 
+## 🎯 How Blessing Points Accumulate (Per-Family, Not Shared)
+
+**Blessing Points are tracked separately for each family member.** There is no shared pool. When you date family X, the blessing points from that date are credited to X and only to X. When you date family Y, those points go to Y.
+
+### Concrete Example
+You go on **100 random Succubus Tonic dates**. RNG picks who you meet each time:
+- **Family X** shows up 3 times → Family X gets **3 dates × (X's blessing power × 4.52) = 3 × X's per-date BP**
+- **Family Y** shows up 50 times → Family Y gets **50 dates' worth of BP**
+- **Family Z** shows up 0 times → Family Z gets **nothing** from those 100 dates
+
+**The family you dated most gets the most blessing points.** Random dates distribute according to whoever RNG feeds you — so Succubus Tonic dates are efficient for bulk BP farming across your roster but inefficient if you want to concentrate points on one specific family member.
+
+### Why Targeted Dates Beat Random Dates for Concentration
+If your priority is pushing **one specific family's** Blessing Power or Advanced Blessing (because that family is the booster for your main carry), use **targeted date systems** so every date's BP goes to that family:
+
+1. **Plane Tickets** — you pick the family, every ticket dumps all the BP on that family (plus 2 guaranteed children)
+2. **Crystal-based travel** — you pick the family, every trip goes to that family (plus 1 guaranteed child)
+3. **Sailing Trip / Airship Journey** — you pick the family
+
+Use Succubus Tonic random dates when you want to **spread** BP across your roster (because it's the cheapest), and use targeted travel when you want to **concentrate** BP on one family.
+
+### Implication for Blessing Power Gifts
+Because BP is per-family, the value of a Blessing Power gift on family X depends entirely on **how many times you're going to date X in the future**. A +2 Blessing Power gift on a family you date once per week gives you +2 × 4.52 × 1 = +9 BP per week. The same gift on a family you date daily gives you +9 × 7 = +63 BP per week. Always gift the family you date most often.
+
 ## Blessing Points Formula (Community-Verified)
 
 Blessing Points earned per date scale **linearly** with the family member's Blessing Power:

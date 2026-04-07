@@ -10,7 +10,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #1a1333;
             min-height: 100vh;
-            padding: 20px;
+            padding: 24px 20px 60px;
             position: relative;
         }
         body::before {
@@ -21,7 +21,7 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.5;
+            opacity: 0.85;
             z-index: 0;
             pointer-events: none;
         }
@@ -29,91 +29,127 @@
             max-width: 720px;
             margin: 0 auto;
             background: transparent;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             position: relative;
             z-index: 1;
         }
+        /* Floating top-right nav, matches chat page */
         .header {
-            background: linear-gradient(135deg, rgba(45, 27, 105, 0.85) 0%, rgba(17, 153, 142, 0.85) 100%);
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 5;
+            background: transparent;
             color: white;
-            padding: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(6px);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+            font-size: 12px;
+            display: block;
+            padding: 0;
         }
-        .header h1 { font-size: 22px; font-weight: 600; }
+        .header h1 { display: none; }
         .header .nav a {
             color: white;
-            text-decoration: none;
-            font-size: 13px;
-            margin-left: 16px;
-            opacity: 0.9;
+            text-decoration: underline;
+            font-size: 12px;
+            margin-left: 14px;
+            opacity: 0.95;
         }
-        .header .nav a:hover { opacity: 1; text-decoration: underline; }
+        .header .nav a:hover { opacity: 1; }
+
+        /* Body becomes a transparent passthrough */
         .body {
-            padding: 28px;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(6px);
+            padding: 0;
+            background: transparent;
         }
+
+        /* Intro panel = frosted bubble */
         .intro {
-            background: rgba(240, 249, 248, 0.9);
-            border-left: 4px solid #11998e;
-            padding: 14px 16px;
-            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 16px 20px;
             font-size: 13px;
-            color: #444;
-            margin-bottom: 24px;
+            color: #1a1333;
+            margin-bottom: 20px;
             line-height: 1.5;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        .field { margin-bottom: 18px; }
+
+        /* Form is a frosted bubble too */
+        form#intakeForm {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .field { margin-bottom: 16px; }
         label {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            color: #555;
+            color: #1a1333;
             margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         input, select, textarea {
             width: 100%;
-            padding: 11px 13px;
-            border: 2px solid #e0e0e0;
+            padding: 11px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
             border-radius: 8px;
             font-size: 14px;
             outline: none;
             font-family: inherit;
-            transition: border-color 0.2s;
+            color: #1a1333;
+            transition: background 0.2s, border-color 0.2s;
         }
-        input:focus, select:focus, textarea:focus { border-color: #11998e; }
-        textarea { resize: vertical; min-height: 70px; }
+        input::placeholder, textarea::placeholder { color: rgba(26, 19, 51, 0.55); }
+        input:focus, select:focus, textarea:focus {
+            border-color: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        textarea { resize: vertical; min-height: 64px; }
+
         button {
             padding: 13px 28px;
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
+            background: rgba(255, 255, 255, 0.55);
+            color: #1a1333;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 28px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
+            transition: background 0.2s;
         }
-        button:disabled { opacity: 0.6; cursor: not-allowed; }
+        button:hover:not(:disabled) { background: rgba(255, 255, 255, 0.75); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Action plan result = frosted bubble */
         .result {
-            margin-top: 28px;
-            padding: 20px 24px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #11998e;
+            margin-top: 24px;
+            padding: 22px 26px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
             font-size: 14px;
             line-height: 1.6;
-            color: #333;
+            color: #1a1333;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         .result h1, .result h2, .result h3, .result h4 {
             margin: 14px 0 8px;
-            color: #2d1b69;
+            color: #1a1333;
         }
         .result h1 { font-size: 19px; }
         .result h2 { font-size: 17px; }
@@ -122,20 +158,20 @@
         .result p { margin: 8px 0; }
         .result ul, .result ol { margin: 8px 0 8px 22px; }
         .result li { margin: 4px 0; }
-        .result strong { color: #11998e; }
+        .result strong { color: #1a1333; font-weight: 700; }
         .result code {
-            background: rgba(17, 153, 142, 0.12);
-            color: #0d6b63;
+            background: rgba(26, 19, 51, 0.12);
+            color: #1a1333;
             padding: 1px 5px;
             border-radius: 4px;
             font-size: 0.92em;
             font-family: ui-monospace, Menlo, Consolas, monospace;
         }
         .result blockquote {
-            border-left: 3px solid #11998e;
+            border-left: 3px solid rgba(26, 19, 51, 0.5);
             padding: 4px 12px;
             margin: 8px 0;
-            color: #555;
+            color: #2a2148;
             font-style: italic;
         }
         .result table {
@@ -145,22 +181,22 @@
             font-size: 13px;
         }
         .result th, .result td {
-            border: 1px solid #dde;
+            border: 1px solid rgba(26, 19, 51, 0.2);
             padding: 7px 11px;
             text-align: left;
             vertical-align: top;
         }
         .result th {
-            background: rgba(17, 153, 142, 0.12);
-            color: #0d6b63;
+            background: rgba(26, 19, 51, 0.12);
+            color: #1a1333;
             font-weight: 600;
         }
         .result tr:nth-child(even) td {
-            background: rgba(0, 0, 0, 0.025);
+            background: rgba(255, 255, 255, 0.18);
         }
         .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #11998e;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             width: 32px;
             height: 32px;
@@ -169,19 +205,34 @@
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
         .sources {
-            margin-top: 16px;
+            margin-top: 12px;
             font-size: 12px;
-            color: #666;
+            color: rgba(26, 19, 51, 0.75);
+            padding: 0 6px;
         }
-        .sources strong { color: #11998e; }
+        .sources strong { color: #1a1333; }
+
+        /* Followup chat — match the chat page bubbles */
+        #followupArea {
+            margin-top: 24px;
+        }
+        #followupForm input {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #1a1333;
+            border-radius: 28px;
+            padding: 13px 18px;
+        }
+        #followupForm button {
+            border-radius: 28px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Fellow Power Intake</h1>
             <div class="nav">
-                <span style="opacity:0.9;font-size:13px;">{{ username }}</span>
+                <span>Logged in as <strong>{{ username }}</strong></span>
                 <a href="/">← Chat</a>
                 <a href="/logout">Logout</a>
             </div>
@@ -285,7 +336,7 @@
         </div>
     </div>
 
-    <script src="/static/markdown.js?v=4"></script>
+    <script src="/static/markdown.js?v=5"></script>
     <script>
         const form = document.getElementById('intakeForm');
         const btn = document.getElementById('submitBtn');
@@ -355,30 +406,36 @@
 
         function appendFollowupMessage(role, contentHtml) {
             const wrap = document.createElement('div');
-            wrap.style.margin = '12px 0';
-            wrap.style.padding = '12px 14px';
-            wrap.style.borderRadius = '8px';
+            wrap.style.margin = '14px 0';
+            wrap.style.padding = '16px 20px';
+            wrap.style.borderRadius = '12px';
+            wrap.style.background = 'rgba(255, 255, 255, 0.5)';
+            wrap.style.backdropFilter = 'blur(10px)';
+            wrap.style.webkitBackdropFilter = 'blur(10px)';
+            wrap.style.border = '1px solid rgba(255, 255, 255, 0.4)';
+            wrap.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
             if (role === 'user') {
-                wrap.style.background = 'rgba(45, 27, 105, 0.08)';
-                wrap.style.borderLeft = '3px solid #2d1b69';
-            } else {
-                wrap.style.background = '#f8f9fa';
-                wrap.style.borderLeft = '3px solid #11998e';
+                wrap.style.maxWidth = '85%';
+                wrap.style.marginLeft = 'auto';
             }
             const label = document.createElement('div');
             label.style.fontSize = '11px';
             label.style.fontWeight = '600';
             label.style.textTransform = 'uppercase';
-            label.style.color = role === 'user' ? '#2d1b69' : '#0d6b63';
+            label.style.letterSpacing = '0.5px';
+            label.style.color = '#1a1333';
+            label.style.opacity = '0.7';
             label.style.marginBottom = '6px';
             label.textContent = role === 'user' ? 'You' : 'Advisor';
             wrap.appendChild(label);
             const body = document.createElement('div');
             body.className = 'result';
             body.style.background = 'transparent';
+            body.style.backdropFilter = 'none';
             body.style.border = 'none';
             body.style.padding = '0';
             body.style.margin = '0';
+            body.style.boxShadow = 'none';
             body.innerHTML = contentHtml;
             wrap.appendChild(body);
             followupMessages.appendChild(wrap);
