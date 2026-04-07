@@ -14,14 +14,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             position: relative;
             background: #1a1333;
+            overflow: hidden;
         }
-        /* Background image at 50% opacity so the dark base shows through */
+        /* Background image — art is the star of the show */
         body::before {
             content: "";
             position: fixed;
@@ -30,51 +29,50 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.5;
+            opacity: 0.85;
             z-index: 0;
             pointer-events: none;
         }
 
+        /* Full-viewport container, no card/box, no background */
         .container {
-            width: 100%;
-            max-width: 900px;
-            background: transparent;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
+            position: fixed;
+            inset: 0;
             display: flex;
             flex-direction: column;
-            height: 90vh;
-            max-height: 800px;
-            position: relative;
             z-index: 1;
+            background: transparent;
         }
 
+        /* Floating nav — top right, just text */
         .header {
-            background: linear-gradient(135deg, rgba(45, 27, 105, 0.85) 0%, rgba(17, 153, 142, 0.85) 100%);
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            z-index: 3;
+            background: transparent;
             color: white;
-            padding: 24px;
-            text-align: center;
-            backdrop-filter: blur(6px);
+            text-align: right;
+            padding: 0;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
         }
-
-        .header h1 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
+        .header h1 { display: none; }
+        .header p { display: none; }
 
         .chat-container {
             flex: 1;
             overflow-y: auto;
-            padding: 24px;
+            padding: 80px 24px 120px;
             background: transparent;
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
         }
+        /* Hide scrollbar visual noise, keep scrolling */
+        .chat-container::-webkit-scrollbar { width: 6px; }
+        .chat-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 3px; }
 
         .message {
             margin-bottom: 20px;
@@ -105,16 +103,22 @@
         }
 
         .message.user .message-bubble {
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
-            color: white;
+            background: rgba(255, 255, 255, 0.5);
+            color: #1a1333;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .message.assistant .message-bubble {
-            background: rgba(255, 255, 255, 0.92);
-            color: #333;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.5);
+            color: #1a1333;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             text-align: left;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
         .message.assistant .message-bubble h1,
         .message.assistant .message-bubble h2,
@@ -263,86 +267,62 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* Floating input pinned to bottom of viewport, no panel background */
         .input-container {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.85);
-            border-top: 1px solid rgba(224, 224, 224, 0.6);
-            backdrop-filter: blur(6px);
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: 880px;
+            padding: 0;
+            background: transparent;
+            border-top: none;
+            z-index: 5;
         }
 
         .input-form {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         #questionInput {
             flex: 1;
-            padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 24px;
+            padding: 14px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 28px;
             font-size: 14px;
             outline: none;
-            transition: border-color 0.3s;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #1a1333;
+            transition: background 0.2s, border-color 0.2s;
         }
-
+        #questionInput::placeholder { color: rgba(26, 19, 51, 0.6); }
         #questionInput:focus {
-            border-color: #11998e;
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.65);
         }
 
         #sendButton {
-            padding: 12px 32px;
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
-            color: white;
-            border: none;
-            border-radius: 24px;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.5);
+            color: #1a1333;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 28px;
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.2s;
         }
+        #sendButton:hover:not(:disabled) { background: rgba(255, 255, 255, 0.7); }
+        #sendButton:disabled { opacity: 0.5; cursor: not-allowed; }
 
-        #sendButton:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
-        }
-
-        #sendButton:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .example-questions {
-            padding: 12px 20px;
-            background: rgba(248, 249, 250, 0.85);
-            border-top: 1px solid rgba(224, 224, 224, 0.6);
-            backdrop-filter: blur(6px);
-        }
-
-        .example-questions-title {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .example-button {
-            display: inline-block;
-            margin: 4px;
-            padding: 6px 12px;
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 16px;
-            font-size: 12px;
-            color: #11998e;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .example-button:hover {
-            background: #11998e;
-            color: white;
-            border-color: #11998e;
-        }
+        /* Example questions panel removed from layout */
+        .example-questions { display: none; }
 
         .error-message {
             background: #f8d7da;
@@ -357,12 +337,10 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Fellow Power Advisor</h1>
-            <p>Isekai: Slow Life — Advanced Strategy for Level 45+ Players</p>
-            <div style="margin-top:12px;font-size:12px;opacity:0.95;">
+            <div style="font-size:12px;">
                 <span>Logged in as <strong>{{ username }}</strong></span>
                 &nbsp;·&nbsp;
-                <a href="/intake" style="color:white;text-decoration:underline;">Intake Mode (new players)</a>
+                <a href="/intake" style="color:white;text-decoration:underline;">Intake Mode</a>
                 &nbsp;·&nbsp;
                 <a href="/logout" style="color:white;text-decoration:underline;">Logout</a>
             </div>
@@ -374,22 +352,6 @@
                     Welcome, adventurer! I'm your Fellow Power Advisor. I specialize in advanced optimization for level 45+ players — Fellow Power calculations, multiplier stacking, awakening strategy, Stella, fishing, and more. What would you like to optimize?
                 </div>
             </div>
-        </div>
-
-        <div class="example-questions">
-            <div class="example-questions-title">Try asking:</div>
-            <button class="example-button" onclick="askExample('How should I allocate Skill Pearls for my main carry?')">
-                Skill Pearl allocation
-            </button>
-            <button class="example-button" onclick="askExample('What is the best awakening priority order?')">
-                Awakening strategy
-            </button>
-            <button class="example-button" onclick="askExample('How does Stella compound with other multipliers?')">
-                Stella stacking
-            </button>
-            <button class="example-button" onclick="askExample('Which fellows have the highest base aptitude?')">
-                Fellow tier list
-            </button>
         </div>
 
         <div class="input-container">
@@ -406,7 +368,7 @@
         </div>
     </div>
 
-    <script src="/static/markdown.js?v=4"></script>
+    <script src="/static/markdown.js?v=5"></script>
     <script>
         const chatContainer = document.getElementById('chatContainer');
         const questionForm = document.getElementById('questionForm');

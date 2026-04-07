@@ -1,5 +1,30 @@
 # Museum Antiques & Trophies — Guild Guide
 
+## 🎯 Quick Answer: Which Antiques To Max
+
+**Max the antique that matches your main typing first. Each typing has exactly one dedicated antique:**
+
+| Your Main Typing | Antique To Max | What It Gives |
+|------------------|----------------|---------------|
+| **Inspiring** | **Oyster Trap** (also called "Trapped Oyster") | Inspiring fellow aptitude + % Inspiring power on awake |
+| **Diligent** | **Narwhal** | Diligent fellow aptitude + % Diligent power on awake |
+| **Brave** | **Sledge** | Brave fellow aptitude + % Brave power on awake |
+| **Informed** | **Bear-Eared Seal** | Informed fellow aptitude + % Informed power on awake |
+| **Unfettered** | **Mammoth** | Unfettered fellow aptitude + % Unfettered power on awake |
+
+**Then** push these three event-pass antiques that boost ALL fellows regardless of typing (so they're universally valuable):
+- **Gold Poker** (Casino on Yacht event pass)
+- **Medal of 15 Trials** (Cloud Kingdom event pass)
+- **Mysterious Cauldron** (Penglai event pass)
+
+**And** max these two excavation antiques for their SSR/UR targeting (only if you have them unlocked via Frozen Abyss / Ice Shipwreck caves):
+- **Dragon** — UR(+) fellow aptitude + UR(+) fellow power %
+- **Mural** — SSR(+) fellow aptitude + SSR(+) fellow power %
+
+Spend **Gold points** (the highest upgrade currency) exclusively on your main typing's antique. Spend **Silver points** on the three all-fellow event pass antiques. Spend **Bronze points** freely across everything else. See the sections below for mechanics and caves.
+
+---
+
 > Source: Guild guide. The museum has TWO separate systems: **Trophies** (from rankings/events) and **Antiques** (from the excavation minigame).
 
 ## Two Separate Systems
