@@ -59,7 +59,7 @@ Skill Pearls upgrade **Talent-based Aptitude skills** on individual fellows, dir
 | Source | Amount | Frequency |
 |--------|--------|-----------|
 | Event point shops | 1-5 per event (5,000 points each) | Per event cycle |
-| Sea Fishing ranking | Up to 15 (Rank 1) | Per fishing event |
+| Fishing event rankings | Up to 15 (Rank 1) | Per fishing event |
 | Crafting | Variable | Ongoing |
 | Battle Pass | Variable | Per season |
 | Ranking rewards | Variable | Competitive events |

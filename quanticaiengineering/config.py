@@ -109,7 +109,10 @@ if os.getenv("APP_ENV") != "test":
             "Add it to your .env file or set LLM_PROVIDER=anthropic to use Claude instead."
         )
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0.1"))
-MAX_TOKENS = int(os.getenv("MAX_TOKENS", "1024"))
+# 1024 was truncating intake tables mid-row. 3000 gives enough headroom for
+# a full prioritized action plan with tables and citations without blowing
+# up cost (Haiku is cheap).
+MAX_TOKENS = int(os.getenv("MAX_TOKENS", "3000"))
 TOP_P = float(os.getenv("TOP_P", "0.9"))
 
 # Groq model options with characteristics

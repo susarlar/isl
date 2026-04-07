@@ -23,6 +23,35 @@ window.renderMarkdown = function (raw) {
         "<pre><code>" + code.replace(/\n/g, "&#10;") + "</code></pre>"
     );
 
+    // GFM tables: header | header \n --- | --- \n row | row \n...
+    // We detect a table block by a header line, a separator line of dashes,
+    // and one or more data lines. Process before headers/lists so the pipes
+    // don't get mangled.
+    text = text.replace(
+        /(^|\n)((?:\|?[^\n]*\|[^\n]*\|?\n)(?:\|?\s*:?-+:?\s*\|[\s:\-|]*\n)((?:\|?[^\n]*\|[^\n]*\|?(?:\n|$))+))/g,
+        (match, lead, block) => {
+            const lines = block.trim().split("\n").filter(Boolean);
+            if (lines.length < 2) return match;
+            const splitRow = (row) =>
+                row.replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+            const headers = splitRow(lines[0]);
+            const rows = lines.slice(2).map(splitRow);
+            let out = "<table><thead><tr>";
+            headers.forEach((h) => { out += "<th>" + h + "</th>"; });
+            out += "</tr></thead><tbody>";
+            rows.forEach((r) => {
+                out += "<tr>";
+                // Pad/truncate to header length
+                for (let i = 0; i < headers.length; i++) {
+                    out += "<td>" + (r[i] || "") + "</td>";
+                }
+                out += "</tr>";
+            });
+            out += "</tbody></table>";
+            return lead + out;
+        }
+    );
+
     // Inline code `...`
     text = text.replace(/`([^`\n]+)`/g, "<code>$1</code>");
 
@@ -63,7 +92,7 @@ window.renderMarkdown = function (raw) {
     const wrapped = blocks.map((block) => {
         const trimmed = block.trim();
         if (!trimmed) return "";
-        if (/^<(h\d|ul|ol|pre|blockquote)/.test(trimmed)) {
+        if (/^<(h\d|ul|ol|pre|blockquote|table)/.test(trimmed)) {
             return trimmed;
         }
         return "<p>" + trimmed.replace(/\n/g, "<br>") + "</p>";

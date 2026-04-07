@@ -15,11 +15,11 @@ Each building provides up to three distinct bonuses to fellows of its matching t
 ### 1. Building Service Level (Flat Power)
 A flat power bonus bought directly with **Gold**. Every tap raises the Building Service Level, which raises the flat power contribution to fellows of that building's typing.
 
-- **Pricing:** Diminishing returns — each tap costs more than the last
+- **Pricing:** Diminishing returns — each tap costs more than the last. **The higher your current Service Level, the more expensive the next tap is.**
 - **Appears in the power breakdown as:** `Building Service Level +XXX`
 - **Verified value:** +157.1M is seen on 4 of the 7 verified fellow snapshots, showing a well-developed Inspiring-side village stack
 - **Applies to:** All fellows whose typing matches the building's typing
-- **Strategy:** Keep tapping until the marginal gold cost exceeds your income — this is pure gold → power conversion with no RNG
+- **Strategy:** Push the buildings where the current Service Level is **LOWEST** first — those taps are the cheapest and give the most flat power per gold spent. High-Service-Level buildings should only be pushed when all their siblings are caught up.
 
 ### 2. Building Training (Aptitude Gacha)
 A gacha-style system that raises the **aptitude** contribution of fellows matching the building's typing. This is the "Building Training" line that appears in both the flat aptitude sources and the Σ% breakdown.
@@ -75,11 +75,13 @@ Buildings level up by consuming **Building Upgrade Blueprints** (a resource obta
 
 ## Priority Order
 
-When investing gold into buildings for fellow power:
+When investing gold into buildings for fellow power, always restrict to **buildings whose typing matches your main carry**, then within that set:
 
-1. **Building Service Level** on matching-typing buildings — deterministic, no RNG, pure gold → flat power
+1. **Push the LOWEST-Service-Level buildings first** — cost scales with current level, so the cheapest marginal power-per-gold lives on whichever building you've pushed the least. Level up the laggards before adding more to your already-pushed buildings.
 2. **Building Training (aptitude gacha)** — aptitude is multiplied by everything else so it scales hard
 3. **Building Appearance (power % gacha)** — additive into Σ% pool, high value on well-developed fellows
+
+**Anti-pattern:** Don't pour gold into your already-highest-Service-Level building. Each successive tap there is more expensive than the taps you could have taken on any under-leveled sibling of the same typing.
 
 If your main carry is Inspiring, do all three tracks on every Inspiring-tagged building. Ignore the tracks on other-typed buildings until you've capped the matching ones.
 

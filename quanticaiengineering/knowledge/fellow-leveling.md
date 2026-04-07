@@ -73,7 +73,7 @@ These are passive boosts to building operations — important for Gold income sc
 ### Crystal Farming Priority
 - **Event shops** — Usually the cheapest source
 - **Guild Exchange** — Daily purchases
-- **Sea Fishing ranking** — Competitive but rewarding
+- **Fishing event rankings** — Competitive but rewarding
 - **Fountain of Wishes** — Low priority (2.1% Acquaint Fragment rate, not crystals)
 
 ## Power Scaling Example

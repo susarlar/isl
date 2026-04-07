@@ -62,6 +62,43 @@ Blessing Power items are rarer than Intimacy items. Spend them wisely.
 | Sailing Trip | Crystals | Blessing Points + 1 child |
 | Airship Journey | Perfume | Blessing Points + twins |
 
+## Date Chances and Travel Types
+
+Dates consume **Date Chances**, and the game offers several distinct ways to spend them. Each has a different cost structure and a different guarantee about who you'll meet on the trip.
+
+### Succubus Tonic — Random-Family Dates
+**Succubus Tonic** is the primary Date Chance currency. Each tonic grants **3 Date Chances**. Once you have chances available, you can go on **random dates** with any eligible family.
+
+- **Cost per chance:** 1/3 of a Succubus Tonic
+- **Target:** Random family member (you don't pick who)
+- **Guarantee:** None — you may or may not encounter a child during the date
+- **Best for:** Bulk Blessing Point farming against whoever RNG gives you
+
+### Plane Tickets — Family-Targeted Trips
+**Plane Tickets** let you **choose** which family you're traveling with, and guarantee meeting **2 children** on the trip.
+
+- **Cost per trip:** 1 Plane Ticket
+- **Target:** A specific family you pick
+- **Guarantee:** **2 children guaranteed per trip** — huge for School tasks that require orphans
+- **Best for:** Knocking out the School orphan intake requirement fast, targeting your highest-Blessing-Power family for BP farming
+
+### Crystal-Based Travel — Guaranteed Child Encounter
+**Crystal travel** is a separate date path that uses **Crystals** to travel with a family you select. Unlike random Succubus Tonic dates, crystal travel **guarantees at least one child encounter** during the date.
+
+- **Cost per trip:** Crystals (escalating cost)
+- **Cost scaling:** **The more you click, the more expensive each successive trip becomes** — diminishing returns in the same way building taps do
+- **Target:** A specific family you pick
+- **Guarantee:** At least **1 child per date**
+- **Best for:** Targeted child-encounter farming when you've used up Plane Tickets but still need orphans for School, and you're crystal-rich
+
+### Priority Between the Three
+1. **Burn your daily Plane Tickets first** — guaranteed 2 children per trip with family targeting is the best value
+2. **Then use Succubus Tonic dates** against your highest-Blessing-Power family (random target, but keep pressing because tonic is renewable)
+3. **Use crystal travel as a top-up** for child encounters when you still need orphans — stop when the escalating cost makes it uneconomical vs other crystal uses
+
+### Child Encounters and the School Task
+Meeting children on dates is the main way to supply the School building's orphan task requirements. Plane Tickets (2 guaranteed) and crystal travel (1 guaranteed) are the reliable sources; Succubus Tonic dates only occasionally yield children. If you're bottlenecked on School orphans, prioritize Plane Tickets over Succubus Tonic.
+
 ## Blessing Points Formula (Community-Verified)
 
 Blessing Points earned per date scale **linearly** with the family member's Blessing Power:
@@ -165,6 +202,9 @@ Because costs grow ~1.4% per level while bonuses stay flat, **spreading blessing
 
 ### Date Strategy
 - **Date your highest Blessing Power family members** — 4.52x means every point of BP translates directly to more income
+- **Plane Tickets first** — family-targeted + 2 children guaranteed, best for School orphan intake (see "Date Chances and Travel Types" above)
+- **Succubus Tonic** provides 3 random-target Date Chances per tonic — use on bulk BP farming
+- **Crystal-based travel** guarantees 1 child encounter but costs more per click — use as a top-up only
 - **Sailing Trips** are crystal-efficient for Blessing Points
 - **Airship Journeys** give twins (2 orphans for School) + Blessing Points
 - CG dates give +20% bonus but are random — don't try to optimize for this, just date consistently

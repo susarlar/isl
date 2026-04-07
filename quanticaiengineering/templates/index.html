@@ -154,6 +154,27 @@
             color: #555;
             font-style: italic;
         }
+        .message.assistant .message-bubble table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+        .message.assistant .message-bubble th,
+        .message.assistant .message-bubble td {
+            border: 1px solid #dde;
+            padding: 6px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .message.assistant .message-bubble th {
+            background: rgba(17, 153, 142, 0.12);
+            color: #0d6b63;
+            font-weight: 600;
+        }
+        .message.assistant .message-bubble tr:nth-child(even) td {
+            background: rgba(0, 0, 0, 0.025);
+        }
 
         .sources {
             margin-top: 12px;
@@ -385,7 +406,7 @@
         </div>
     </div>
 
-    <script src="/static/markdown.js"></script>
+    <script src="/static/markdown.js?v=3"></script>
     <script>
         const chatContainer = document.getElementById('chatContainer');
         const questionForm = document.getElementById('questionForm');

@@ -16,13 +16,13 @@
 
 | Source | Amount | Frequency |
 |--------|--------|-----------|
-| Sea Fishing event shop | 1-5 (5,000 pts each) | Per fishing event |
-| Sea Fishing ranking (Rank 1) | 15 | Per fishing event |
+| Fishing event shop | 1-5 (5,000 pts each) | Per fishing event |
+| Fishing event ranking (Rank 1) | 15 | Per fishing event |
 | Event rewards | Variable | Per event |
 | Battle Pass | Variable | Per season |
 | Crafting | Variable | Ongoing |
 
-**Priority:** Sea Fishing ranking > Event shops > Battle Pass > Crafting
+**Priority:** Fishing event ranking > Event shops > Battle Pass > Crafting
 
 ## Crystal Ores (Limit Breaks)
 
@@ -30,11 +30,10 @@
 |--------|--------|-----------|
 | Event shops | Variable | Per event |
 | Guild Exchange Shop | Limited daily | Daily |
-| Sea Fishing ranking | Up to 40 Bravery Ore (Rank 1) | Per fishing event |
+| Fishing event ranking | Up to 40 Bravery Ore (Rank 1) | Per fishing event |
 | Adventure stage drops | Variable | Ongoing |
-| Sea Fishing event shop | (1,500 pts each) | Per fishing event |
 
-**Priority:** Guild Exchange (daily) > Event shops > Sea Fishing > Adventure
+**Priority:** Guild Exchange (daily) > Event shops > Fishing event ranking > Adventure
 
 ## Magic Ore (Artifacts)
 

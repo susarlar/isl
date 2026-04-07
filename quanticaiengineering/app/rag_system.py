@@ -57,7 +57,7 @@ class IsekaiRAGSystem:
         top_k: int = TOP_K_DOCUMENTS,
         enable_reranking: bool = False,
         temperature: float = 0.1,
-        max_tokens: int = 1024,
+        max_tokens: int = 3000,
         provider: Optional[str] = None,
     ):
         """

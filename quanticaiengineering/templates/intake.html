@@ -138,6 +138,26 @@
             color: #555;
             font-style: italic;
         }
+        .result table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 14px 0;
+            font-size: 13px;
+        }
+        .result th, .result td {
+            border: 1px solid #dde;
+            padding: 7px 11px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .result th {
+            background: rgba(17, 153, 142, 0.12);
+            color: #0d6b63;
+            font-weight: 600;
+        }
+        .result tr:nth-child(even) td {
+            background: rgba(0, 0, 0, 0.025);
+        }
         .spinner {
             border: 3px solid #f3f3f3;
             border-top: 3px solid #11998e;
@@ -247,7 +267,7 @@
         </div>
     </div>
 
-    <script src="/static/markdown.js"></script>
+    <script src="/static/markdown.js?v=3"></script>
     <script>
         const form = document.getElementById('intakeForm');
         const btn = document.getElementById('submitBtn');

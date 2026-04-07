@@ -315,19 +315,6 @@ Because Advanced Bait is hard-capped at one per day, the rarity of the fish you 
 - Events: 1,200 Flower Tickets/unit (Blossoming Wealth)
 - Events: 50 Camp Coupons/unit (Camping with A Slime)
 
-## Sea Fishing (Event-Based)
-
-Separate from regular fishing. Sea critters provide **flat Fellow Power only** (2K–80K range).
-
-| Bait | Points | Cost | Daily Limit |
-|------|--------|------|-------------|
-| Fruit Paste Bait | +300 | Free | 10 |
-| Shrimp Bait | +600 | 20 Crystals | 20 |
-| Fake Fish Bait | +1,000 | 50 Crystals | 10 |
-| Glowing Bait | +1,200 | 100 Crystals | 5 |
-
-Sea Fishing event shop sells Skill Pearls (5,000 pts) — buy these first.
-
 ## Fish Combinations
 
 Specific fish pairs/trios unlock Combination Skills (additional bonuses). Combination names are listed by rank (SSR, SR, R, N) but detailed skill data is incomplete in public sources.
@@ -417,4 +404,4 @@ The 5 ocean % fish should be every player's top fishing priority regardless of m
 - [ ] Use all free baits daily
 - [ ] Prioritize catching fish that upgrade your % power skills
 - [ ] Check Fish Combination Encyclopedia for combos you're close to completing
-- [ ] During Sea Fishing events: buy Skill Pearls from event shop first
+- [ ] Use your daily Advanced Bait at your priority fishing spot
