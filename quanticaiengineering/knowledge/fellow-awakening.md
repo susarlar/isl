@@ -84,23 +84,36 @@ Similarly, 5★ and 6★ require multiple 4★ and 5★ fellows respectively.
 
 ## Awakening Priority Order
 
-### Tier 1: Awaken First (Main Carry)
-Choose ONE of these based on your account:
-- **Neptune** (UR, 120 apt) — Best all-around
-- **Amaterasu** (UR, 120 apt) — Top aptitude
-- **Sunna** (UR, 120 apt) — Top aptitude
-- **Orivita** (UR, 120 apt) — Top aptitude
-- **Leon** (UR, 120 apt) — Top aptitude
+> **For typing-specific awakening priorities (Inspiring, Diligent, Brave, Informed, Unfettered)** — see `category-guide.md` "Awakening Priorities (X Main)" sections, OR `awakening-priority.md` for the universal cross-typing priorities (Aegle for artifact caps, Mio for blessing power, etc.).
 
-### Tier 2: Awaken for 4★ Gate (Get to 3★)
-- All your SSR/UR fellows that you use regularly
-- Prioritize those with useful awakening skills
-- Archdemons (Super, Lux, Acedia, Avar, Ira) — 75 aptitude, strong skills
+### Tier 1: Universal — Main Carry First
+Pick ONE 120 base aptitude UR matching your main typing:
+- **Inspiring main:** Amaterasu
+- **Diligent main:** Sunna
+- **Brave main:** Leon (or Heracles for whales)
+- **Informed main:** Neptune (or Aegle for F2P)
+- **Unfettered main:** Orivita
 
-### Tier 3: Skip/Last
-- Fellows with Student EXP/Earnings awakening skills
+### Tier 2: Universal — Account-Wide Awakenings (Any Main)
+These give whole-account benefits regardless of your typing:
+- **Aegle** — Unlocks artifact level caps (massive — affects every artifact on every fellow)
+- **Mio** — Boosts blessing points per family date
+- **Mulberry** — Familiar tower combat power
+- **Crysta** — All SSR fellows power
+- **Kaye** — Banquet popularity bonus
+- **Magi's** fellow / Rimuru — Also unlock artifact caps
+
+### Tier 3: Typing-Specific — Awaken for 4★ Gate
+Get 15 SSR/UR fellows to 3★ to unlock the 4★ gate. Prioritize fellows of YOUR main typing — see `category-guide.md` for the exact list per typing.
+
+**Easy gate-fillers (any typing):**
+- All 5 Archdemons (75 apt, shared Purple Stars currency)
+- All 5 Otherworld Valiants (75 apt, shared Insignias currency)
+
+### Tier 4: Skip
+- Fellows with Student EXP/Earnings awakening skills (pupil bonuses are weak)
 - Fellows you don't use in buildings
-- Lower aptitude fellows unless needed for gate requirements
+- Non-main typing fellows past gate requirements
 
 ## Advanced Awakening Math
 

@@ -157,7 +157,7 @@ SUPPORTED_EXTENSIONS = [".md", ".txt", ".pdf", ".html"]
 
 # Retrieval Configuration
 # =======================
-TOP_K_DOCUMENTS = int(os.getenv("TOP_K_DOCUMENTS", "10"))
+TOP_K_DOCUMENTS = int(os.getenv("TOP_K_DOCUMENTS", "15"))
 SIMILARITY_THRESHOLD = float(os.getenv("SIMILARITY_THRESHOLD", "0.7"))
 RERANK_ENABLED = os.getenv("RERANK_ENABLED", "false").lower() == "true"
 

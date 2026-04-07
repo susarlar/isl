@@ -41,7 +41,16 @@
       "Bash(netstat -ano)",
       "Bash(taskkill:*)",
       "Bash(APP_ENV=development PYTHONIOENCODING=utf-8 python -X utf8 server.py)",
-      "Bash(xargs -I {} taskkill //PID {} //F)"
+      "Bash(xargs -I {} taskkill //PID {} //F)",
+      "Bash(python -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('SOURCES:'\\); [print\\(f'  {s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]} -> {s[\\\\\"title\\\\\"]}'\\) for s in d['sources']]\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('SOURCES:'\\); [print\\(f'  {s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]}'\\) for s in d['sources']]\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('ANSWER:', d['answer'][:1500]\\); print\\(\\); print\\('TOP CHUNKS:'\\); [print\\(f'  {s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]}'\\) for s in d['sources'][:6]]\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('ANSWER:'\\); print\\(d['answer'][:1800]\\); print\\(\\); print\\('TOP CHUNKS:'\\); [print\\(f'  {s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]}'\\) for s in d['sources'][:8]]\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('ANSWER:'\\); print\\(d['answer'][:1800]\\)\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\(d['answer'][:1800]\\)\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); [print\\(f'{s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]} -> {s[\\\\\"title\\\\\"][:60]}'\\) for s in d['sources']]\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('CHUNKS:'\\); [print\\(f'  {s[\\\\\"score\\\\\"]:.3f} {s[\\\\\"filename\\\\\"]} -> {s[\\\\\"title\\\\\"][:55]}'\\) for s in d['sources'][:8]]; print\\(\\); print\\('ANSWER:'\\); print\\(d['answer'][:1500]\\)\")",
+      "Bash(PYTHONIOENCODING=utf-8 python -X utf8 -c \"import sys, json; d=json.loads\\(sys.stdin.read\\(\\)\\); print\\('TOP CHUNK:', d['sources'][0]['filename'], '->', d['sources'][0]['title'], '\\(score:', round\\(d['sources'][0]['score'], 3\\), '\\)'\\); print\\(\\); print\\(d['answer'][:1200]\\)\")"
     ]
   }
 }

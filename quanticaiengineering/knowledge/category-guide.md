@@ -10,10 +10,36 @@ This guide connects all systems together by aptitude category. When a player say
 | Fellow | Base Aptitude | Rarity | Type | Notes |
 |--------|-------------|--------|------|-------|
 | Amaterasu | ~120 | UR | Inspiring | Empyrean Sound, top tier |
-| Shlomo | ~110 | SSR | Inspiring | VIP 7 |
+| Tamamo | UR | UR | Inspiring | Touno Island Story event |
+| Phanes | UR | UR | Inspiring | Ancient Magi Magnus of Inspiring |
+| Phinphynx | UR | UR | Inspiring | Empyrean Sound |
+| Kerr & Bel and Ros | UR | UR | Inspiring | Empyrean Sound (no outfit) |
+| Shlomo | ~110 | SSR | Inspiring | VIP 7, Divine Gospel |
 | Lux | ~75 | SSR | Inspiring | Archdemon of Lust |
 | Loya | ~70 | SSR | Inspiring | Perpetual Secretary, Tier SS combat |
-| Avril | ~75 | SSR | Inspiring | Otherworld Heroes |
+| Avril | ~75 | SSR | Inspiring | Otherworld Valiants |
+| Black | ~80 | SSR | Inspiring | The Elites |
+| Mio | SSR | SSR | Inspiring | Moonlit Visitor (TSUKIMICHI) |
+
+### Awakening Priorities (Inspiring Main)
+
+**If you main Inspiring, here are the fellows you should awaken first and their aptitude values.** This is the awakening priority list for Inspiring main players asking "what fellows to awaken inspiring main aptitude".
+
+**Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power per date — note Mio is also Inspiring!), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
+
+**Inspiring-specific awakening priorities:**
+1. **Amaterasu** (UR Inspiring, base 120 apt) — your main carry, biggest aptitude pool
+2. **Mio** (SSR Inspiring) — DOUBLE benefit: Inspiring + universal blessing power awakening
+3. **Tamamo** (UR Inspiring, base ~120) — second Touno UR if going that path
+4. **Phanes** (UR Inspiring, base ~120) — Ancient Magi UR group Stella, Magnus of Inspiring
+5. **Lux** (SSR Inspiring, base ~75 apt) — Archdemon of Lust, shared Purple Stars
+6. **Loya** (SSR Inspiring, base ~70 apt) — Tier SS combat, Followers group
+7. **Shlomo** (SSR Inspiring, base ~110 apt) — VIP 7, Divine Gospel
+8. **Black** (SSR Inspiring, base ~80 apt) — The Elites group
+9. **Avril** (SSR Inspiring, base ~75 apt) — Otherworld Valiants, shared Insignias
+10. **Phinphynx** (UR Inspiring, base ~120) — Empyrean Sound
+11. **Kerr & Bel and Ros** (UR Inspiring, base ~120) — Empyrean Sound (no outfit, hard to main)
+12. **Mulberry** (SSR Inspiring) — Followers + universal familiar tower benefit
 
 ### Stella Investment
 - **Elise** → Boosts ALL Inspiring fellows' power (category-wide multiplier)
@@ -55,11 +81,38 @@ Push Elise's Stella as high as possible — every level multiplies your entire I
 | Fellow | Base Aptitude | Rarity | Notes |
 |--------|-------------|--------|-------|
 | Sunna | ~120 | UR | Empyrean Sound, top tier |
+| Master Tongxuan | UR | UR | Penglai event main UR |
+| Anpu | UR | UR | Raphael's Stage event UR |
+| Nemetona | UR | UR | Ancient Magi Magus of Diligent |
+| Tohru | UR | UR | Dragon Maid collab |
 | Acedia | ~75 | SSR | Archdemon of Sloth |
-| Jewlry | ~70 | SSR | Stella-based flexible blessing slots |
+| Jewlry | ~70 | SSR | Followers group |
 | Kaye | ~75 | SSR | Summoned Shield, defensive meta |
-| Trady | ~90 | SSR | VIP 4 |
-| Ida | ~70 | SSR | |
+| Trady | ~90 | SSR | VIP 4, Divine Gospel |
+| Ida | ~70 | SSR | Followers group |
+| Crysta | SSR (upgradable) | SSR | The Elites |
+
+### Awakening Priorities (Diligent Main)
+
+**If you main Diligent, here are the fellows you should awaken first and their aptitude values.** This is the awakening priority list for Diligent main players asking "what fellows to awaken diligent main aptitude".
+
+**Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power per date), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
+
+**Diligent-specific awakening priorities:**
+1. **Master Tongxuan** (UR Diligent, base ~120) — your main carry from Penglai
+2. **Sunna** (UR Diligent, base 120 apt) — Empyrean Sound, second carry option
+3. **Acedia** (SSR Diligent, base ~75 apt) — Archdemon of Sloth, shared Purple Stars
+4. **Jewlry** (SSR Diligent, base ~70 apt) — Followers group
+5. **Trady** (SSR Diligent, base ~90 apt) — VIP 4, Divine Gospel
+6. **Nemetona** (UR Diligent, base ~120) — Ancient Magi, UR group Stella access
+7. **Crysta** (SSR Diligent) — also boosts ALL SSR fellows when awakened
+8. **Anpu** (UR Diligent, base ~120) — Ancient Magi, +Sadako blessing bond at Stella Lv4
+9. **Kaye** (SSR Diligent, base ~75 apt) — Otherworld Valiants, shared Insignias, banquet popularity bonus
+10. **Ida** (SSR Diligent, base ~70 apt) — Followers group
+11. **Tohru** (UR Diligent) — Dragon Maid collab
+12. **Hakuren** (UR Diligent) — Empyrean Sound
+
+**Skip awakening Pupil-related fellows** unless they're SSR Diligent (most pupil bonuses are weak vs power scaling).
 
 ### Stella Investment
 - **Nemetona** (UR, "Magus of Diligent") → Stella bond with Baity at Stella Lv.4
@@ -90,11 +143,40 @@ Check blessing chart for families that bless your specific Diligent fellows. Key
 | Fellow | Base Aptitude | Rarity | Notes |
 |--------|-------------|--------|-------|
 | Leon | ~120 | UR | Empyrean Sound, top tier |
-| Mammon | ~80 | SSR | VIP 2, universal operator |
+| Heracles | UR | UR | Cloud Kingdom (Olympics) — best whale option |
+| Freesia | UR | UR | Frantic Forest event |
+| Nyar | UR | UR | Casino on Yacht |
+| Andras | UR | UR | Ancient Magi |
+| Beryl | UR+ | UR+ | UR+ rarity |
+| Mammon | ~80 | SSR | VIP 2, universal operator, Divine Gospel |
 | Salvo | ~75 | SSR | Summoned Bravery, Tier SS combat |
 | Ira | ~75 | SSR | Archdemon of Wrath, beginner + endgame viable |
-| Paat | ~80 | SSR | Northrealm Guardian |
-| Emosen | ~70 | SSR | Polar Explorer |
+| Paat | ~80 | SSR | Diligent Dynamo |
+| Tigirl | ~80 | SSR | Diligent Dynamo |
+| Emosen | ~70 | SSR | Polar Explorer, Followers |
+| Healora | SSR | SSR | The Elites (Frantic Forest) |
+| Benimaru | SSR | SSR | Slime collab |
+| Fafnir | SSR | SSR | Dragon Maid collab |
+
+### Awakening Priorities (Brave Main)
+
+**If you main Brave, here are the fellows you should awaken first and their aptitude values.** This is the awakening priority list for Brave main players asking "what fellows to awaken brave main aptitude".
+
+**Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
+
+**Brave-specific awakening priorities:**
+1. **Heracles** (UR, base ~120 apt) if whaling Olympics, OR **Freesia** (UR, base ~120) for F2P, OR **Leon** (UR, base 120 apt) if already invested
+2. **Mio** (SSR Inspiring) for blessing power universal benefit
+3. **Ira** (SSR Brave, base ~75 apt) — Archdemon of Wrath, shared Purple Stars
+4. **Salvo** (SSR Brave, base ~75 apt) — Otherworld Valiants, shared Insignias, Tier SS combat
+5. **Mammon** (SSR Brave, base ~80 apt) — VIP 2, universal building operator, Divine Gospel
+6. **Andras** (UR Brave, base ~120) — Ancient Magi UR group Stella
+7. **Tigirl** (SSR Brave, base ~80) / **Paat** (SSR Brave, base ~80) — Diligent Dynamo group
+8. **Healora** (SSR Brave) — The Elites group
+9. **Beryl** (UR+ Brave) — Highest rarity Brave fellow in the game
+10. **Nyar** (UR Brave) — Casino on Yacht event UR
+11. **Benimaru** (SSR Brave) — Slime collab
+12. **Fafnir** (SSR Brave) — Dragon Maid collab
 
 ### Stella Investment
 - Look for Stella that boosts Brave category
@@ -135,10 +217,41 @@ Key families blessing Informed fellows:
 ### Top Informed Fellows
 | Fellow | Base Aptitude | Rarity | Notes |
 |--------|-------------|--------|-------|
-| Neptune | ~120 | UR | VIP 8, best all-around fellow in game |
+| Neptune | ~120 | UR | VIP 8, Divine Gospel, best all-around |
+| Aegle | UR | UR | F2P-friendly, Empyrean Sound |
+| Ao Li | UR | UR | Ancient Magi |
+| Nierus | UR | UR | Aloha event |
+| Athena | UR | UR | Empyrean Sound |
+| Gabrael | UR+ | UR+ | UR+, Uncrowned |
 | Super | ~75 | SSR | Archdemon of Pride, Tier SS combat |
-| Augustine | ~70 | SSR | Stone Summoned |
-| Stephanie | ~75 | SSR | Summoned Magic |
+| Augustine | ~70 | SSR | Followers |
+| Stephanie | ~75 | SSR | Otherworld Valiants |
+| Stheno | SSR | SSR | The Elites (Cloud Kingdom) |
+| Tigris | SSR | SSR | The Elites (Penglai) |
+| Eter & NAL | SSR | SSR | Diligent Dynamo |
+| Shiki | SSR | SSR | Moonlit Visitor (TSUKIMICHI) |
+| Roxy Migurdia | SSR | SSR | Greyrat Family (Mushoku Tensei) |
+
+### Awakening Priorities (Informed Main)
+
+**If you main Informed, here are the fellows you should awaken first and their aptitude values.** This is the awakening priority list for Informed main players asking "what fellows to awaken informed main aptitude".
+
+**Universal awakenings (any main):** Aegle (artifact level cap — but also your main if Informed!), Mio (blessing power), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
+
+**Informed-specific awakening priorities:**
+1. **Aegle** (UR Informed, base ~120) — DOUBLE benefit: F2P main carry + universal artifact cap unlock
+2. **Neptune** (UR Informed, base 120 apt) — VIP 8, solo Divine Gospel Stella
+3. **Super** (SSR Informed, base ~75 apt) — Archdemon of Pride, Tier SS combat, shared Purple Stars
+4. **Stephanie** (SSR Informed, base ~75 apt) — Otherworld Valiants, shared Insignias
+5. **Augustine** (SSR Informed, base ~70 apt) — Followers group
+6. **Ao Li** (UR Informed, base ~120) — Ancient Magi UR group Stella
+7. **Gabrael** (UR+ Informed) — Highest rarity Informed, Uncrowned
+8. **Nierus** (UR Informed, base ~120) if going Aloha event path
+9. **Athena** (UR Informed) — Empyrean Sound
+10. **Stheno** (SSR Informed) — The Elites (Cloud Kingdom)
+11. **Tigris** (SSR Informed) — The Elites (Penglai)
+12. **Eter & NAL** (SSR Informed) — Diligent Dynamo
+13. **Roxy Migurdia** (SSR Informed) — Greyrat Family (Mushoku Tensei)
 
 ### Stella Investment
 - **Angie** → Boosts ALL Informed fellows' power
@@ -180,11 +293,44 @@ Key families blessing Unfettered fellows:
 |--------|-------------|--------|-------|
 | Orivita | ~120 | UR | Empyrean Sound, top tier |
 | Hermes | ~100 | UR | Ancient Magi, economic growth boost |
-| Mescal | ~100 | SSR | VIP 5, Dragonfather, Tier SS combat |
+| Beelzebub | UR | UR | Empyrean Sound, Mines event |
+| Tomoe | UR | UR | Moonlit Visitor (TSUKIMICHI) |
+| Gale | UR | UR | Empyrean Sound |
+| Thora | UR | UR | Empyrean Sound |
+| Rimuru Tempest | UR+ | UR+ | Slime collab UR+ |
+| Mescal | ~100 | SSR | VIP 5, Divine Gospel, Tier SS combat |
 | Avar | ~75 | SSR | Archdemon of Greed |
 | Anne | ~70 | SSR | Gorgon Captain, Tier SS combat |
-| Nip | ~75 | SSR | Summoned Arrow |
-| Iori | ~80 | SSR | Touno Island Story |
+| Nip | ~75 | SSR | Summoned Arrow, Otherworld Valiants |
+| Iori | ~80 | SSR | Touno Island Story, Diligent Dynamo |
+| Myner | SSR | SSR | The Elites (Mines) |
+| Frogella | SSR | SSR | The Elites |
+| Elma | SSR | SSR | Dragon Maid collab |
+| Milim Nava | SSR | SSR | Slime collab |
+
+### Awakening Priorities (Unfettered Main)
+
+**If you main Unfettered, here are the fellows you should awaken first and their aptitude values.** This is the awakening priority list for Unfettered main players asking "what fellows to awaken unfettered main aptitude".
+
+**Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
+
+**Unfettered-specific awakening priorities:**
+1. **Orivita** (UR Unfettered, base 120 apt) — main carry if going Tree alts path
+2. **Beelzebub** (UR Unfettered, base ~120) — main carry if going Mines path
+3. **Hermes** (UR Unfettered, base ~100 apt) — Ancient Magi + economic boost
+4. **Mescal** (SSR Unfettered, base ~100 apt) — VIP 5, Divine Gospel, Tier SS combat
+5. **Anne** (SSR Unfettered, base ~70 apt) — Gorgon Captain, Tier SS combat, Followers
+6. **Avar** (SSR Unfettered, base ~75 apt) — Archdemon of Greed, shared Purple Stars
+7. **Nip** (SSR Unfettered, base ~75 apt) — Summoned Arrow, Otherworld Valiants, shared Insignias
+8. **Iori** (SSR Unfettered, base ~80 apt) — Touno event, Diligent Dynamo
+9. **Tomoe** (UR Unfettered) — Moonlit Visitor
+10. **Rimuru Tempest** (UR+ Unfettered) — Slime collab UR+
+11. **Gale** (UR Unfettered) — Empyrean Sound
+12. **Thora** (UR Unfettered) — Empyrean Sound
+13. **Myner** (SSR Unfettered) — The Elites (Mines event)
+14. **Frogella** (SSR Unfettered) — The Elites
+15. **Elma** (SSR Unfettered) — Dragon Maid collab
+16. **Milim Nava** (SSR Unfettered) — Slime collab
 
 ### Stella Investment
 - Look for Stella that boosts Unfettered category
