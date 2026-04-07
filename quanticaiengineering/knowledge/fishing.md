@@ -2,9 +2,12 @@
 
 ## Overview
 
-Fishing provides three types of permanent Fellow boosts through the Fish Tank system. **Fish is the #1 source of power percentage in the entire game** — on endgame Amaterasu, Fish contributes +2,624.5% to the total Σ% pool, beating Family (+2,019.5%), Artifacts (+788.25%), and every other source.
+Fishing provides three types of permanent Fellow boosts through the Fish Tank system. **Fish is the #1 source of power percentage in the entire game** — on the verified endgame UR Empyrean Sound Inspiring reference carry (Lv 750, 5★), Fish contributes +2,624.5% to the total Σ% pool, beating Family (+2,019.5%), Artifacts (+788.25%), and every other source.
 
-Fishing characters: **Kaity**, **Chihaya**, **Jin Yu**.
+## Related NPCs (Not Permanent Assignments)
+
+- **Jin Yu** — gives you a **wish** that guarantees a better fish on your next catch
+- **Kaity** — gives you bait during **roaming encounters**
 
 ## Three Fish Skill Types
 
@@ -33,9 +36,10 @@ Fish skills target fellows by either **aptitude category** or **rarity**:
 ## Skill Scaling
 
 ### % Power Skills
-- **+5% per level** (consistent at all levels tested)
+- **Main-typing (Inspiring / Diligent / Brave / Informed / Unfettered) % skills: ~+5% per level**
 - Axolotl example: Level 110 = 555% (= 5% × 110 + 5% base)
 - Pirarucu example: Level 12 = 65%
+- **All-Fellow % skills scale at a LOWER rate per level** — less than 5% per level. (Exact rate is in the collected fish data; treat All-Fellow % as lower-per-level than category-specific %.)
 
 ### Aptitude Skills
 - **+5 aptitude per level** (for category-targeted)
@@ -47,19 +51,30 @@ Fish skills target fellows by either **aptitude category** or **rarity**:
 - Sun Carp (SSR+): ~+20K per level, Level 85 = +1.73M
 - Bubble Puffer (SR): ~+15K per level, Level 85 = +1.3M
 
+**Note:** The scaling rates above come from a spot-check of a few fish. Individual fish may differ. For systematic decisions, look at the specific fish's current level and bonus shown in-game rather than extrapolating.
+
+## Normal vs Gold Crown Fish
+
+When you fish with one bait, the game rolls for the fish's **category**: you can catch either the **Normal version** or the **Gold Crown version** of whichever fish hits. Gold Crown is a rarer roll, **not a "next level"** — it's a different variant with a different skill track.
+
+- **Normal fish** upgrade the fish's **Normal Skill** (the top skill row)
+- **Gold Crown fish** upgrade the fish's **Gold Crown Skill** (the bottom skill row)
+
+You need catches of both variants to level both skills, and the two skills level independently.
+
 ## Diminishing Returns — Fish Leveling Costs
 
-The bonus per level stays constant (+5% or +5 apt), but the **number of fish catches needed per level increases**:
+The bonus per level stays roughly constant (e.g., +5% or +5 apt per level for main-typing fish), but the **number of fish catches needed per level increases as the skill's level climbs**. Exact catch-cost curves are not systematically measured — treat leveling costs as "gets worse at higher levels, plan accordingly." In practice this means:
 
-| Level Range | Approximate Fish Catches per Level |
-|-------------|-----------------------------------|
-| 1–15 | 1 fish |
-| 15–60 | 2–5 fish |
-| 60–90 | 9–17 fish |
-| 90–110 | 5–24 fish |
-| 110+ | 3–5 fish (gold crown), escalating (normal) |
+- **Early levels (the first few dozen)** cost roughly 1–5 catches per level
+- **Mid-levels** cost noticeably more catches per level
+- **High levels** can require many catches per level, at which point your efficiency (bonus per catch) drops hard
 
-This means **efficiency (bonus per fish catch) decreases at higher levels**, even though the absolute bonus keeps growing linearly.
+This is why rotation between fishing spots matters — once your top fish at spot A hits the "too expensive per level" zone, your time is better spent at spot B, where you're still on cheaper early levels of that spot's top fish.
+
+## Fish Rosters by Region
+
+> **Note:** The game has **7 specific fishing ponds** across these 4 regions. The rosters below are grouped by region for convenience; the detailed pond-to-typing mapping is in the "Fishing Spots" section below.
 
 ## Complete Fish Data — Village (10 Fish)
 
@@ -169,7 +184,7 @@ This means **efficiency (bonus per fish catch) decreases at higher levels**, eve
 | Sea Anemone | Unfettered Fellow (flat) |
 | Tubuca Arcuata | All Fellow (flat) |
 
-**Ocean MVPs:** The top 5 ocean fish are the best in the entire game — **All Fellow Power %** on both skills. They boost EVERY fellow in your roster with a big % contribution to each fellow's Σ% pool.
+**Ocean MVPs:** The top 5 ocean fish are **All Fellow Power %** on both skills — they boost every fellow in your roster. Note: All-Fellow % scales at a **lower rate per level** than main-typing % fish, so on a single-carry account the Ocean top 5 is not automatically "better" than your main typing's dedicated % fish — it's broader but smaller per level. Push them in parallel with your main-typing fish, not instead of them.
 
 ## Complete Fish Data — Northrealm (25 Fish)
 
@@ -225,14 +240,14 @@ This means **efficiency (bonus per fish catch) decreases at higher levels**, eve
 ### Tier 1: % Power Fish (Highest Value)
 These add to your fellow's Σ% pool along with Awakening, Artifacts, Advanced Blessing, Stella, Museum, Family, and all other % sources. Fish is the single biggest category:
 
-| Location | Fish | Target |
-|----------|------|--------|
-| Ocean | Sperm Whale, Giant Squid, Helicoprion, Smooth Hammerhead, Mosasaurus | **All Fellows** |
-| Northrealm | Barreleye, Snow Leopard, Narwhal, Fin Whale, Sea Angel | Category-specific |
-| Drakenberg | Pirarucu, Gold Pirarucu, Star Anglerfish, Drakenberg Monster | Category-specific |
-| Village | Axolotl | Inspiring |
+| Location | Fish | Target | Per-Level Scaling |
+|----------|------|--------|-------------------|
+| Northrealm | Barreleye, Snow Leopard, Narwhal, Fin Whale, Sea Angel | Category-specific | ~+5% per level |
+| Drakenberg | Pirarucu, Gold Pirarucu, Star Anglerfish, Drakenberg Monster | Category-specific | ~+5% per level |
+| Village | Axolotl | Inspiring | ~+5% per level |
+| Ocean | Sperm Whale, Giant Squid, Helicoprion, Smooth Hammerhead, Mosasaurus | **All Fellows** | Less than +5% per level |
 
-**The 5 ocean % fish are the single most valuable fish in the game** — they add a huge % to EVERY fellow in your roster (not just one category).
+**For single-carry players:** your main typing's category-specific % fish scale faster per level than the Ocean All-Fellow fish, so on your main carry alone the category fish add more per catch. The Ocean 5 are still valuable because they also boost your other fellows, but don't skip your main typing's dedicated % fish to chase Ocean fish — push them in parallel.
 
 ### Tier 2: Aptitude Fish (Feeds Base Power)
 Aptitude increases feed into Base Power = Aptitude × Level Multiplier, which then gets multiplied by everything. Valuable but additive at the aptitude stage.
@@ -287,7 +302,7 @@ When choosing a spot, you can also look at **sub-typings** — many spots have t
 3. Then **swap to the OTHER pond for your typing** and do the same
 4. Continue rotating between your typing's spots
 
-**Bait priority:** Only upgrade **bait speed** for a very long time — at least up to **level 30**. Don't upgrade other bait stats early.
+**Bait priority:** Upgrade **bait production speed** with **White Pearls** from the shop. Each successive speed upgrade costs **more White Pearls** than the last, but each tier makes your bait regenerate faster — which directly means more catches per day and therefore more fish skill levels. Don't spend White Pearls on anything else; bait speed is the only thing that compounds.
 
 ### Why Stay In One Spot
 Each spot specializes in specific UR fish crowns. Concentrating on one spot pushes your highest-impact fish skills further before you spread investment to the second spot.
@@ -296,11 +311,11 @@ Each spot specializes in specific UR fish crowns. Concentrating on one spot push
 
 There are **two kinds of fishing bait**, and they behave very differently:
 
-### Normal Bait — Unlimited, Any Rarity
-- Use freely throughout the day
+### Normal Bait — Stamina-Like Regenerating Pool
+- **Normal Bait behaves like stamina** — it regenerates over time in a pool, and you use it to fish
 - Can catch fish of **any rarity** from the spot's pool (including top-tier fish, just at lower hit rates)
-- Main production resource — this is what your Bait Production buildings output
-- **Bait production speed is improved with White Pearls** from the shop — see `pearls.md`
+- **How fast the pool regenerates depends on your bait production speed**, which you upgrade by spending **White Pearls** at the shop. Higher bait production speed = faster pool refill = more fish catches per day. See `pearls.md` for White Pearl details.
+- Not literally "unlimited" — the daily cap on your fishing is set by how fast your bait pool refills
 
 ### Advanced Bait — Once Per Day, Higher Rarity
 - You get **one Advanced Bait per day** (hard daily cap)
@@ -311,13 +326,14 @@ There are **two kinds of fishing bait**, and they behave very differently:
 ### Why This Matters
 Because Advanced Bait is hard-capped at one per day, the rarity of the fish you get from it sets the ceiling on your endgame fish progression. Make sure you're burning your Advanced Bait at whichever spot is currently your priority pond (see the spot rotation strategy below).
 
-### Event-Shop Advanced Bait (Supplemental)
-- Events: 1,200 Flower Tickets/unit (Blossoming Wealth)
-- Events: 50 Camp Coupons/unit (Camping with A Slime)
+### Supplemental Advanced Bait Sources
+Event shops occasionally offer Advanced Bait for various event currencies. The specific events cycle roughly once a year and are not a reliable planning source — treat event-shop Advanced Bait as a bonus when available, not as a dependable supply.
 
 ## Fish Combinations
 
-Specific fish pairs/trios unlock Combination Skills (additional bonuses). Combination names are listed by rank (SSR, SR, R, N) but detailed skill data is incomplete in public sources.
+Specific fish pairs/trios unlock Combination Skills (additional bonuses). **Fish Combinations are most relevant between account levels ~15 and ~45** — during that window, unlocking combinations is a meaningful power source.
+
+**By the time you're level 45+ (this bot's target audience), you've almost certainly already unlocked all available fish combinations**, so combinations become background completion rather than an active push. If you somehow reach 45+ without having collected all combinations, check your Fish Combination Encyclopedia and catch the missing fish to finish them off — otherwise ignore this system.
 
 ## Fish by Aptitude Category — Where to Fish for Your Main Type
 
@@ -400,8 +416,7 @@ The 5 ocean % fish should be every player's top fishing priority regardless of m
 
 ## Daily Fishing Checklist
 
-- [ ] Keep Chihaya researching at all times
-- [ ] Use all free baits daily
-- [ ] Prioritize catching fish that upgrade your % power skills
-- [ ] Check Fish Combination Encyclopedia for combos you're close to completing
+- [ ] Use all regenerated Normal Bait before the pool caps out (bait pool works like stamina — unspent bait past the cap is wasted)
 - [ ] Use your daily Advanced Bait at your priority fishing spot
+- [ ] Prioritize catching fish that upgrade your main typing's % power skills
+- [ ] If you're still below level 45 account-wide: check Fish Combination Encyclopedia for combos you're close to completing

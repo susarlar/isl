@@ -32,14 +32,42 @@ Advanced Blessing (+% power) adds to the Σ% bucket along with Fish, Artifacts, 
 
 **For level 45+ players:** Fellow Blessing and Advanced Blessing both matter, but Advanced Blessing scales with Base (which is enormous on endgame fellows) while Fellow Blessing is just a fixed addition. Prioritize Advanced Blessing for your main carry.
 
-## Blessing Power vs Intimacy
+## Blessing Power vs Intimacy — What Each Stat Actually Does
 
 | Stat | Affects | Priority |
 |------|---------|----------|
-| Blessing Power | Fellow Power (combat, progression) | **HIGH** |
-| Intimacy | Village Earnings (Gold income) | Medium |
+| **Blessing Power** | Fellow Power (Fellow/Advanced/Special Blessing leveling) | **HIGH** |
+| **Intimacy** | Family Earning Skills (building earning multipliers, reforged with Luck Stones), then Latency after 5k | Medium |
 
 Blessing Power items are rarer than Intimacy items. Spend them wisely.
+
+### Intimacy Effects in Detail
+
+Intimacy is **not** a generic "village earnings" buff — it drives a specific system of **Family Earning Skills** that multiply building earnings:
+
+1. **Up to 5,000 intimacy:** Unlocks Family Earning Skills one at a time as intimacy grows. Each family has skills for **each of the 5 main typings separately** (Brave / Diligent / Unfettered / Inspiring / Informed) **plus** an "all buildings" booster. Each of those six slots **repeats 3 times** (unlocks in three waves as intimacy climbs), giving you progressively stronger multipliers on buildings of the matching typing.
+2. **Above 5,000 intimacy:** You stop getting new Family Earning Skills and instead earn **Latency**, which is a separate bonus that also increases building earnings. Latency keeps growing the more intimacy you accumulate past the 5k mark.
+3. **Reforging:** Family Earning Skills can be **reforged with Luck Stones** to reroll the exact numbers — useful if your initial skill rolls are weak.
+
+**Practical rule:** Push intimacy to 5,000 on the family member that boosts your highest-earning building typing first. Then keep stacking intimacy on them for Latency bonuses. Spread any leftover intimacy gifts across other families only after your primary family hits 5k.
+
+## Bond — Blessing Power + Intimacy Combined (Determines Student Rarity)
+
+Each family member has a **Bond** stat built from combining Blessing Power and Intimacy. Bond has threshold milestones that each **raise the rarity of the students** that family recruits — and higher-rarity students generate more gold per tick:
+
+| Bond Threshold | Requirement | Unlock |
+|----------------|-------------|--------|
+| Tier 1 | 2,000 each (Blessing Power + Intimacy) | Higher-rarity student slot 1 |
+| Tier 2 | 4,000 each | Higher-rarity student slot 2 |
+| Tier 3 | 8,000 each | Higher-rarity student slot 3 |
+| Tier 4 | 20,000 each | Higher-rarity student slot 4 |
+| Tier 5 | 50,000 each | Top-rarity student slot |
+
+**Bond determines the rarity of the student you get from that family.** The student's rarity then determines how much gold they earn per tick. Higher Bond → higher-rarity student → more gold.
+
+The **"each" is load-bearing** — you need both stats at the threshold, not one. A family with 50,000 Blessing Power but only 4,000 Intimacy is stuck at Tier 2 for student rarity. To hit the high Bond tiers, both stats must advance together.
+
+**This is the main non-Fellow-Power reason to care about intimacy** beyond unlocking Family Earning Skills.
 
 ## Gift Items
 
@@ -56,11 +84,13 @@ Blessing Power items are rarer than Intimacy items. Spend them wisely.
 | Flower Necklace | +1 |
 | Jewel Necklace | +2 |
 
-### Dates (Both Intimacy + Blessing Power)
-| Date | Cost | Rewards |
-|------|------|---------|
-| Sailing Trip | Crystals | Blessing Points + 1 child |
-| Airship Journey | Perfume | Blessing Points + twins |
+### Date Chance Economy
+Dates consume **Date Points** — a dating stamina pool that recharges. Each date uses one Date Point. You earn additional Date Points from Succubus Tonic (3 per tonic). Plane Tickets and Crystal Travel also consume Date Points when used.
+
+### Event-Sourced Date Items
+| Item | Source | Use |
+|------|--------|-----|
+| **Airship Journey** | Event rewards | Event item spent on the **School task** (twins / orphan intake). Useful but event-gated. |
 
 ## Date Chances and Travel Types
 
@@ -121,7 +151,16 @@ If your priority is pushing **one specific family's** Blessing Power or Advanced
 Use Succubus Tonic random dates when you want to **spread** BP across your roster (because it's the cheapest), and use targeted travel when you want to **concentrate** BP on one family.
 
 ### Implication for Blessing Power Gifts
-Because BP is per-family, the value of a Blessing Power gift on family X depends entirely on **how many times you're going to date X in the future**. A +2 Blessing Power gift on a family you date once per week gives you +2 × 4.52 × 1 = +9 BP per week. The same gift on a family you date daily gives you +9 × 7 = +63 BP per week. Always gift the family you date most often.
+**You can't choose who you date on random Succubus Tonic dates** — RNG picks the family. So for planning gift placement, only the **dates you control** matter:
+
+- **Plane Tickets** (you pick the family)
+- **Crystal-based travel** (you pick the family)
+
+Concentrate Blessing Power gifts on **whichever family you'll target most often through Plane Tickets and Crystal Travel** — that's the family where every +1 Blessing Power compounds predictably across every targeted date you spend on them.
+
+Gifting random-date-only families is gambling: you're hoping RNG picks them more often than average. It's not a wasted gift (any +BP on any family helps if RNG ever picks them), but it's not optimal either. The targeted-travel family is the controllable lever.
+
+**Practical rule:** Pick one family as your "main date target" (usually the family that boosts your main carry's typing). Burn every Plane Ticket and most of your Crystal Travel on them. Dump all your Blessing Power gifts on them. Random Succubus Tonic dates become a passive bonus on top.
 
 ## Blessing Points Formula (Community-Verified)
 
@@ -158,12 +197,15 @@ A family member at 60K Blessing Power earns **~9x more Blessing Points per date*
 - A single Jewel Necklace (+2 BP) on a 60K family saves far less time than +2 on a 7K family in percentage terms, but in absolute BP earned per date the high-BP family is always more efficient to date
 - CG dates are 20% more efficient — you cannot control this, but it averages out over time
 
-### Daily Blessing Points Income Estimate
+### Per-Date BP Examples (Not Daily Totals)
 
-With 15 Date Points per day and a family at 30K Blessing Power:
-- Non-CG: 30,000 x 4.52 = ~135,600 BP per date
-- CG: 30,000 x 5.42 = ~162,600 BP per date
-- Assuming ~40% CG rate: ~15 dates x avg ~146K = **~2.19M Blessing Points/day**
+Because daily total BP depends on how many Date Points you have, how many Succubus Tonics you burn, and which families RNG picks for random dates, the only reliable numbers are per-date:
+
+- Family at 30K Blessing Power, non-CG: 30,000 × 4.52 = **~135,600 BP per date**
+- Family at 30K Blessing Power, CG: 30,000 × 5.42 = **~162,600 BP per date**
+- Family at 60K Blessing Power, non-CG: 60,000 × 4.52 = **~271,200 BP per date**
+
+**Daily totals** depend on how many of your dates land on that specific family — which is controllable via Plane Tickets / Crystal Travel but random via Succubus Tonic. Plan around per-date income, not daily.
 
 ## Leveling Blessings
 
@@ -202,14 +244,16 @@ The single most important thing to understand: **both blessing types give a fixe
 | 309   | +6.375M         | 239K               | ~25K                  | ~0.10             |
 | 700   | Very high        | Very high          | —                     | Very low          |
 
-**Special Blessing:** Unlocks when both Fellow Blessing AND Advanced Blessing reach Level 700. Max Level 700.
+**Special Blessing:** Unlocks when both Fellow Blessing AND Advanced Blessing reach Level 700. Max Level 700. **In practice no player reaches this** — the 1.014×-per-level cost growth makes the last few hundred levels effectively infinite. Treat Special Blessing as theoretical endgame, not a planning target.
 
-### Cost Growth Formula (Approximate)
+### Cost Growth Formula (Verified Through Lv 515)
 
-Blessing skill costs grow at approximately **×1.014 per level** (1.4% compounding). This means:
+Blessing skill costs grow at approximately **×1.014 per level** (1.4% compounding) — verified by real cost data between Lv 1 and Lv 515. This means:
 - Every 50 levels, costs roughly double
 - Every 165 levels, costs increase ~10x
 - Every 330 levels, costs increase ~100x
+
+**Beyond Lv 515 is extrapolation** — the doc's cost data stops at 515 because real accounts stop pushing there (diminishing returns make higher levels uneconomical). The formula probably continues to hold past 515 but no one has verified it because no one reaches those levels.
 
 ## Strategy for Level 45+ Players
 
@@ -225,19 +269,23 @@ Because costs grow ~1.4% per level while bonuses stay flat, **spreading blessing
 **Rule of thumb:** If a blessing level-up costs more than 500K BP, check if another family member has a cheaper level available first.
 
 ### Date Strategy
-- **Date your highest Blessing Power family members** — 4.52x means every point of BP translates directly to more income
-- **Plane Tickets first** — family-targeted + 2 children guaranteed, best for School orphan intake (see "Date Chances and Travel Types" above)
-- **Succubus Tonic** provides 3 random-target Date Chances per tonic — use on bulk BP farming
-- **Crystal-based travel** guarantees 1 child encounter but costs more per click — use as a top-up only
-- **Sailing Trips** are crystal-efficient for Blessing Points
-- **Airship Journeys** give twins (2 orphans for School) + Blessing Points
+**Important:** You can only choose who you date when you use a **targeted** date system. Random Succubus Tonic dates are RNG — you don't pick the recipient.
+
+- **Plane Tickets first** — you choose the family + 2 children guaranteed, best for both BP concentration AND School orphan intake
+- **Crystal-based travel** — you choose the family + 1 child guaranteed, but escalating cost per click — use as a top-up after Plane Tickets are exhausted
+- **Succubus Tonic** — 3 random Date Chances per tonic, RNG-distributed across your families. Treat this as **passive background BP farming** spread across your roster
+- **Sailing Trips** — crystal-efficient way to earn Blessing Points
+- **Airship Journeys** — give twins (2 orphans for School) + Blessing Points
 - CG dates give +20% bonus but are random — don't try to optimize for this, just date consistently
+- **Concentration rule:** every targeted date should go on the SAME family (the one boosting your main carry's typing) so their BP and Blessing Power scale fastest
 
 ### Blessing Power Gift Priority
 Since BP income = Blessing Power x 4.52, every +1 Blessing Power from gifts permanently adds +4.52 BP per date (or +5.42 on CG dates). Over 15 daily dates, +1 BP = ~68 extra Blessing Points per day. Concentrate gifts on the family member you date most.
 
 ### Family Costume Synergy
-3-star Family Costumes give +300 Blessing Power = +1,356 extra BP per non-CG date. Over 15 daily dates that's ~20K extra Blessing Points/day from a single costume.
+3-star Family Costumes give **+300 Blessing Power = +1,356 extra BP per non-CG date** with that family member.
+
+The daily value depends on **how many of your dates actually land on the costumed family**. If you burn 5 Plane Tickets on them per day, the costume adds ~6.8K BP/day from those targeted dates. If most of your dates are random Succubus Tonic dates that may or may not hit that family, the daily benefit is much smaller and RNG-dependent. **Only costume the family you're already concentrating targeted dates on.**
 
 ### The Compounding Loop
 1. Level Advanced Blessing → % power boost on fellows

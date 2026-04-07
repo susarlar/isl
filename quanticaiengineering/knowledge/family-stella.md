@@ -1,6 +1,10 @@
 # Family Stella — Verified Tables
 
-> Family Stella is separate from Fellow Stella. Family members can have their own Stella that boosts their **blessed fellow** with intimacy, blessing power, aptitude, power %, and building earnings.
+> Family Stella is separate from Fellow Stella. Family members can have their own Stella that boosts the specific fellows they're paired with — giving the paired fellows intimacy, blessing power, aptitude, power %, and building earnings bonuses. Each family can bless multiple fellows (the full pairing list is in `families-roster.md`), and some pairings only unlock after you advance the relevant Fellow Stella.
+>
+> **Family rarity determines Stella rarity.** UR families have UR Family Stella; SSR families have SSR Family Stella; SR/R/N families have lesser or no Stella. See `families-roster.md` for the full family-to-rarity mapping.
+>
+> **Family Stella max level:** Verified Lv 1–10 in this doc. Family Stella may extend to Lv 20 — not yet verified since the reference account isn't there yet.
 
 ## SSR Family Stella
 
@@ -66,21 +70,23 @@
 ### Blessing Power Compounding
 Remember the formula: **Blessing Points = Blessing Power × 4.52** per non-CG date.
 
-A maxed UR Family Stella adds **+9,200 Blessing Power** (since BP and Intimacy share the same number). That translates to:
-- +9,200 × 4.52 = **+41,584 Blessing Points per non-CG date**
-- Across 15 daily dates: **+623,760 Blessing Points/day** from a single maxed UR Family Stella
+A maxed UR Family Stella adds **+9,200 Blessing Power** (Blessing Power and Intimacy are given together on the same line, so each level adds the same number to both stats). That translates to:
+- +9,200 × 4.52 = **+41,584 Blessing Points per non-CG date on that family**
 
-That's a massive income boost just from leveling one Family Stella.
+The daily impact depends on how many of your dates actually land on that family. **Random Succubus Tonic dates can't be targeted** — RNG picks the recipient, so only a fraction of random dates will hit any specific family. The dates you **can** control are Plane Tickets and Crystal Travel (targeted). A maxed UR Family Stella pays off most when you're burning targeted dates on that family, not when relying on random dates.
 
 ### Aptitude Skill Cap Bonus
 UR Family Stella raises the **aptitude skill cap by +50** at levels 2, 6, and 10 (total +50 max). This is critical for advanced players who are hitting Skill Pearl caps on their main carry.
 
-### Stacking Multiple Family Stellas
-Each Family Stella affects ONE blessed fellow. So:
-- If you main Neptune, find a UR family that blesses Neptune, max their Stella → +120% power, +220 apt, +50 cap on Neptune alone
-- Multiple families can bless the same fellow — stack them all on your main carry
+### Stacking Multiple Family Stellas On Your Main Carry
+Each Family Stella boosts only the fellows that family blesses — and multiple families can bless the same fellow. Use `families-roster.md` to find every family that blesses your main carry, then stack their Stellas on them.
+
+**Example:** If you main an Inspiring UR like Amaterasu, `families-roster.md` shows that Phantanyl (UR), Thubran (SSR), Kagura (SSR), Futaba (SSR), Bridget (SSR), Sera (SSR), and Tsukuyomi (UR) among others all bless Amaterasu. Maxing the UR families on that list gives her +120% power × 2 = +240% from UR Family Stella alone, plus the stacked SSR contributions. That's before touching Fellow Stella, Artifacts, or Fish.
+
+The UR families on your main carry's roster should be your top Family Stella priority. The SSR ones fill in below that.
 
 ### Investment Priority
-1. **UR Family Stella matching your main carry** — Highest priority, 4x stronger than SSR
-2. **SSR Family Stella for secondary fellows** — Spread across roster for blessing power income
-3. **All family members give blessing power even at Lv1** — Light up cheaply for the universal +150/+800 boost
+1. **UR Family Stella of families that bless your main carry** — Highest priority, ~4x stronger than SSR. Look these up in `families-roster.md` first.
+2. **SSR Family Stella of families that bless your main carry** — Every SSR that blesses your carry stacks on them. Push these after the URs.
+3. **SR/R/N Family Stellas** — Low priority; push only if the family blesses your main carry AND you've exhausted higher-rarity options.
+4. **Lv 1 unlocks on other families:** cheap initial unlock gives +150/+800 Blessing Power + Intimacy per family, but cost efficiency depends on your fragment supply — treat this as a fill-in, not a universal rule.

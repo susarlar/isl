@@ -6,42 +6,43 @@
 
 | Pattern | Groups/Fellows | Personal/Lvl | Boost Pattern | Currency |
 |---------|---------------|-------------|---------------|----------|
-| **A: Premium UR Group** | Empyrean Sound, Ancient Magi, Divine Gospel | +3M→+5M→+10M | Multi-type (apt/%/earnings), unlocks slots | Character Fragments (most), Magi Shards (Magi only) |
-| **B: SSR High Group** | Archdemon, Otherworld, Elites, Diligent Dynamo, Moonlit Visitor, Uncrowned, Greyrat Family, Dungeon Challenger | +1.5M→+2M→+3M | Alternating: group +10% / fellow +30% | Purple Stars (Archdemon), Insignias (Otherworld), Character Fragments (others) |
-| **C: SSR Low Group** | Followers | +1M | Alternating: group +5% / fellow +15% | Character Fragments |
-| **D: SR Standalone** | Rani, Elise, Liz, Angie | +500K | +3% to ALL of category | Character Fragments |
+| **A: Premium UR Group** | Empyrean Sound, Ancient Magi, **Neptune** (Divine Gospel) | +3M→+5M→+10M | Multi-type per level (apt/%/earnings/slot unlocks/cap raises/family blessing bond) | Character Fragments (most), **per-fellow** Magi tokens (Magi) |
+| **B: SSR High Group** | Archdemon, Otherworld, Elites, Diligent Dynamo, Moonlit Visitor, Uncrowned, Greyrat Family, Dungeon Challenger | +1.5M→+2M→+3M | Alternating: odd lvls group +10% / even lvls fellow +30% | Purple Stars (Archdemon — shared), Insignias (Otherworld — shared), Character Fragments (others — per-fellow) |
+| **C: SSR Low Group** | Followers, **Mammon/Trady/Mescal/Shlomo** (Divine Gospel) | +1M | Alternating: odd lvls group +5% / even lvls fellow +15% | Character Fragments |
+| **D: SR Standalone** | Rani, Elise, Liz, Angie | +500K | +3% per level to ALL of category (max verified +30% at Lv 10) | Character Fragments |
 
-**Note:** Mammon, Trady, Mescal, Shlomo are in **Divine Gospel** group (not "The Prominent"). Only Neptune has a Stella unlocked currently in this group.
+**Note:** Divine Gospel contains mixed rarities and mixed Stella patterns: Neptune (UR, Pattern A) and Mammon/Trady/Mescal/Shlomo (SSR, Pattern C). The group is also VIP-gated — most Divine Gospel fellows are only obtainable by paying for VIP levels. See the Divine Gospel section below.
 
-**Note:** SR Standalone Stellas (Rani/Elise/Liz/Angie) are NOT part of any group — they boost an entire aptitude category. Brave and Unfettered have no equivalent.
+**Note:** SR Standalone Stellas (Rani/Elise/Liz/Angie) are NOT part of any group — they boost an entire aptitude category. Brave and Unfettered have no equivalent, which is a permanent ~30% multiplier gap for those typings (or +60% gap for Inspiring mains who stack Rani + Elise).
 
 ## Stella Currencies — Critical Mechanic
 
-**ALL fellows have group Stella.** Every fellow improves their group Stella with their **own personal character shards** — except for two groups that share a common currency.
+**ALL fellows have group Stella.** Every fellow improves their group Stella with their **own personal character shards** — except for two groups that use a truly shared currency.
 
 | Group | Currency | Source | How It Works |
 |-------|----------|--------|--------------|
-| **Archdemon** | **Purple Stars** | Event/gacha rewards | SHARED — any Purple Star upgrades any Archdemon Stella |
-| **Otherworld Valiants** | **Insignias** | Event/gacha rewards | SHARED — any Insignia upgrades any Otherworld Stella |
-| **Ancient Magi** | **Magi Shards** | Random from chests | SHARED but RANDOM — you pick which Magi to apply each shard to |
-| **All other groups** | **Character-specific Fragments** | Gacha duplicates, character shop, event rewards | NOT SHARED — Amaterasu's Stella requires Amaterasu Fragments specifically |
+| **Archdemon** | **Purple Stars** | Events, gacha, game shops — widely available | SHARED — any Purple Star upgrades any Archdemon Stella |
+| **Otherworld Valiants** | **Insignias** | Events, game shops, wins | SHARED — any Insignia upgrades any Otherworld Stella |
+| **Ancient Magi** | **Per-fellow Magi tokens** | Random from chests, purchases, multiple sources | **NOT actually shared.** Each Magi fellow (Hermes, Ao Li, Phanes, Nemetona, Andras) has their OWN specific tokens. Hermes's tokens cannot be used on Ao Li, and vice versa. |
+| **All other groups** | **Character-specific Fragments** | Gacha duplicates, character shop, event rewards | NOT SHARED — each fellow needs their own dupes |
 
 ### Key Implications
 
-**For Archdemon and Otherworld Valiants:**
+**For Archdemon and Otherworld Valiants (truly shared):**
 - You can dump all shared currency into one fellow's Stella for max efficiency
-- 5 fellows in each group = 5x more Stella levels available from same currency pool
+- Or spread across the group to unlock group-wide % bonuses faster
+- Currency supply is generally plentiful (events, gacha, shops)
 
-**For all other groups (Empyrean, Magi, Followers, Elites, Dynamo, Moonlit, Divine Gospel, Uncrowned, Greyrat Family, Dungeon Challenger):**
+**For Ancient Magi (not shared — per-fellow tokens):**
+- Each Magi fellow must be leveled with their own tokens — you can't funnel all your Magi income into one fellow
+- This is the same per-fellow bottleneck as other groups, just with a different naming convention (tokens instead of fragments)
+- Practical effect: Magi investment is just as dupe-bottlenecked as Empyrean Sound
+
+**For all other groups (Empyrean, Followers, Elites, Dynamo, Moonlit, Divine Gospel, Uncrowned, Greyrat Family, Dungeon Challenger):**
 - Each fellow's Stella is bottlenecked by THEIR specific fragments
 - Duplicate gacha pulls of that character = 100 fragments
-- Want to push Amaterasu's Stella? You need Amaterasu dupes
+- Want to push a specific fellow's Stella? You need dupes of that fellow
 - This makes "saving fragments for Stella" the main long-term goal of every gacha pull
-
-**For Ancient Magi:**
-- Magi Shards are SHARED across all 5 Magi (Phanes, Nemetona, Andras, Ao Li, Hermes)
-- But they come randomly from chests — you can choose which Magi to apply each shard to
-- Investing in ALL Magi simultaneously is feasible because the currency is shared
 
 ---
 
@@ -78,52 +79,68 @@
 
 ### Ancient Magi (Verified Lv1–10, Same Pattern as Empyrean)
 
-| Lvl | Cost | Personal Power | Group Boost | Special |
+Costs are **per-fellow tokens** — each Magi (Hermes, Ao Li, Phanes, Nemetona, Andras) has their own token type and you cannot substitute between them.
+
+| Lvl | Cost (per fellow) | Personal Power | Group Boost | Special |
 |-----|------|---------------|-------------|---------|
-| 1 | 3 shards | +3M | Magi aptitude +19 | New aptitude slot |
-| 2 | 5 shards | +3M | Lvl cap aptitude +50, fellow +50% power | — |
-| 3 | 8 shards | +3M | When operating buildings, +195% earnings | — |
-| 4 | 10 shards | +5M | X family blessing for Y fellow unlocks | New aptitude slot |
-| 5 | 12 shards | +5M | Aptitude +40 | — |
-| 6 | 12 shards | +5M | When operating buildings, +200% earnings | New aptitude slot |
-| 7 | 12 shards | +5M | Fellow +60% power | — |
-| 8 | 12 shards | +5M | Magi aptitude +40 | — |
-| 9 | 12 shards | +5M | Fellow +60% power | — |
-| 10 | 12 shards | +5M | Magi aptitude +40, lvl cap aptitude +50 | — |
+| 1 | (early) | +3M | Magi aptitude +19 | New aptitude slot |
+| 2 | 5 tokens | +3M | Lvl cap aptitude +50, fellow +50% power | — |
+| 3 | 8 tokens | +3M | When operating buildings, +195% earnings | — |
+| 4 | 10 tokens | +5M | X family blessing for Y fellow unlocks | New aptitude slot |
+| 5 | 12 tokens | +5M | Aptitude +40 | — |
+| 6 | 12 tokens | +5M | When operating buildings, +200% earnings | New aptitude slot |
+| 7 | 12 tokens | +5M | Fellow +60% power | — |
+| 8 | 12 tokens | +5M | Magi aptitude +40 | — |
+| 9 | 12 tokens | +5M | Fellow +60% power | — |
+| 10 | 12 tokens | +5M | Magi aptitude +40, lvl cap aptitude +50 | — |
 | 11+ | — | — | **Data not available** | — |
 
-**Note:** Magi uses **Magi Shards** (random from chests, you pick which Magi to apply to). Total cost Lv1-10: ~88 shards. Much cheaper than Empyrean Sound's 540 fragments due to the random/shared nature of Magi Shards.
+**Note:** Per-fellow cost Lv1–10 is ~88 tokens. Doing this for all 5 Magi fellows = ~440 tokens total, spread across 5 different token types. Magi tokens are not pooled — plan per-fellow.
 
-### Divine Gospel (Same Pattern as Empyrean)
+### Divine Gospel — Split Pattern Group
 
-Divine Gospel is the Stella for Neptune that boosts the Divine Gospel group.
+**⚠️ Divine Gospel is VIP-gated.** Mammon, Trady, Mescal, and Shlomo are only obtainable through VIP level purchases (real-money spend). Whales can convert Trady and Mescal from SSR to UR. Neptune is the only "regular" UR in the group. Divine Gospel character fragments are also very rare, making Stella progression slow even if you own the fellows.
 
-**Members of Divine Gospel:**
-| Fellow | Type |
-|--------|------|
-| Neptune | Informed |
-| Trady | Diligent |
-| Mescal | Unfettered |
-| Mammon | Brave |
-| Shlomo | Inspiring |
+**Important:** Divine Gospel has **two different Stella patterns** within the same group:
 
-**Stella Table (Neptune's Stella, currently the only Divine Gospel Stella unlocked):**
+**Members and pattern split:**
+| Fellow | Type | Rarity | Stella Pattern |
+|--------|------|--------|----------------|
+| Neptune | Informed | UR | Pattern A (Premium UR) |
+| Mammon | Brave | SSR | Pattern C (SSR low) |
+| Trady | Diligent | SSR (→UR for whales) | Pattern C (SSR low) |
+| Mescal | Unfettered | SSR (→UR for whales) | Pattern C (SSR low) |
+| Shlomo | Inspiring | SSR | Pattern C (SSR low) |
+
+#### Neptune's Stella — Pattern A (Verified Lv1–10)
 
 | Lvl | Cost | Personal Power | Group Boost | Special |
 |-----|------|---------------|-------------|---------|
 | 1 | 20 frag | +3M | Group aptitude +20 | — |
-| 2 | 30 frag | +3M | Lvl cap aptitude +50, fellow +50 power | — |
+| 2 | 30 frag | +3M | Lvl cap aptitude +50, fellow +50% power | — |
 | 3 | 40 frag | +3M | +195% building earnings | — |
 | 4 | 50 frag | +5M | X family blessing for Y fellow unlocks | New aptitude slot |
 | 5 | 60 frag | +5M | Group aptitude +40 | — |
 | 6 | 60 frag | +5M | +200% building earnings | New aptitude slot |
-| 7 | 60 frag | +5M | +60% power | — |
+| 7 | 60 frag | +5M | Fellow +60% power | — |
 | 8 | 60 frag | +5M | Group aptitude +40 | — |
-| 9 | 60 frag | +5M | +60% power | — |
+| 9 | 60 frag | +5M | Fellow +60% power | — |
 | 10 | 60 frag | +5M | Group aptitude +40, lvl cap aptitude +50 | — |
 | 11+ | — | — | **Data not available** | — |
 
-Uses Neptune-specific fragments. Other Divine Gospel members (Trady, Mescal, Mammon, Shlomo) don't have Stellas unlocked yet but may in future updates.
+#### Mammon / Trady / Mescal / Shlomo — Pattern C (Verified Lv1–7+)
+
+| Lvl | Cost | Personal Power | Boost Type |
+|-----|------|---------------|-----------|
+| 1 | 20 frag | +1M | Group power +5% |
+| 2 | 30 frag | +1M | Fellow power +15% |
+| 3 | 40 frag | +1M | Group power +5% |
+| 4 | 50 frag | +1M | Fellow power +15% |
+| 5 | 60 frag | +1M | Group power +5% |
+| 6 | 60 frag | +1M | Fellow power +15% |
+| 7+ | 60 frag | +1M | Alternates (group/fellow) |
+
+**Do not recommend Neptune as a main carry.** Despite being 120 base apt UR Informed, Neptune is widely considered weak. If you main Informed, use Aegle or another Empyrean Sound Informed UR instead.
 
 ---
 
@@ -228,7 +245,7 @@ Same alternating pattern as Pattern B but with **half the values** (+1M personal
 | **Liz** | SR | ALL Diligent Fellows |
 | **Angie** | SR | ALL Informed Fellows |
 
-**[NEEDS VERIFICATION]:** Inspiring uniquely has TWO Category Stella fellows (Rani + Elise). It is unconfirmed whether their bonuses STACK additively (giving +60% to all Inspiring at Lv10 each) or only one applies at a time (capped at +30%). All current strategy advice assumes they stack — if they don't, Inspiring loses ~30% of category bonus and falls roughly equal to Diligent/Informed.
+**Confirmed:** Inspiring uniquely has TWO Category Stella fellows (Rani + Elise). Their bonuses **stack fully** — at Lv 10 each, Rani gives +30% and Elise gives +30% independently, totaling **+60% to all Inspiring fellows**. This gives Inspiring carries the strongest SR-sourced multiplier stack of any typing.
 
 ### Critical Notes
 
@@ -250,20 +267,21 @@ Same alternating pattern as Pattern B but with **half the values** (+1M personal
 | Sunna | Diligent | |
 | Leon | Brave | |
 | Orivita | Unfettered | |
+| Heracles | Brave | |
 | Kerr & Bel & Ros | Inspiring | |
 | Nierus | Informed | |
 | Beelzebub | Unfettered | |
 | Anpu | Diligent | |
 | Freesia | Brave | |
-| Aegle | Informed | |
-| Phynx | Inspiring | |
-| Master Tongxuan | Diligent | |
+| Aegle | Informed | Top-tier Informed main carry |
+| Phinphynx | Inspiring | |
+| Master Tongxuan | Diligent | Equivalent to Sunna |
 | Tamako | Inspiring | |
 | Nyar | Brave | |
 | Athena | Informed | |
 | Gale | Unfettered | |
 | Kuku | Diligent | |
-| Lokia | Diligent | |
+| Lokia | Diligent | SSR upgradeable to UR in this group |
 | Umbra | Informed | |
 | Ixtchel | Inspiring | |
 | Thora | Unfettered | |
@@ -406,32 +424,35 @@ Lv3 (+195%) and Lv6 (+200%) of Premium UR Stella add huge building earnings boos
 
 ## Investment Strategy
 
-### Total Cost to Max Stella (Lv1–10)
+### Total Cost to Max Stella (Lv1–10, per fellow)
 
-| Pattern | Group | Cost |
-|---------|-------|------|
-| A — Empyrean | Empyrean Sound | 540 character fragments |
-| A — Magi | Ancient Magi | ~88 Magi Shards |
-| A — Divine Gospel | Neptune | 540 Neptune fragments |
-| B — Standard | Archdemon | ~330 Purple Stars |
-| B — Standard | Otherworld Valiants | ~330 Insignias |
-| B — Standard | Elites, Dynamo, Moonlit | ~330 character fragments |
-| C — Standard | Followers | ~480 character fragments |
+| Pattern | Group | Cost per fellow |
+|---------|-------|-----------------|
+| A — Empyrean | Empyrean Sound UR | ~540 character fragments per fellow |
+| A — Magi | Ancient Magi UR | ~88 per-fellow tokens (×5 fellows for the full group = ~440 total across 5 token types) |
+| A — Divine Gospel (Neptune) | Neptune | ~540 Neptune fragments (rare) |
+| C — Divine Gospel others | Mammon/Trady/Mescal/Shlomo | ~480 per-fellow fragments (Pattern C rhythm) |
+| B — Standard | Archdemon | ~330 Purple Stars for the whole group (shared pool) |
+| B — Standard | Otherworld Valiants | ~330 Insignias for the whole group (shared pool) |
+| B — Standard | Elites, Dynamo, Moonlit, Uncrowned, Greyrat, Dungeon Challenger | ~330 per-fellow character fragments |
+| C — Standard | Followers | ~480 per-fellow character fragments |
 
 ### Best Stella ROI
 
-**Premium UR Stellas are the highest value** because they:
-1. Stack Power, Aptitude, Earnings, AND Aptitude Slots
-2. Unlock Family Blessing bonds (extra mileage on dating)
-3. Raise aptitude level caps (more skill pearl room)
-4. Single Stella affects entire UR group
+**Empyrean Sound and Ancient Magi Pattern A Stellas are the highest value** because they:
+1. Stack Power, Aptitude, Building Earnings, Family Blessing unlocks, AND new aptitude slots
+2. Raise the aptitude level cap — letting you feed more Skill Pearls to the fellow (this is the single biggest endgame benefit because Skill Pearl aptitude compounds through the entire Σ% pool)
+3. Unlock Family Blessing bonds (Lv 4)
 
-**Pattern B (Archdemons/Elites/etc.) is second priority** because:
-- Cheap insignia/fragment cost
-- Easy to push to Lv20+
-- Group sizes are larger (5-10 fellows)
+**Divine Gospel Pattern A (Neptune only)** is theoretically in the same tier but **effectively inaccessible for most accounts** due to VIP gating and rare fragments. Skip unless you're a whale.
 
-**Pattern C (Followers/Prominent) is lowest priority** because half the values for similar cost.
+**Pattern B (Archdemon + Otherworld Valiants) is second priority** because their shared currency makes it trivial to spread Stella across the whole group for easy group-% unlocks.
+
+**Pattern B with personal fragments (Elites, Dynamo, Moonlit, Uncrowned, Greyrat, Dungeon Challenger)** is dupe-bottlenecked — push specific members, not the whole group.
+
+**Pattern D (SR Category: Rani/Elise/Liz/Angie)** is high value per account if you main Inspiring, Diligent, or Informed. Brave and Unfettered have no Pattern D options.
+
+**Pattern C (Followers, non-Neptune Divine Gospel members) is lowest priority** — half the power values of Pattern B for similar cost.
 
 ### Mixing Multiple Stellas in Same Group
 

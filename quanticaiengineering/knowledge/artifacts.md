@@ -51,6 +51,7 @@ Higher rarity = higher base aptitude, more skill slots, more materia slots.
 
 | Artifact | Base Apt | Skill Slots | Max Materia Slots |
 |----------|---------|-------------|-------------------|
+| Diablo Doll | (verified endgame) | up to 23 at high awakening | high |
 | Magic Lamp | 60 | 10 | **4** |
 | Kanna Plush | 50 | 10 | **4** |
 | Dragon Summon Horn | 55 | 10 | 3 |
@@ -62,7 +63,9 @@ Higher rarity = higher base aptitude, more skill slots, more materia slots.
 | Cloak of Levitation | 25 | 8 | 1 |
 | Meowna Lisa | 20 | 8 | 1 |
 
-**Note:** Magic Lamp and Kanna Plush are the top UR artifacts — highest aptitude + 4 materia slots.
+**Note:** Magic Lamp and Kanna Plush are confirmed 4-materia-slot URs. Whether other top-tier URs (Dragon Summon Horn, Horn of Plenty, Diablo Doll, etc.) also reach 4 materia slots at full awakening is not confidently known. Treat the "4 slot" column as minimum confirmed, not exhaustive.
+
+**Diablo Doll** is a top-tier UR artifact used on the endgame UR Empyrean Sound Inspiring reference carry — seen at 23 skill slots filled with +595% total contribution and +3,515 aptitude at artifact Lv 436 with Lv 80 materia.
 
 ### SSR Artifacts
 
@@ -98,15 +101,26 @@ Higher rarity = higher base aptitude, more skill slots, more materia slots.
 
 ## Artifact Skills
 
-Artifacts have multiple **skill slots** that provide percentage power boosts. You fill these slots by gambling with **oils**:
+Artifacts have **skill slots** that provide percentage power boosts. You fill these slots by rerolling with **Reforge Oils** (available from fountain, shops, gacha, and most event tracks — widely obtainable):
 
 - Each skill slot rolls a random attribute (e.g., "SR Fellow Power %", "SSR Fellow Aptitude", "Inspiring Fellow Power %")
-- You have to gamble/reroll with oils until you get the attributes you want
+- You reroll with Reforge Oils until you get the attributes you want
+- **Rerolls are unlimited as long as you have oil**
 - Higher number of skill slots = more potential stacked bonuses
+
+### Skill Slots Come From Awakening, NOT Leveling
+
+**Important:** Adding more skill slots to an artifact requires **awakening it with Quenching Stones** — not leveling it up. Each successive awakening unlocks more skill slots but the cost escalates per awakening tier. There is a **hard cap on total skill slots per artifact type** (e.g., the cap for Golden Apple is different from Magic Lamp).
+
+**Artifact leveling is a completely separate track** — leveling only increases the fellow's **aptitude** contribution from the artifact. Levels do NOT unlock new skill slots, do NOT change skill count, and do NOT affect the reroll mechanic. Each artifact level costs a **constant 70 ores** (no escalation across levels).
+
+### Strategy Implication: Awaken Multiple Artifacts
+
+Because materia slots are gated by artifact awakening (and capped per artifact), the best way to stack more materia across your main carry is to **awaken multiple artifacts and swap between them for different fights** — rather than pouring everything into one artifact that's already at its slot cap. Awakening is the bottleneck; leveling is cheap and constant.
 
 ### Skill Percentage Scaling
 
-The total skill % scales with the number of slots filled AND the artifact level. Examples from real accounts:
+The total skill % scales with the number of slots filled (which depends on awakening) AND the artifact level. Examples from real accounts:
 
 | Artifact | Skills Filled | Total % | Aptitude Bonus | Artifact Lvl | Materia Lvl |
 |----------|--------------|---------|----------------|--------------|-------------|
@@ -118,7 +132,7 @@ The total skill % scales with the number of slots filled AND the artifact level.
 | Mescal Cape (Cloak of Levitation, UR) | 8 | +139% | +27 | 1 | 1 |
 | Mermaid's Tear (UR) | 8 | +140% | +35 | 0 | 0 |
 
-**Key observation:** Skill count scales with artifact level/materia progression. A Lv1 artifact has fewer/weaker skills than Lv436. The gap between 8 skills (140%) and 23 skills (595%) is +455% added to the fellow's total Σ% pool, which is then multiplied with Base Power.
+**Key observation:** The gap between 8 skills (140%) and 23 skills (595%) is +455% added to the fellow's total Σ% pool, which is then multiplied with Base Power. **But skill count does NOT scale with artifact level** — skill slots are gated by **awakening** (Quenching Stones). The snapshot at Lv 436 / 23 skills reflects deep awakening investment, not leveling. A Lv 1 artifact at equivalent awakening would still have 23 skills.
 
 ## Materia System
 
@@ -130,9 +144,9 @@ Materias are separate items equipped into the artifact's materia slots. Each mat
 
 ### Materia Leveling
 
-- **40 Magic Ores per materia level** (standard rate)
-- At very high artifact levels, cost increases (e.g., 70 ores/level at artifact Lv 436)
+- **40 Magic Ores per materia level** (constant — this is the materia cost curve)
 - Each materia level improves the random bonus values
+- **Do not confuse with artifact leveling.** Artifact leveling is a separate track at **70 ores per level** (also constant, no escalation). Materia levels and artifact levels are independent investment tracks.
 
 ### Materia Power Boost Unlocks
 
@@ -141,21 +155,25 @@ At specific materia levels, you unlock **additional power boost slots** on the m
 | Materia Level | Unlock |
 |---------------|--------|
 | 10 | 1 random power boost (free roll) |
-| 20 | 2 random power boosts (must activate with Breakthrough Materia) |
+| 20 | 2 random power boosts (requires Breakthrough Materia to continue past Lv 10) |
 
-### Breakthrough Materia
-- **Activates** the Lv20 power boost slots
-- The power boost is **random** — you get whatever rolls
-- Used after materia reaches Lv20
+**You cannot level a materia past Lv 10 without Breakthrough Materia.** Lv 10 is a hard gate — Breakthrough Materia is what unblocks continued leveling toward Lv 20 and beyond.
 
-### Refine Materia
-- Obtained from **events only**
-- Gives **better power boosts** than Breakthrough alone
-- Used to reroll for higher-quality bonuses at the Lv10/Lv20 slots
+### Breakthrough Materia — Required To Go Past Lv 10
+- **Breakthrough Materia is the gate-unlock item** — without it, materia cannot be leveled past Lv 10
+- Essential for reaching the higher power-boost slots (Lv 20+)
+- More common than Refine Materia but still a limiting resource
+
+### Refine Materia — Rerolls The Bonus Values
+- Obtained from events (much rarer than Breakthrough)
+- **Used to reroll the actual bonus values** rolled onto the power-boost slots
+- Rerolls give you a chance at higher-quality bonuses at the Lv 10 / Lv 20 slots you've already unlocked
+
+**Both matter — they do different things.** Breakthrough Materia unlocks further leveling. Refine Materia rerolls the bonus quality at already-unlocked slots. You need Breakthrough to progress; Refine is for optimizing what Breakthrough enabled. In practice, **Breakthrough Materia is often the more important bottleneck** because without it you're stuck at Lv 10.
 
 ## Real Account Examples — Fellow Power Impact
 
-### Diablo Doll on Amaterasu (top-tier setup)
+### Diablo Doll on Endgame UR Carry (top-tier setup)
 - **With artifact:** 48,471,403,770
 - **Without artifact:** 39,884,181,012
 - **Increase:** +8,587,222,758 (**+21.5% total fellow power**)
@@ -222,9 +240,11 @@ If you get **Magic Lamps**, use them in place of Apples (Lamps have 4 materia sl
 If you've already spread Magic Ore across multiple artifacts, **break them down and replace with Lv 1 artifacts** so you can re-concentrate properly.
 
 ### Materia Boosting Order
-1. First: **Unlock Materia slots** by boosting them to **+2**
-2. Then: After all your main typing fellows have +2 materia slots, start boosting to **+5**
-3. Use excess Quench for slot awakenings on artifacts that benefit your main typing
+This strategy applies mainly to the **top-tier materia-heavy artifacts** — Golden Apple, Magic Lamp, Kanna Plush, Horn of Plenty, and other high-slot URs. Low-slot artifacts have a materia cap that makes concentrated investment less effective, so don't bother optimizing this on Sapphire Crown / Mermaid's Tear / lower URs.
+
+1. First: **Unlock Materia slots** by boosting them to **+2** across your main typing's top artifacts
+2. Then: After your main typing fellows have +2 materia slots, start boosting to **+5**
+3. Use excess Quench for slot awakenings on artifacts that benefit your main typing (this is what unlocks more skill slots, not artifact leveling)
 
 ## Strategic Notes
 
@@ -243,16 +263,16 @@ These are the two UR artifacts with **4 materia slots** (vs 3 or 1 for others). 
 - Inspiring carry? Target "Inspiring Fellow Power %" rolls
 - Don't waste oils on non-main fellows
 
-### Refine Materia Priority
-- Only use Refine Materia (event-exclusive) on your main carry's equipped artifact
-- Breakthrough Materia is for general use (still random but more common)
+### Refine vs Breakthrough Materia — Both Are Required
+- **Breakthrough Materia** is the gate-unlock item that lets materia level past Lv 10. Without it, your materias are stuck at Lv 10 no matter how much Magic Ore you throw at them. Breakthrough is often the tighter bottleneck.
+- **Refine Materia** (rarer, event-exclusive) rerolls the bonus values on already-unlocked slots to hunt for better rolls. Use on your main carry's equipped artifact when you're already past Lv 10.
 
 ### Cost Budget
-- **40 Magic Ores per materia level** (standard)
-- Endgame materia Lv 80 = ~3,200+ Magic Ores per materia on main carry
-- With 4 materia slots (Magic Lamp/Kanna Plush): ~12,800+ Magic Ores just for materias
-- Plus artifact leveling costs
-- **Magic Ore is a long-term grind** — budget carefully
+- **Materia leveling: 40 Magic Ores per level, constant** — 80 levels × 40 = 3,200 ores per materia slot
+- **Artifact leveling: 70 ores per level, constant** — completely separate track from materia
+- Endgame single materia slot to Lv 80 = ~3,200 ores
+- But the "total materia budget" depends on how many slots the artifact has awakened (not how high you level the artifact), and the number of useful slots is capped by Stella levels, awakenings, and other per-fellow bonuses that shift the cap. Don't compute a fixed "12,800 ores per Magic Lamp" budget — the actual cap moves as your fellow progresses.
+- **Breakthrough Materia is the scarce resource, not Magic Ore** — Magic Ore is a grind but obtainable; Breakthrough gates your entire materia ceiling.
 
 ## Cross-System Interactions (Additive Math)
 
@@ -274,7 +294,7 @@ Artifact bonuses ADD to the percentage sum that multiplies Base Power. All these
 **All these sum into one Σ%**, which then multiplies Base.
 
 **Artifact aptitude adds alongside:**
-- Born Aptitude (base)
+- Base Aptitude (innate per-fellow stat)
 - Skill Pearls (Supreme/Outstanding/Ordinary Talent)
 - Costume essence track aptitude
 - Family Stella aptitude
@@ -290,11 +310,11 @@ Artifact bonuses ADD to the percentage sum that multiplies Base Power. All these
 
 All these sum, then get a final × (1 + aptitude familiar% + aptitude skill%).
 
-### Real Example (Amaterasu)
+### Real Example (Endgame UR Carry)
 
 Diablo Doll contributes:
-- **+788.25% to Σ%** (part of her 8,099.15% total)
-- **+3,515 to aptitude** (part of her 30,488 flat aptitude)
+- **+788.25% to Σ%** (part of the 8,099.15% total)
+- **+3,515 to aptitude** (part of the 30,488 flat aptitude)
 
 The "with artifact: 48.47B / without: 39.88B" gap of +8.59B represents how much those contributions add when plugged through the formula:
 - Aptitude gap: 3,515 points × 15,500 level multiplier × 82 percentage sum = ~4.47B from the aptitude side
