@@ -298,9 +298,12 @@ def validate_config() -> None:
     if not POLICIES_DIR.exists():
         errors.append(f"Policies directory not found: {POLICIES_DIR}")
 
-    # Check Groq API key
-    if not GROQ_API_KEY and APP_ENV != "test":
-        errors.append("GROQ_API_KEY not set")
+    # Check API key for the selected LLM provider
+    if APP_ENV != "test":
+        if LLM_PROVIDER == "anthropic" and not ANTHROPIC_API_KEY:
+            errors.append("LLM_PROVIDER=anthropic but ANTHROPIC_API_KEY not set")
+        elif LLM_PROVIDER == "groq" and not GROQ_API_KEY:
+            errors.append("LLM_PROVIDER=groq but GROQ_API_KEY not set")
 
     # Check model availability (warn only — Groq adds new models regularly)
     if GROQ_MODEL not in GROQ_MODELS:
