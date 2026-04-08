@@ -280,27 +280,59 @@ class IsekaiRAGSystem:
         "sylthel", "sachiko", "sylphiette", "mercuria", "loo",
     }
 
+    # Triggers that indicate the query is about maximizing / improving /
+    # optimizing fellow power. When any of these appear in the query, we
+    # run multi-domain expansion retrieval to pull in chunks from every
+    # power source (fish, family, aptitude, artifacts, etc.) even if the
+    # query doesn't mention those domains explicitly.
+    _POWER_QUERY_TRIGGERS = {
+        "most power", "max power", "maximum power", "optimize", "optimise",
+        "improve", "increase power", "boost", "biggest", "best way",
+        "push power", "maximize", "maximise", "stronger", "strongest",
+        "fellow power", "main carry", "action plan", "priority", "prioritize",
+        "how to power", "how do i", "how do you", "help me improve",
+    }
+
+    # Canonical sub-queries to run when a power-optimization intent is
+    # detected. Each pulls a different domain, ensuring the LLM sees content
+    # from every major power source regardless of the original query's
+    # semantic anchor.
+    _POWER_DOMAIN_SUBQUERIES = [
+        "aptitude skill pearls supreme talent insight alraune bazaar scroll",
+        "fish tank percent power fish skills ocean top category",
+        "family stella blessing power aptitude to blessed fellow",
+        "artifacts awakening quenching stone materia oils reforge",
+        "awakening stars gates limit break aptitude slot",
+        "costume essence typing boost fellow power",
+        "building service level training diligent inspiring brave informed unfettered",
+        "fellow power formula aptitude multiplier sigma percent flat",
+        "museum antique trophy per typing",
+        "item consumable flat power bonus main carry",
+    ]
+
     def _retrieve(
         self, question: str, k: int
     ) -> Tuple[List[Tuple[Chunk, float]], float]:
         """
-        Retrieve top-k relevant chunks using hybrid dense + keyword search.
+        Retrieve top-k relevant chunks using hybrid dense + keyword search
+        with domain expansion for power-optimization queries.
 
-        Dense retrieval alone is weak at named-entity queries (e.g., "how to
-        power up Sunna") because proper nouns don't dominate the embedding.
-        We do a second-pass keyword match for any entity names found in the
-        query, then merge results so name-relevant chunks are guaranteed in
-        the retrieved set.
+        Three-stage retrieval:
+        1. Dense retrieval on the original query (captures user intent)
+        2. Keyword match pass for named entities (Sunna, Hermes, etc.)
+        3. For power-optimization intents, multi-query retrieval across
+           every power domain (fish, family, aptitude, artifacts, awakening,
+           buildings, costumes) so the LLM sees content from all major
+           power sources, not just whichever one best matched the query.
         """
         start_time = time.time()
 
-        # Step 1: Dense retrieval (normal path) — get more chunks than k so we
-        # have a deeper pool to merge with keyword hits.
+        # Step 1: Dense retrieval on the original query
         query_embedding = self.embedding_generator.embed_query(question)
         dense_k = max(k * 2, 20)
         dense_results = self.vector_store.search(query_embedding, k=dense_k)
 
-        # Step 2: Keyword-match pass. Find entity names present in the query.
+        # Step 2: Keyword-match pass for named entities
         question_lower = question.lower()
         mentioned_entities = {
             name for name in self._KEYWORD_ENTITIES
@@ -310,42 +342,101 @@ class IsekaiRAGSystem:
         keyword_results: List[Tuple[Chunk, float]] = []
         if mentioned_entities:
             logger.info(f"Query mentions entities: {sorted(mentioned_entities)}")
-            # Score each chunk by how many mentioned entities it contains,
-            # weighted by a base keyword score so they can compete with dense.
             for chunk in self.vector_store.chunks:
                 chunk_lower = chunk.content.lower()
                 hits = sum(1 for name in mentioned_entities if name in chunk_lower)
                 if hits > 0:
-                    # Base keyword score: 0.55 for a single hit, climbs with
-                    # more hits but caps around 0.8 so dense top hits can still
-                    # win on non-name queries.
                     keyword_score = min(0.55 + 0.08 * (hits - 1), 0.80)
                     keyword_results.append((chunk, keyword_score))
-            # Sort by keyword score
             keyword_results.sort(key=lambda x: x[1], reverse=True)
             keyword_results = keyword_results[:dense_k]
 
-        # Step 3: Merge. Prefer the higher score per chunk; keyword results
-        # guarantee that name-matching chunks are present even if dense missed.
-        merged: Dict[str, Tuple[Chunk, float]] = {}
-        for chunk, score in dense_results:
-            merged[chunk.chunk_id] = (chunk, float(score))
-        for chunk, score in keyword_results:
-            existing = merged.get(chunk.chunk_id)
-            if existing is None or score > existing[1]:
-                merged[chunk.chunk_id] = (chunk, score)
+        # Step 3: Domain expansion for power-optimization queries
+        # This is the key fix: for "how to maximize power for X" type
+        # queries, we also retrieve from every power-source domain so the
+        # LLM sees fish/family/artifacts/etc. content even though the
+        # original query's embedding doesn't match those domains directly.
+        is_power_query = any(trigger in question_lower for trigger in self._POWER_QUERY_TRIGGERS)
+        domain_results: List[Tuple[Chunk, float]] = []
+        if is_power_query:
+            logger.info("Power-optimization intent detected — expanding to domain sub-queries")
+            per_domain_k = 3  # top 3 chunks per domain
+            for subquery in self._POWER_DOMAIN_SUBQUERIES:
+                sub_emb = self.embedding_generator.embed_query(subquery)
+                sub_results = self.vector_store.search(sub_emb, k=per_domain_k)
+                # Score domain chunks at ~0.5 so they participate in the
+                # merge without dominating. The domain expansion is a safety
+                # net to ensure coverage, not a replacement for primary search.
+                for chunk, score in sub_results:
+                    domain_results.append((chunk, 0.5 + float(score) * 0.2))
 
-        # Final: take top k by score
-        final_results = sorted(
-            merged.values(), key=lambda x: x[1], reverse=True
-        )[:k]
+        # Quota-based merge: reserve slots per retrieval source so that both
+        # domain coverage (fish, family, aptitude, etc.) AND named-entity
+        # specificity (Sunna, Hermes, etc.) are guaranteed in the final set.
+        # Without quotas, whichever source scores highest would crowd out
+        # the others — e.g., domain expansion would push out Sunna-specific
+        # chunks because domain scores end up higher than keyword-boost scores.
+        final_results: List[Tuple[Chunk, float]] = []
+        used_ids: set[str] = set()
+
+        def _add_unique(src_results: List[Tuple[Chunk, float]], quota: int):
+            added = 0
+            for chunk, score in src_results:
+                if added >= quota:
+                    break
+                if chunk.chunk_id not in used_ids:
+                    final_results.append((chunk, float(score)))
+                    used_ids.add(chunk.chunk_id)
+                    added += 1
+
+        if mentioned_entities and is_power_query:
+            # Both named entity AND power optimization → reserve slots for each
+            # k=18 typical split: 8 keyword + 6 domain + 4 dense
+            keyword_quota = max(k // 2, 1)
+            domain_quota = max(k // 3, 1)
+            dense_quota = k - keyword_quota - domain_quota
+            _add_unique(keyword_results, keyword_quota)
+            _add_unique(domain_results, domain_quota)
+            _add_unique(dense_results, dense_quota)
+        elif mentioned_entities:
+            # Named entity query, no power intent
+            # k=18 typical split: 12 keyword + 6 dense
+            keyword_quota = int(k * 0.65)
+            dense_quota = k - keyword_quota
+            _add_unique(keyword_results, keyword_quota)
+            _add_unique(dense_results, dense_quota)
+        elif is_power_query:
+            # Power optimization without a specific fellow
+            # k=18 typical split: 10 domain + 8 dense
+            domain_quota = int(k * 0.55)
+            dense_quota = k - domain_quota
+            _add_unique(domain_results, domain_quota)
+            _add_unique(dense_results, dense_quota)
+        else:
+            # Normal query — dense retrieval only, no quotas needed
+            _add_unique(dense_results, k)
+
+        # If quotas under-filled (e.g., not enough keyword chunks existed),
+        # top up from the highest-scoring remaining chunks across all sources
+        if len(final_results) < k:
+            all_candidates: Dict[str, Tuple[Chunk, float]] = {}
+            for chunk, score in dense_results + keyword_results + domain_results:
+                if chunk.chunk_id in used_ids:
+                    continue
+                existing = all_candidates.get(chunk.chunk_id)
+                if existing is None or float(score) > existing[1]:
+                    all_candidates[chunk.chunk_id] = (chunk, float(score))
+            leftover = sorted(all_candidates.values(), key=lambda x: x[1], reverse=True)
+            for chunk, score in leftover[: k - len(final_results)]:
+                final_results.append((chunk, score))
+                used_ids.add(chunk.chunk_id)
 
         retrieval_time = time.time() - start_time
 
         logger.info(
             f"✓ Hybrid retrieval: {len(dense_results)} dense + "
-            f"{len(keyword_results)} keyword → {len(final_results)} merged "
-            f"in {retrieval_time:.3f}s"
+            f"{len(keyword_results)} keyword + {len(domain_results)} domain → "
+            f"{len(final_results)} merged in {retrieval_time:.3f}s"
         )
         if final_results:
             logger.info(f"  Top score: {final_results[0][1]:.4f}")
