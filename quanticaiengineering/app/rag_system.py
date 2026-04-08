@@ -244,25 +244,113 @@ class IsekaiRAGSystem:
 
         return response
 
+    # Known proper-noun entities in the game. Dense retrieval is weak at
+    # differentiating named entities, so we do a keyword fallback pass: if the
+    # query mentions any of these names, we force-include chunks that mention
+    # them into the retrieved set. Extends naturally as the knowledge base
+    # grows — only the names that actually appear in both the query AND at
+    # least one chunk will have effect, so false positives are harmless.
+    _KEYWORD_ENTITIES = {
+        # Top-tier 120-apt UR fellows
+        "amaterasu", "sunna", "master tongxuan", "tongxuan", "leon", "heracles",
+        "orivita", "aegle", "neptune", "phanes", "nemetona", "andras", "ao li",
+        "hermes", "freesia", "nyar", "beelzebub", "gale", "thora", "tomoe",
+        "rimuru", "kerr & bel & ros", "tamamo", "phinphynx", "ixtchel",
+        "athena", "nierus", "umbra", "gabrael", "kuku", "lokia", "anpu",
+        # Common SSR / event fellows
+        "mio", "mulberry", "crysta", "kaye", "milim nava", "iori", "salvo",
+        "avril", "stephanie", "super", "mammon", "ira", "avar", "acedia",
+        "lux", "mescal", "shlomo", "trady", "black", "magellan", "jewlry",
+        "loya", "augustine", "bubo", "eter", "flos", "onikiri", "tigirl",
+        "paat", "myner", "frogella", "thalia", "healora", "benimaru", "fafnir",
+        "tohru", "elma", "kanna", "lucoa", "shiki", "emma", "mushimi",
+        # SR standalone Stella fellows
+        "rani", "elise", "liz", "angie",
+        # Low-rarity fellows users might ask about
+        "fifi", "woolf", "maxim", "pump", "belle", "prim", "nalu",
+        # UR families
+        "phantanyl", "tsukuyomi", "namiko", "mors", "mia", "curren", "nirvana",
+        "skogul", "usuri", "cranelia", "wadjetta", "shuna",
+        # SSR families (partial — high-value ones)
+        "lancelot", "hestia", "hanamiya rica", "vlad", "raphael", "thubran",
+        "kagura", "futaba", "bridget", "sera", "lilith", "denier", "kosuzu",
+        "lina", "baity", "bren", "lud", "alanna", "connie", "bathery", "holly",
+        "phetia", "nibel", "emiru", "jin yu", "puffair", "pan pan", "penglia",
+        "chitana", "lunaria", "leopolda", "devileer", "squaky", "willo",
+        "sylthel", "sachiko", "sylphiette", "mercuria", "loo",
+    }
+
     def _retrieve(
         self, question: str, k: int
     ) -> Tuple[List[Tuple[Chunk, float]], float]:
-        """Retrieve top-k relevant chunks."""
+        """
+        Retrieve top-k relevant chunks using hybrid dense + keyword search.
+
+        Dense retrieval alone is weak at named-entity queries (e.g., "how to
+        power up Sunna") because proper nouns don't dominate the embedding.
+        We do a second-pass keyword match for any entity names found in the
+        query, then merge results so name-relevant chunks are guaranteed in
+        the retrieved set.
+        """
         start_time = time.time()
 
-        # Generate query embedding
+        # Step 1: Dense retrieval (normal path) — get more chunks than k so we
+        # have a deeper pool to merge with keyword hits.
         query_embedding = self.embedding_generator.embed_query(question)
+        dense_k = max(k * 2, 20)
+        dense_results = self.vector_store.search(query_embedding, k=dense_k)
 
-        # Search vector store
-        results = self.vector_store.search(query_embedding, k=k)
+        # Step 2: Keyword-match pass. Find entity names present in the query.
+        question_lower = question.lower()
+        mentioned_entities = {
+            name for name in self._KEYWORD_ENTITIES
+            if name in question_lower
+        }
+
+        keyword_results: List[Tuple[Chunk, float]] = []
+        if mentioned_entities:
+            logger.info(f"Query mentions entities: {sorted(mentioned_entities)}")
+            # Score each chunk by how many mentioned entities it contains,
+            # weighted by a base keyword score so they can compete with dense.
+            for chunk in self.vector_store.chunks:
+                chunk_lower = chunk.content.lower()
+                hits = sum(1 for name in mentioned_entities if name in chunk_lower)
+                if hits > 0:
+                    # Base keyword score: 0.55 for a single hit, climbs with
+                    # more hits but caps around 0.8 so dense top hits can still
+                    # win on non-name queries.
+                    keyword_score = min(0.55 + 0.08 * (hits - 1), 0.80)
+                    keyword_results.append((chunk, keyword_score))
+            # Sort by keyword score
+            keyword_results.sort(key=lambda x: x[1], reverse=True)
+            keyword_results = keyword_results[:dense_k]
+
+        # Step 3: Merge. Prefer the higher score per chunk; keyword results
+        # guarantee that name-matching chunks are present even if dense missed.
+        merged: Dict[str, Tuple[Chunk, float]] = {}
+        for chunk, score in dense_results:
+            merged[chunk.chunk_id] = (chunk, float(score))
+        for chunk, score in keyword_results:
+            existing = merged.get(chunk.chunk_id)
+            if existing is None or score > existing[1]:
+                merged[chunk.chunk_id] = (chunk, score)
+
+        # Final: take top k by score
+        final_results = sorted(
+            merged.values(), key=lambda x: x[1], reverse=True
+        )[:k]
 
         retrieval_time = time.time() - start_time
 
-        logger.info(f"✓ Retrieved {len(results)} chunks in {retrieval_time:.3f}s")
-        if results:
-            logger.info(f"  Top score: {results[0][1]:.4f}")
+        logger.info(
+            f"✓ Hybrid retrieval: {len(dense_results)} dense + "
+            f"{len(keyword_results)} keyword → {len(final_results)} merged "
+            f"in {retrieval_time:.3f}s"
+        )
+        if final_results:
+            logger.info(f"  Top score: {final_results[0][1]:.4f}")
 
-        return results, retrieval_time
+        return final_results, retrieval_time
 
     def _rerank(
         self, question: str, chunks_with_scores: List[Tuple[Chunk, float]]

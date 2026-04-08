@@ -125,6 +125,11 @@ class DocumentChunker:
 
         Splits on ## and ### level headings, keeping heading with content.
         Falls back to token-based chunking if no headings found.
+
+        Post-processes the output to merge any "heading-only" chunks (where
+        the content is just a heading line with no body text) into the next
+        chunk. This prevents useless stub chunks like "## Diligent Fellows"
+        from polluting the vector store.
         """
         content = document.content
 
@@ -138,21 +143,53 @@ class DocumentChunker:
             )
             return self._chunk_by_tokens(document)
 
-        chunks = []
-
+        # First pass: extract raw sections (heading + body up to next heading)
+        raw_sections = []
         for i, match in enumerate(matches):
             start_pos = match.start()
-
-            # Find end position (start of next heading or end of document)
             if i < len(matches) - 1:
                 end_pos = matches[i + 1].start()
             else:
                 end_pos = len(content)
-
-            # Extract section content
             section_content = content[start_pos:end_pos].strip()
+            raw_sections.append(section_content)
 
-            # If section is too large, split it further
+        # Second pass: merge "heading-only" sections (body < min_body_chars)
+        # forward into the next section. This handles the common pattern:
+        #   ## Parent Heading
+        #   ### Child Heading 1
+        #   | table content |
+        #   ### Child Heading 2
+        #   | more table content |
+        # where the Parent Heading would otherwise become a useless stub chunk.
+        min_body_chars = 40  # anything shorter than this is "heading only"
+        merged_sections = []
+        carry = ""
+        for section in raw_sections:
+            # Calculate the "body" by removing the heading line
+            lines = section.split("\n", 1)
+            body = lines[1].strip() if len(lines) > 1 else ""
+
+            if len(body) < min_body_chars:
+                # Heading-only: accumulate and prepend to next section
+                carry = (carry + "\n\n" + section).strip() if carry else section
+            else:
+                # Real content: prepend any accumulated heading context
+                merged = (carry + "\n\n" + section).strip() if carry else section
+                merged_sections.append(merged)
+                carry = ""
+
+        # If there's leftover carry (document ends with only headings), emit it
+        # as its own chunk rather than losing it entirely.
+        if carry and not merged_sections:
+            merged_sections.append(carry)
+        elif carry:
+            # Append leftover to the final section rather than creating a stub
+            merged_sections[-1] = merged_sections[-1] + "\n\n" + carry
+
+        # Third pass: create Chunk objects, splitting oversized sections
+        chunks = []
+        for i, section_content in enumerate(merged_sections):
             if len(section_content) > self.chunk_size * 1.5:
                 sub_chunks = self._split_large_section(section_content, document, i)
                 chunks.extend(sub_chunks)
