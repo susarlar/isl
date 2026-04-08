@@ -42,23 +42,18 @@ This guide connects all systems together by aptitude category. When a player say
 12. **Mulberry** (SSR Inspiring) — Followers + universal familiar tower benefit
 
 ### Stella Investment
-- **Elise** → Boosts ALL Inspiring fellows' power (category-wide multiplier)
-- **Phanes** (UR, "Magnus of Inspiring") → Stella bond with Kosuzu at Stella Lv.4
+- **Rani + Elise** → Both boost ALL Inspiring fellows' power, and **their bonuses stack fully** (verified). At max Lv 10 each, Rani's +30% and Elise's +30% add independently for **+60% total** to every Inspiring fellow. Inspiring is the only typing with two stacking Category Stella boosters.
+- **Empyrean Sound Pattern A Stella** on your main carry (Amaterasu or other Inspiring UR) — Push this for the +175% Lv 10 group boost plus the Pattern A slot unlocks / aptitude cap raises that let you feed more Skill Pearls.
+- **Ancient Magi Stella (Phanes)** if you have Phanes — Pattern A benefits apply equally.
 
-Push Elise's Stella as high as possible — every level multiplies your entire Inspiring roster.
+Push both Rani and Elise to max — every level of each multiplies your entire Inspiring roster and they stack.
 
 ### Family Blessings — Who to Date
-**3x Blessing (best value):**
-| Family | Blesses | Why |
-|--------|---------|-----|
-| Kosuzu | Avar, **Orivita**, **Neptune** | Blesses two 120-apt URs |
-| Kagura | Iori, Salvo, **Orivita** | Orivita coverage |
-| Lilith | Leon, Acedia, **Sunna** | Sunna coverage |
-| Bren (SSR) | Hermes, Sunna, Aegle, Crysta, Mushimi, Paat, Stephanie, Ixtchel | Strong 8-fellow coverage |
-| Sera | **Amaterasu**, Stephanie, Acedia | If you run Amaterasu |
-| Baity | Salvo, Anne, **Hermes** | Hermes coverage |
+Open `families-roster.md` and find every family that blesses Amaterasu (or your chosen Inspiring main). Amaterasu in particular has **7 families** (2 UR + 5 SSR) that bless her — the strongest Inspiring family coverage in the game.
 
-**Blessing strategy:** Get Advanced Blessing to ~200 on the family that blesses your main carry first, then spread to others. Remember: costs double every ~50 levels.
+**Amaterasu's family lineup:** Phantanyl (UR), Tsukuyomi (UR), Thubran, Kagura, Futaba, Bridget, Sera
+
+**Blessing strategy:** Push Advanced Blessing to ~200 first on the family you date most often, spread to additional blessing families from there. Costs roughly double every ~50 levels — don't chase high levels on every family, concentrate on the ones you can actually target with Plane Tickets and Crystal Travel.
 
 ### Fish Priority
 **% Power fish (biggest % contribution — do these first):**
@@ -99,8 +94,7 @@ Push Elise's Stella as high as possible — every level multiplies your entire I
 **Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power per date), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
 
 **Diligent-specific awakening priorities:**
-1. **Master Tongxuan** (UR Diligent, base ~120) — your main carry from Penglai
-2. **Sunna** (UR Diligent, base 120 apt) — Empyrean Sound, second carry option
+1. **Sunna or Master Tongxuan** (both UR Diligent, base 120 apt, both Empyrean Sound Pattern A) — these two are **mechanically equivalent**. Do not switch between them — pick one and commit. Investment already spent on one does NOT transfer to the other.
 3. **Acedia** (SSR Diligent, base ~75 apt) — Archdemon of Sloth, shared Purple Stars
 4. **Jewlry** (SSR Diligent, base ~70 apt) — Followers group
 5. **Trady** (SSR Diligent, base ~90 apt) — VIP 4, Divine Gospel
@@ -165,7 +159,12 @@ Check blessing chart for families that bless your specific Diligent fellows. Key
 **Universal awakenings (any main):** Aegle (artifact level cap), Mio (blessing power), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
 
 **Brave-specific awakening priorities:**
-1. **Heracles** (UR, base ~120 apt) if whaling Olympics, OR **Freesia** (UR, base ~120) for F2P, OR **Leon** (UR, base 120 apt) if already invested
+1. **Leon, Heracles, or Freesia** (all UR Brave, 120 apt, Empyrean Sound) — all three are mechanically equivalent at the base level. Family coverage is similar:
+   - **Leon:** 6 families — Mia (UR), Lina, Lilith, Holly, Willo, Penglia
+   - **Heracles:** 6 families — Cranelia (UR), Nyar (UR), Lud, Athena, Mercuria, Mushimi
+   - **Freesia:** Blessed by Curren (UR), Mors (UR), Lud, Wadjetta (UR), Vlad, Nyar (family) — also good coverage
+
+   **Practical recommendation:** **Freesia** is the best new-main pick for Brave because Sandtopia (Leon's event) is very rare nowadays. Heracles is locked behind Cloud Kingdom Olympics (best whale event). Choose based on event access and which families you already have unlocked.
 2. **Mio** (SSR Inspiring) for blessing power universal benefit
 3. **Ira** (SSR Brave, base ~75 apt) — Archdemon of Wrath, shared Purple Stars
 4. **Salvo** (SSR Brave, base ~75 apt) — Otherworld Valiants, shared Insignias, Tier SS combat
@@ -206,19 +205,17 @@ Key families blessing Brave fellows:
 ## I Main Informed
 
 ### Stella Investment
-- **Angie** → Boosts ALL Informed fellows' power
-- **Neptune** (UR) is VIP 8, so if you have him, pair with Angie's Stella
+- **Angie** → Boosts ALL Informed fellows' power (+30% at max verified level)
+- **Empyrean Sound Pattern A Stella** on your main Informed UR — push this as the primary stella investment
 
 ### Family Blessings — Who to Date
-Key families blessing Informed fellows:
-- **Willo** (3x) → Kaye, Ira, **Andras** (note: Andras is Brave, but Willo blesses multiple types)
-- Check blessing chart for families blessing Super, Augustine, Stephanie specifically
+Open `families-roster.md` and find every family that blesses your main Informed carry. Aegle in particular has strong coverage (6 families including 2 UR + Hestia custom slot). Key multi-Informed families: Curren, Namiko (UR), Bren, Jin Yu.
 
 ### Top Informed Fellows
 | Fellow | Base Aptitude | Rarity | Notes |
 |--------|-------------|--------|-------|
-| Neptune | ~120 | UR | VIP 8, Divine Gospel, best all-around |
-| Aegle | UR | UR | F2P-friendly, Empyrean Sound |
+| Aegle | 120 | UR | **Top-tier Informed main.** Empyrean Sound, F2P-friendly (Aegle Stella 10 possible free), massive family coverage |
+| Neptune | 120 | UR | Divine Gospel. **Do NOT recommend as a main carry** — widely considered weak despite 120 base apt and UR rarity. Not worth investing in even for whales. |
 | Ao Li | UR | UR | Ancient Magi |
 | Nierus | UR | UR | Aloha event |
 | Athena | UR | UR | Empyrean Sound |
@@ -239,8 +236,8 @@ Key families blessing Informed fellows:
 **Universal awakenings (any main):** Aegle (artifact level cap — but also your main if Informed!), Mio (blessing power), Mulberry (familiar tower), Crysta (SSR power), Kaye (banquet popularity)
 
 **Informed-specific awakening priorities:**
-1. **Aegle** (UR Informed, base ~120) — DOUBLE benefit: F2P main carry + universal artifact cap unlock
-2. **Neptune** (UR Informed, base 120 apt) — VIP 8, solo Divine Gospel Stella
+1. **Aegle** (UR Informed, base 120 apt) — TOP-TIER main carry choice for Informed. DOUBLE benefit: best-in-typing carry + universal artifact cap unlock
+2. **Ao Li** (UR Informed, base 120 apt) — Ancient Magi, excellent alternative if going Magi main
 3. **Super** (SSR Informed, base ~75 apt) — Archdemon of Pride, Tier SS combat, shared Purple Stars
 4. **Stephanie** (SSR Informed, base ~75 apt) — Otherworld Valiants, shared Insignias
 5. **Augustine** (SSR Informed, base ~70 apt) — Followers group

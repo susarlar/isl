@@ -71,9 +71,9 @@ Fellows of the **same typing in a team get a minor boost** to each other. Combin
 
 ## Key F2P Plays
 
-- **Aegle Stella 10 (Free)** — Daily gacha ticket gives you points → trade for Aegle fragments. Get to Stella 10 free over time.
+- **Aegle Stella 10 (Free)** — Daily gacha ticket gives you points → trade for Aegle fragments. Get to Stella 10 free over time. Aegle is the **top-tier Informed main** and fully F2P-accessible. No reason to main Neptune over Aegle.
 - **Orivita Stella 10 (Alt accounts)** — Make alt accounts for Tree event, feed fragments to main. Also unlimited Orivita outfit upgrades this way.
-- **Aloha cheap path** — Nierus Stella is fairly cheap to get even at low spend.
+- **Aloha cheap path** — Nierus Stella is fairly cheap to get even at low spend, decent backup Informed UR.
 
 ## Daily Activities for Events
 

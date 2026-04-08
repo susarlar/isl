@@ -78,7 +78,7 @@ Aptitude sources ADD flat values, then get multiplied by aptitude-level Familiar
 - Expo (Expo gives aptitude + % power + flat power — all three; do Expo daily)
 - Museum (from Museum antiques — typed per-fellow aptitude)
 - Familiar (from Familiar binding)
-- Compendium (scrapbook system — more characters collected unlocks bonuses, some aptitude, some % power, some other)
+- Compendium (scrapbook system with one page per event — collecting a certain number of fellows from each event unlocks milestone bonuses, some aptitude, some % power, some other. Most Compendium pages are from **limited events**, which means the available progression depends on which events you've participated in historically.)
 - Demon's Blessing (assumed to be Archdemons Stella output) `[NEEDS VERIFICATION]`
 - Building Training (Gold-gated, +1 aptitude per Training building level; see `buildings.md`)
 - Resonance Skill Aptitude (top-tier UR only)
@@ -96,18 +96,23 @@ Total Aptitude = (Σ all flat aptitude sources) × (1 + AptFamiliar% + AptSkill%
 
 Base Power = Total Aptitude × Level Multiplier
 
-Level multiplier at Level 750 ≈ **15,500 per aptitude point** — verified by back-calculation from the endgame UR carry's breakdown (508.7M / 32,823 apt ≈ 15,497).
+Level multiplier per aptitude point, from verified real-account snapshots and unverified estimates:
 
-**`[NEEDS VERIFICATION]`** Intermediate level multiplier values below:
+- Lv 1: 300/apt `[NEEDS VERIFICATION]`
+- Lv 100: 925/apt `[NEEDS VERIFICATION]`
+- Lv 300: 3,362/apt `[NEEDS VERIFICATION]`
+- **Lv 500: ~7,588/apt** ✅ (verified — Cimitir snapshot: aptitude 3,747, base +28.43M → 28.43M / 3,747 ≈ 7,588. The old estimate of 7,590 is essentially correct.)
+- **Lv 600: ~10,393/apt** ✅ (verified — Gabrael UR snapshot: aptitude 14,403, base +149.7M → 149.7M / 14,403 ≈ 10,393. **This supersedes the earlier "Lv 700 = 13,680" estimate**, which was based on wiki data and cannot be reconciled with the Gabrael Lv 600 snapshot.)
+- Lv 700: (not yet verified — previous wiki estimate of 13,680 should not be trusted given the Lv 600 correction)
+- **Lv 750: ~15,500/apt** ✅ (verified — endgame UR carry: base 508.7M / aptitude 32,823 ≈ 15,497)
 
-- Lv 1: 300/apt
-- Lv 100: 925/apt
-- Lv 300: 3,362/apt
-- Lv 500: 7,590/apt
-- Lv 700: 13,680/apt
-- Lv 750: ~15,500/apt ✅ (verified from real snapshot)
+### Verified growth between verified points
+- Lv 500 → Lv 600: 7,588 → 10,393 (+37% across 100 levels)
+- Lv 600 → Lv 750: 10,393 → 15,500 (+49% across 150 levels)
 
-Only the Lv 750 value is verified from real data. The Lv 1/100/300/500/700 values come from an older source (likely wiki) and have not been cross-checked against real account snapshots. Treat them as rough estimates, not verified breakpoints.
+The multiplier grows roughly 30-40% per 100 levels in the verified range.
+
+**Why intermediate levels like Lv 700 are hard to pin down exactly:** In-game "base power" back-calculations depend on the fellow's total invested state (Skill Pearls, Limit Breaks, Insight, costume slots, etc.). A fellow at Lv 700 with maxed investments may show a different effective base-per-aptitude than one with partial investments, making it tricky to get a clean "just level multiplier" number at every level. The three verified points above (Lv 500, 600, 750) are the cleanest we have — treat intermediate levels as rough interpolation.
 
 ### 3. Power Percentage Bonuses (Σ%)
 

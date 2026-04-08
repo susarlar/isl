@@ -63,8 +63,8 @@
 | 7 | 60 frag | +5M | Fellow +60% power | — |
 | 8 | 60 frag | +5M | Empyrean Sound aptitude +40 | — |
 | 9 | 60 frag | +5M | Fellow +60% power | — |
-| 10 | 100 frag | +49M → +59M | Power +175% → +235% | — |
-| 11 | 100 frag | +10M | Empyrean Sound aptitude +140 → +180 | — |
+| 10 | 100 frag | +49M total personal power | **Lv 10 final state: +175% group power** | — |
+| 11 | 100 frag | +10M → +59M cumulative personal power | **Lv 11 unlocks next tier: +235% group power, Empyrean Sound aptitude +140 → +180** | The "Lv 10 → Lv 11" jump is the biggest single upgrade in the Empyrean Sound Stella track — most of the percentage and aptitude gains happen here |
 | 12 | 100 frag | +10M | Fellow +60% additional power | — |
 | 13 | 100 frag | +10M | Empyrean Sound aptitude +40 | — |
 | 14 | 100 frag | +10M | Fellow +60% additional power | — |

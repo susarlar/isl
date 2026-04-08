@@ -26,7 +26,7 @@ Focus on these in order:
 
 1. **Fellow** — Main carry levels, awakening, skill pearls
 2. **Family** — Blessing on the families that bless your main carry
-3. **Stella to Lv 4 (Fellow)** — Unlocks Family Blessing Bond
+3. **Stella to Lv 4 (Fellow)** — Unlocks a Family Blessing pairing (specific to the fellow)
 4. **Outfit to Lv 5** — Maximize aptitude/typing bonuses
 5. **Stella Lv 6 → Lv 10 (Fellow)** — Depends on what you want:
    - **Stella 6**: Max operation earnings

@@ -39,6 +39,18 @@
 
 When the user tells you their "top fellow" or "main carry", immediately check the Fellow Database to identify the rarity. If it's R/N or a non-exception SR, recommend a different fellow as the power target and do **not** suggest investments that would require Stella, Awakening, or Resonance on that fellow.
 
+## Why Neptune Is Not Recommended (Despite Being 120 Apt UR)
+
+Neptune is 120 base aptitude, UR, and a member of Divine Gospel (technically Pattern A Stella). On paper she should be competitive with Amaterasu / Sunna / Aegle / Orivita. In practice she is consistently **not recommended** as a main carry for several compounding reasons:
+
+1. **Expensive to acquire in the first place.** Neptune is paywalled behind VIP 8, which is a very expensive VIP tier. Most F2P and mid-spender accounts simply do not have Neptune at all.
+2. **Stella fragments are hard to come by.** You can only buy **up to 5 Neptune fragments per week**, and those fragments are **shared between Neptune and Nirvana** (another VIP-based family). So even if you pay for Neptune, you can't push her Stella without also diverting fragments from Nirvana, and the weekly cap throttles progression to a crawl.
+3. **Divine Gospel group Stella bonus is weaker in practice than Empyrean Sound / Ancient Magi.** Even though Neptune's per-level Stella table looks Pattern A, the group-wide benefits compound poorly because most Divine Gospel members are SSR and the group is small. You don't get the same "whole-group Stella stack" that Empyrean Sound and Ancient Magi enjoy.
+4. **No meaningful family-coverage advantage.** Neptune does not have more families blessing her than other 120-apt URs — she's not a family-stack outlier that would compensate for the fragment scarcity.
+5. **Community consensus.** Across the playerbase, no one really likes Neptune — the combined cost/fragment/Stella issues mean invested players don't recommend her to new players.
+
+**Practical rule for the advisor:** If a user says they main Informed, recommend **Aegle** (Empyrean Sound, top-tier, F2P-accessible). Do not recommend Neptune even if the user is a whale. If the user already owns Neptune and has invested in her, acknowledge the sunk cost but explain they'll hit a fragment wall at the weekly cap and should consider whether to pivot to a different Informed UR for future investment.
+
 ## Equivalent Top-Tier UR Carries (Do Not Tell Users to "Switch" Between Equals)
 
 The following fellows are **mechanically equivalent** within their typing — same 120 base aptitude, same Stella group (Empyrean Sound, Pattern A), same UR rarity, same maximum ceiling. **Never tell a user to "switch" from one of these to another of equal rank in the same typing — it gains nothing.**

@@ -55,13 +55,15 @@ Only push these if you actively participate in their respective events:
 | **Tree (World Tree Cup)** | Tigirl, Flos, Onikiri, Orivita |
 | **Rimuru main/semi-main** | Milim Nava, Benimaru |
 
-### 5. Conditional (Skip Pearl Slot Unlocks)
+### 5. Conditional (Skip Pearl Slot Unlocks Until Invested)
 
-**Leon, Neptune, Kerr & Bel and Ros** — only awaken these if they're already strong enough to benefit from MORE skill pearl slots. Otherwise these are not priority.
+**Leon, Kerr & Bel & Ros**, and similar high-rarity fellows — only awaken these if they're already strong enough to benefit from MORE skill pearl slots. Awakening a fellow you haven't invested in doesn't give you anywhere near the value of awakening a fellow you're actively building, because the extra skill pearl slots are only useful if you have pearls to put in them.
+
+**Do NOT prioritize Neptune** — despite being 120 apt UR, Neptune is widely considered weak and not recommended as a main carry even for whales.
 
 ## What's Next After 4★
 
-Once your priority fellows hit 4★, **start upgrading your main typing for extra skill pearl slots** (each awakening star unlocks more slots, which means more aptitude investment ceiling).
+Once your priority fellows hit 4★, **start upgrading your main typing for extra skill pearl slots** (each awakening star unlocks more slots, which means more aptitude investment ceiling — this is the real value of awakening at endgame, not the +10% per star).
 
 ## Things to AVOID Awakening
 
@@ -79,7 +81,7 @@ Remember the level + acquaint stone requirements:
 | 5★ | Lv 700 | 30 | 20× 4★ fellows |
 | 6★ | Lv 750 | 50 | 25× 5★ fellows |
 
-The sub-fellow requirement means awakening 1 main carry to 6★ requires sustained roster investment. Plan accordingly.
+Sub-fellow gates are **NOT recursive** — sub-fellows only need to exist at the required star level, they don't need their own gates satisfied. The **same 25 fellows** serve both the 5★ and 6★ gates as you push them from 4★ → 5★ → 6★ over time. Plan for one well-developed roster of ~25 sub-fellows that you progress alongside your main carry.
 
 ## Why This Order
 

@@ -1,6 +1,8 @@
 # Per-Typing Main Fellow Guide
 
 > Source: Guild guide. Each typing's main UR options, the events that drop their Stella fragments, and the families that bless them.
+>
+> **Acquisition reminder:** You don't start the game with every fellow or every family — most come from specific events, and if an event hasn't run you simply cannot acquire the corresponding fellow/family yet. When choosing a main typing, prioritize fellows whose events run frequently AND whose families you actually have unlocked. A fellow with excellent theoretical family coverage is only as strong as the families you've actually acquired.
 
 ## Inspiring
 
@@ -17,7 +19,7 @@
 |--------|---------|-------|
 | Sera | Ama, Kanna | |
 | Bridget | Ama, Elise | |
-| **Phantanyl (Pthahnil)** | Ama, Kerr, Phanes, Kanna | UR family with 4 inspiring fellows |
+| **Phantanyl** | Ama, Kerr, Phanes, Kanna | UR family with 4 inspiring fellows |
 | Kagura | Ama, Tamamo | |
 | Tsukuyomi | Ama, Tamamo | |
 | Futaba | Ama, Tamamo, Avril | |
@@ -48,9 +50,9 @@
 
 | Fellow | Event | Frequency | Rewards | Notes |
 |--------|-------|-----------|---------|-------|
-| **Sunna** | Northern Odyssey | Fairly common | Bad | No Stella until you get her outfit |
-| **Anpu** | Raphael's Stage | Common | Bad | |
-| **Master Tongxuan** | Penglai Immortal | Common | **Very good** | |
+| **Sunna** | Northern Odyssey | Fairly common | Bad | No Stella until you get her outfit. Mechanically equivalent to Master Tongxuan (same 120 apt, same Empyrean Sound Pattern A). |
+| **Master Tongxuan** | Penglai Immortal | Common | **Very good** | Mechanically equivalent to Sunna. Better event rewards make Tongxuan the more practical choice for new mains. |
+| **Anpu** | Raphael's Stage | Common | Bad | UR Ancient Magi alternative. |
 
 ### Diligent Family Coverage
 | Family | Blesses | Notes |
@@ -73,9 +75,7 @@
 | Cranelia | Tongxuan | |
 | Athena | Tongxuan | |
 
-**Best:** Sunna has the best family — but she's not worth maining unless you're whaling on the event.
-
-**Verdict:** Master Tongxuan is the practical choice (Penglai has very good rewards).
+**Verdict:** Master Tongxuan is the practical choice for a new Diligent main (Penglai has very good event rewards and Tongxuan's family coverage includes 2 UR families — Cranelia and Wadjetta — plus Pan Pan and Emiru). Sunna is mechanically equivalent if you already have her invested. **Do not switch between Sunna and Tongxuan — they're the same thing, and switching means starting over.**
 
 ---
 
@@ -85,37 +85,41 @@
 
 | Fellow | Event | Frequency | Rewards | Notes |
 |--------|-------|-----------|---------|-------|
-| **Leon** | Sandtopia Pilgrimage | Very rare | Bad | Dead character, hard to gain Stella |
-| **Freesia** | Purification of Frantic Forest | Fairly common | Mid | Easy to farm even for low spenders |
-| **Heracles** | Cloud Kingdom Games (Olympics) | — | **Best** — direct Stella swipe option | Best whale option |
-| **Nyar** | Casino on Yacht | Common | Mid | Easy UR piece farming |
+| **Freesia** | Purification of Frantic Forest | Fairly common | Mid | **Best practical Brave main for new players.** 120 apt UR Empyrean Sound, easy to farm even for low spenders. Blessed by Curren (UR), Mors (UR), Wadjetta (UR), Lud, Vlad, Nyar (family) — strong family coverage. |
+| **Leon** | Sandtopia Pilgrimage | **Very rare nowadays** | Bad | 120 apt UR Empyrean Sound. 6 families bless him (Mia UR + Lina, Lilith, Holly, Willo, Penglia) — good coverage. **But Sandtopia rarely runs**, so Leon Stella progression is slow. Only commit if already invested. |
+| **Heracles** | Cloud Kingdom Games (Olympics) | — | **Best loot** — direct Stella swipe option | 120 apt UR Empyrean Sound, best whale option. 6 families (Cranelia UR, Nyar UR, Lud, Athena, Mercuria, Mushimi). Pick if committing to Olympics. |
+| **Nyar** | Casino on Yacht | Common | Mid | UR Empyrean Sound. Easy UR piece farming. |
+| **Andras** | — | — | — | UR Ancient Magi Brave. Alternative if going Magi main. |
 
 ### Brave Family Coverage
 | Family | Blesses | Notes |
 |--------|---------|-------|
 | Lina | Leon | |
 | Lilith | Leon, Andras | |
-| Holly | Leon, Tigirl | |
+| Holly | Leon | |
 | Mia | Leon, Mammon | |
-| Willo | Leon, Andras, Ira | 3 brave fellows |
-| Pengia | Leon, Andras | |
+| Willo | Leon, Andras, Ira, Kaye | Multi-brave |
+| Penglia | Leon, Andras | |
 | Curren | Freesia, Beryl | |
-| Mors | Freesia, Healora | |
+| Mors | Freesia | |
 | Lud | Freesia, Heracles | |
 | Wadjetta | Freesia, Paat | |
-| Vlad | Freesia, Surena | |
-| Sylthel | Nyar | |
-| Athena | Heracles, Nyar | |
-| Mercuria | Heracles, Nyar | |
-| Nyar (family) | Heracles, Nyar, Freesia | 3 brave fellows |
-| Cranelia | Heracles | |
+| Vlad | Freesia | |
+| Sylthel | Nyar (fellow) | |
+| Athena (family) | Heracles | Sparse — more TBD |
+| Mercuria | Heracles, Nyar (fellow, with fellow stella) | |
+| Nyar (family) | Nyar (fellow), Heracles, Freesia | |
+| Cranelia | Heracles | (Along with several Inspiring/Diligent fellows) |
+| Mushimi (family) | Heracles | Sparse — more TBD |
+| Skogul | Andras | |
+| Denier | Andras (with fellow stella) | |
 
 **Coverage analysis:**
-- All brave units share a lot of family — very well rounded
-- Freesia only has families that share another brave unit
-- Heracles/Nyar share 3 family
+- Leon and Heracles each have 6 families — roughly equal in raw count
+- Freesia has strong UR family coverage (Curren, Mors, Wadjetta are all UR)
+- Andras (Ancient Magi Brave) has decent coverage with Skogul as his UR family
 
-**Verdict:** Brave is a strong whale typing. Pick by event preference. Avoid Sand (Leon).
+**Verdict:** Freesia is the best practical new-main pick for Brave because her event (Frantic Forest) runs reasonably often. Heracles is the best whale option if you can commit to Olympics. Leon is avoided for new mains because Sandtopia is very rare nowadays, though he has good family coverage if you already have him invested. Brave overall is a strong typing.
 
 ---
 
@@ -125,8 +129,8 @@
 
 | Fellow | Event | Frequency | Rewards | Notes |
 |--------|-------|-----------|---------|-------|
-| **Aegle** | FREE | Always available | — | F2P friendly, can hit Stella 10 free |
-| **Nierus** | Aloha! Bubble Island | Fairly rare | Low tier | Stella fairly cheap |
+| **Aegle** | FREE | Always available | — | **Top-tier Informed main.** F2P friendly, Stella 10 possible for free. Empyrean Sound Pattern A. 6 families bless her. |
+| **Nierus** | Aloha! Bubble Island | Fairly rare | Low tier | Stella fairly cheap, decent secondary |
 
 ### Informed Family Coverage
 | Family | Blesses | Notes |
@@ -143,7 +147,7 @@
 | Puffair | Nierus | |
 | Athena | Nierus, Stheno | |
 
-**Verdict:** Just main Aegle (free path) or wait for Athena. Right now both Aegle and Nierus are mid — Aegle for F2P, but you'll miss two paid pass characters in Aegle's family if going pure F2P.
+**Verdict:** Aegle is the top-tier Informed main — both for F2P and for spenders. She has excellent family coverage (6 families including 2 UR + Hestia custom slot) and is Empyrean Sound Pattern A. **Do NOT recommend Neptune as an Informed main** despite her being 120 apt Divine Gospel UR — she's widely considered weak and not worth investing in even for whales.
 
 ---
 
@@ -193,7 +197,7 @@ These summaries combine fish + family + museum antique + Stella in one place for
 **No SR Category Stella for Brave** — Brave loses the +30% category bonus that Inspiring/Diligent/Informed get.
 
 ### Inspiring Quick Reference (Amaterasu, Tamamo, Kerr, Phinphynx)
-**Best Inspiring Family Blessings:** Phantanyl/Pthahnil (UR — Ama, Kerr, Phanes, Kanna, Gabrael), Sera (Ama, Kanna), Bridget (Ama, Elise), Kagura (Ama, Tamamo), Tsukuyomi (Ama, Tamamo), Futaba (Ama, Tamamo, Avril), Skogul (Tamamo), Loo (Tamamo, Sunna shared), Raphael (Tamamo), Vlad (Kerr, Black), Willo (Kerr), Phetia (Kerr, Phanes), Curren (Kerr), Mors (Phinphynx, Phanes), Lunaria (Phinphynx), Wadjetta (Phinphynx), Connie (Phinphynx), Cranelia (Phinphynx, Onikiri), Chitana (Phinphynx, Black, Lux).
+**Best Inspiring Family Blessings:** Phantanyl (UR — Ama, Kerr, Phanes, Kanna, Gabrael), Sera (Ama, Kanna), Bridget (Ama, Elise), Kagura (Ama, Tamamo), Tsukuyomi (Ama, Tamamo), Futaba (Ama, Tamamo, Avril), Skogul (Tamamo), Loo (Tamamo, Sunna shared), Raphael (Tamamo), Vlad (Kerr, Black), Willo (Kerr), Phetia (Kerr, Phanes), Curren (Kerr), Mors (Phinphynx, Phanes), Lunaria (Phinphynx), Wadjetta (Phinphynx), Connie (Phinphynx), Cranelia (Phinphynx, Onikiri), Chitana (Phinphynx, Black, Lux).
 **Best Inspiring Museum Antique:** Oyster Trap — gives Inspiring fellow aptitude, awake effect: per 30 guild donations gives % boost on Inspiring power.
 **Best Inspiring Fishing Spots:** Village River (Inspiring), Unfrozen Sea Cave (Inspiring/Diligent), and ocean top 5 fish.
 **Best Inspiring Fish:** Axolotl (double % Inspiring), Barreleye Fish (double % Inspiring), Megakarp (Inspiring apt → %), Bonefish (Inspiring apt → %).
