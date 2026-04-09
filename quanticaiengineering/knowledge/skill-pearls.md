@@ -10,11 +10,24 @@ Skill Pearls upgrade **Talent-based Aptitude skills** on individual fellows, dir
 
 ## Three Talent Tiers
 
-| Talent Tier          | Aptitude per Level | Skill Pearl Cost/Level | Max Level | Max Aptitude Gain |
-|----------------------|-------------------|------------------------|-----------|-------------------|
-| **Supreme Talent**   | +3                | 3 Skill Pearls         | 300       | 900 aptitude      |
-| **Outstanding Talent** | +2              | 2 Skill Pearls         | 300       | 600 aptitude      |
-| **Ordinary Talent**  | +1                | 1 Skill Pearl          | 300       | 300 aptitude      |
+| Talent Tier          | Aptitude per Level | Skill Pearl Cost/Level | Starting Level Cap | Starting Max Aptitude |
+|----------------------|-------------------|------------------------|-----|---------|
+| **Supreme Talent**   | +3                | 3 Skill Pearls         | 300 | +900 apt |
+| **Outstanding Talent** | +2              | 2 Skill Pearls         | 300 | +600 apt |
+| **Ordinary Talent**  | +1                | 1 Skill Pearl          | 300 | +300 apt |
+
+### ⚠️ Level Caps Are NOT Hard Ceilings — They Get Raised
+
+The "300 level cap" on each Talent tier is the **starting** cap — not the permanent ceiling. Multiple systems raise the aptitude cap on a fellow, letting you feed MORE Skill Pearls past the initial 300 limit:
+
+- **Pattern A Fellow Stella** (Empyrean Sound / Ancient Magi / Divine Gospel Neptune) raises the aptitude level cap at specific Stella levels (Lv 2, Lv 10, Lv 11+). Each cap raise is typically +50 aptitude.
+- **Awakening stars** unlock **new Limit Break aptitude slots** — one per star, each fed independently with Skill Pearls. So a 6★ fellow has 6 extra Limit Break slots on top of the Talent tier caps.
+- **Family Stella** (Pattern A UR families) adds aptitude level cap raises at specific levels, documented in `family-stella.md`.
+- **Fellow Costumes** (3★+) unlock additional aptitude slots for the wearing fellow, each with its own cap.
+
+**This is why the endgame reference UR carry has +20,965 Skill aptitude** (far beyond the naive 900+600+300 = 1,800 ceiling of Talent tiers alone). The raw Talent caps are just the starting point — every other progression system stacks on top.
+
+**Practical rule:** don't treat Supreme Talent as "capped at +900." Treat it as "starts at +900 when you first unlock it, grows as your Stella/Awakening/Costume/Family Stella progression pushes the caps higher."
 
 ## Efficiency Analysis
 

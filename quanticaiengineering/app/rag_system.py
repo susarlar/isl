@@ -288,6 +288,57 @@ class IsekaiRAGSystem:
         "sylthel", "sachiko", "sylphiette", "mercuria", "loo",
     }
 
+    # Common typos and short-form aliases → canonical entity name.
+    # When an alias is found in the query, we look for chunks containing the
+    # canonical form (not the alias). This lets queries like "Belzebub main
+    # strategy" or "Amateratsu fish" still boost the right chunks.
+    _KEYWORD_ALIASES = {
+        # Beelzebub variants
+        "belzebub": "beelzebub",
+        "beelzebul": "beelzebub",
+        "beelzebup": "beelzebub",
+        "belzebuth": "beelzebub",
+        # Amaterasu variants
+        "amateratsu": "amaterasu",
+        "amaterazu": "amaterasu",
+        "ameterasu": "amaterasu",
+        # Orivita variants
+        "oravita": "orivita",
+        "orivitta": "orivita",
+        "orvita": "orivita",
+        # Master Tongxuan short form
+        "tongxuan": "master tongxuan",
+        "tong xuan": "master tongxuan",
+        "master tong": "master tongxuan",
+        # Other common typos
+        "nemetonia": "nemetona",
+        "fanes": "phanes",
+        "ixchel": "ixtchel",
+        "ictchel": "ixtchel",
+        "neptnune": "neptune",
+    }
+
+    # Domain concepts (not named entities) that should trigger keyword boost
+    # when present in the query. These are multi-word phrases unlike fellow
+    # names — important for questions that scope to a system rather than a
+    # specific fellow/family.
+    #
+    # WARNING: Do NOT add phrases that appear many times in table-heavy chunks
+    # (e.g., "fellow power" appears dozens of times in fishing.md fish tables).
+    # Over-broad keywords cause scoring saturation where table chunks dominate
+    # every query that happens to mention the phrase. Keep phrases specific
+    # enough that they identify the actual topic, not any chunk that references
+    # the concept in passing.
+    _KEYWORD_DOMAIN_PHRASES = {
+        "empyrean sound", "ancient magi", "divine gospel",
+        "family stella", "fellow stella",
+        "fish tank", "advanced blessing", "fellow blessing",
+        "family blessing", "limit break",
+        "aptitude slot", "aptitude cap", "level cap",
+        "museum antique", "museum coin", "museum card",
+        "power formula",
+    }
+
     # Triggers that indicate the query is about maximizing / improving /
     # optimizing fellow power OR asking for a strategy / priority / action.
     # When any of these appear in the query, we run multi-domain expansion
@@ -347,12 +398,27 @@ class IsekaiRAGSystem:
         dense_k = max(k * 2, 20)
         dense_results = self.vector_store.search(query_embedding, k=dense_k)
 
-        # Step 2: Keyword-match pass for named entities
+        # Step 2: Keyword-match pass for named entities.
+        # We find entities in the query via (a) direct substring match on
+        # canonical names, (b) alias resolution for common typos, and
+        # (c) multi-word domain phrases.
         question_lower = question.lower()
+
+        # Direct canonical matches
         mentioned_entities = {
             name for name in self._KEYWORD_ENTITIES
             if name in question_lower
         }
+
+        # Alias → canonical mapping for typos / short forms
+        for alias, canonical in self._KEYWORD_ALIASES.items():
+            if alias in question_lower:
+                mentioned_entities.add(canonical)
+
+        # Domain phrases (e.g., "empyrean sound", "skill pearl")
+        for phrase in self._KEYWORD_DOMAIN_PHRASES:
+            if phrase in question_lower:
+                mentioned_entities.add(phrase)
 
         keyword_results: List[Tuple[Chunk, float]] = []
         if mentioned_entities:

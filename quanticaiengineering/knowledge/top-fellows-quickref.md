@@ -22,7 +22,7 @@ These are also in the strongest Stella group (Empyrean Sound, Pattern A) and are
 
 | Fellow | Typing | Stella Group | Stella Pattern |
 |--------|--------|--------------|----------------|
-| **Beelzebub** | Unfettered | Empyrean Sound | Pattern A (UR) |
+| **Beelzebub** | Unfettered | Empyrean Sound | Pattern A (UR) — **120 base apt, top-tier Unfettered main carry candidate** with 3 UR families blessing her (Mia, Curren, Shuna) |
 | **Gale** | Unfettered | Empyrean Sound | Pattern A (UR) |
 | **Thora** | Unfettered | Empyrean Sound | Pattern A (UR) |
 | **Kerr & Bel & Ros** | Inspiring | Empyrean Sound | Pattern A (UR) |

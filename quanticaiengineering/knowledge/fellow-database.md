@@ -55,17 +55,41 @@ Neptune is 120 base aptitude, UR, and a member of Divine Gospel (technically Pat
 
 The following fellows are **mechanically equivalent** within their typing — same 120 base aptitude, same Stella group (Empyrean Sound, Pattern A), same UR rarity, same maximum ceiling. **Never tell a user to "switch" from one of these to another of equal rank in the same typing — it gains nothing.**
 
-| Typing | Equivalent 120-Apt Empyrean Sound URs |
+| Typing | Equivalent 120-Apt Empyrean Sound / Ancient Magi URs |
 |--------|---------------------------------------|
-| **Inspiring** | Amaterasu |
-| **Diligent** | Sunna, Master Tongxuan |
-| **Brave** | Leon, Heracles |
-| **Informed** | Neptune* |
-| **Unfettered** | Orivita |
+| **Inspiring** | Amaterasu, Phanes (Magi), Phinphynx, Tamamo, Ixtchel, Kerr & Bel & Ros |
+| **Diligent** | Sunna, Master Tongxuan, Nemetona (Magi), Kuku, Anpu, Lokia |
+| **Brave** | Leon, Heracles, Andras (Magi), Freesia, Nyar |
+| **Informed** | Aegle, Ao Li (Magi), Nierus, Athena, Umbra |
+| **Unfettered** | **Orivita, Beelzebub, Hermes (Magi)**, Gale, Thora |
 
-\* Neptune is Divine Gospel, not Empyrean Sound, but shares the 120 base apt and Pattern A Stella.
+**Rule:** When the user already has one of these fellows invested, only suggest shifting to a different fellow if the alternative has **meaningfully better family coverage** or belongs to a different typing the user wants to main. Base aptitude is the same, so the tie-breaker is usually family support.
 
-**Rule:** When the user already has one of these fellows invested, only suggest shifting to a different fellow if the alternative is in a DIFFERENT typing the user wants to main OR belongs to a genuinely higher tier (which for most practical purposes doesn't exist — these are the top). **Do not tell a Diligent user with invested Sunna to switch to Master Tongxuan, or vice versa** — they are the same thing.
+### Important Exception: Family Coverage Tie-Breakers
+
+The "mechanically equivalent" rule above assumes family support is comparable between candidates. In practice, **family coverage varies significantly** between same-typing 120-apt URs, and this can shift which fellow is actually the stronger endgame carry:
+
+**Diligent example — Master Tongxuan vs Sunna:**
+- **Sunna:** 0 UR families + 6 SSR families + 1 SR family (Bridget, Lilith, Bren, Loo, Leopolda, Emiru, Sadako)
+- **Master Tongxuan:** 2 UR families (Cranelia, Wadjetta) + 2 SSR families (Emiru, Pan Pan) + 2 fellow-stella-gated SSR families (Bathery, Athena after Fellow Stella Lv 4)
+- Rough calculation at maxed Family Stellas:
+  - **Sunna:** ~218% Family Fellow Power (6 × 33%) + ~336 Family aptitude
+  - **Master Tongxuan:** ~372% Family Fellow Power (2 × 120% + 4 × 33%) + ~664 Family aptitude
+- **Verdict:** Master Tongxuan has **~70% more Family Stella power contribution and ~2× more Family Stella aptitude** than Sunna at full investment. This is a meaningful gap.
+
+**Practical guidance:**
+- For a **new** Diligent main, choose **Master Tongxuan** over Sunna because of better family coverage AND better event (Penglai vs Northern Odyssey).
+- If a user is **already invested in Sunna**, do NOT tell them to switch — the sunk investment doesn't transfer. Acknowledge Sunna is viable, note Master Tongxuan would have been stronger had they started with him, and focus advice on maximizing Sunna's accessible family stacks.
+
+**Unfettered example — Beelzebub vs Orivita vs Hermes:**
+All three are 120 base apt. All three are Pattern A (Empyrean Sound / Ancient Magi). Family coverage determines the winner:
+- **Orivita:** 5 families (Namiko UR + Kagura, Kosuzu, Holly, Puffair SSR)
+- **Beelzebub:** 6 families (Mia UR + Curren UR + Phetia, Denier, Devileer, Shuna UR SSR/UR mix — note Shuna is UR)
+- **Hermes:** 6 families (Usuri UR + Baity, Bren, Chitana, Denier [with fellow stella], Mushimi [with fellow stella])
+
+**Beelzebub** has **3 UR families** (Mia, Curren, Shuna) vs Orivita's 1 (Namiko) and Hermes's 1 (Usuri). This makes Beelzebub arguably the strongest Unfettered main from a family-support standpoint.
+
+**Apply this same logic** to any user question about "who is the best X main" — compare family rosters from `families-roster.md`, calculate maxed Family Stella contributions, and recommend based on family support AND event accessibility, not just base aptitude.
 
 **What "equivalent" means here:**
 - Same base aptitude (120)
