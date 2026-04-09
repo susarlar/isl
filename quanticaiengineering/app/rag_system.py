@@ -401,19 +401,32 @@ class IsekaiRAGSystem:
     # from every major power source regardless of the original query's
     # semantic anchor.
     _POWER_DOMAIN_SUBQUERIES = [
-        "aptitude skill pearls supreme talent insight alraune bazaar scroll",
-        "fish tank percent power fish skills ocean top category",
+        # Aptitude system — split into two sub-queries so the round-robin
+        # guarantees both the talent tier overview AND the slot detail
+        "supreme talent outstanding talent ordinary talent skill pearl tier cap 300 900",
+        "aptitude slot insight books alraune essence bazaar scroll proficiency limit break",
+        # Fish
+        "fish tank percent power fish skills ocean top category typing",
+        # Family
         "family stella blessing power aptitude to blessed fellow",
-        "artifacts awakening quenching stone materia oils reforge",
-        "artifact tier hierarchy UR+ support echo magic lamp kanna plush",
-        "materia leveling breakthrough refine magic ore artifact level 70",
+        # Artifacts — 3 sub-queries covering tier/awakening/materia
+        "artifact tier hierarchy UR+ support echo magic lamp kanna plush equip",
+        "materia leveling breakthrough refine magic ore artifact level 70 40",
         "reforge oils skill slots artifact awakening quenching stone cap",
-        "awakening stars gates limit break aptitude slot",
-        "costume essence typing boost fellow power",
-        "building service level training diligent inspiring brave informed unfettered",
-        "fellow power formula aptitude multiplier sigma percent flat",
-        "museum antique trophy per typing",
-        "item consumable flat power bonus main carry",
+        # Awakening
+        "awakening stars gates limit break aptitude slot acquaint stone",
+        # Costume
+        "costume essence typing boost fellow power family costume",
+        # Buildings
+        "building service level training employee gold earning typing",
+        # Formula / additive
+        "fellow power formula aptitude multiplier additive percentage flat",
+        # Museum
+        "museum antique trophy per typing oyster narwhal sledge",
+        # Items / consumables
+        "item consumable flat power bonus main carry event reward",
+        # Pearls (white / black / skill — all three)
+        "white pearl black pearl bait production aptitude fellow power account boost",
     ]
 
     def _retrieve(
@@ -495,15 +508,31 @@ class IsekaiRAGSystem:
         domain_results: List[Tuple[Chunk, float]] = []
         if is_power_query:
             logger.info("Power-optimization intent detected — expanding to domain sub-queries")
-            per_domain_k = 3  # top 3 chunks per domain
+            per_domain_k = 3  # top 3 chunks per domain sub-query
+
+            # Round-robin: guarantee at least 1 chunk from EACH sub-query
+            # makes it into domain_results with a high enough score to
+            # survive the quota merge. Without this, 13 sub-queries compete
+            # for ~6-7 domain quota slots and 6-7 domains get zero
+            # representation (the Nierus/Informed query had 0 chunks for
+            # supreme talent, black pearl, building service level, items).
+            domain_round_robin: List[Tuple[Chunk, float]] = []
+            domain_overflow: List[Tuple[Chunk, float]] = []
+
             for subquery in self._POWER_DOMAIN_SUBQUERIES:
                 sub_emb = self.embedding_generator.embed_query(subquery)
                 sub_results = self.vector_store.search(sub_emb, k=per_domain_k)
-                # Score domain chunks at ~0.5 so they participate in the
-                # merge without dominating. The domain expansion is a safety
-                # net to ensure coverage, not a replacement for primary search.
-                for chunk, score in sub_results:
-                    domain_results.append((chunk, 0.5 + float(score) * 0.2))
+                for rank, (chunk, score) in enumerate(sub_results):
+                    adjusted = 0.5 + float(score) * 0.2
+                    if rank == 0:
+                        # First result per sub-query gets a guaranteed slot
+                        # with a higher base score to survive the merge
+                        domain_round_robin.append((chunk, adjusted + 0.1))
+                    else:
+                        domain_overflow.append((chunk, adjusted))
+
+            # Combine: round-robin first (1 per domain), then overflow
+            domain_results = domain_round_robin + domain_overflow
 
         # Quota-based merge: reserve slots per retrieval source so that both
         # domain coverage (fish, family, aptitude, etc.) AND named-entity
@@ -524,26 +553,29 @@ class IsekaiRAGSystem:
                     used_ids.add(chunk.chunk_id)
                     added += 1
 
+        # Number of domain sub-queries determines how many round-robin
+        # slots we need to guarantee full coverage.
+        n_domains = len(self._POWER_DOMAIN_SUBQUERIES) if is_power_query else 0
+
         if mentioned_entities and is_power_query:
-            # Both named entity AND power optimization → reserve slots for each
-            # k=18 typical split: 8 keyword + 6 domain + 4 dense
-            keyword_quota = max(k // 2, 1)
-            domain_quota = max(k // 3, 1)
-            dense_quota = k - keyword_quota - domain_quota
+            # Both named entity AND power optimization → need all three.
+            # With k=22 and 13 domains: ~8 keyword + 13 domain + 1 dense
+            # (domain round-robin guarantees 1 per sub-query)
+            keyword_quota = max(k - n_domains - 1, 4)
+            domain_quota = n_domains + 1  # round-robin + 1 overflow
+            dense_quota = max(k - keyword_quota - domain_quota, 1)
             _add_unique(keyword_results, keyword_quota)
             _add_unique(domain_results, domain_quota)
             _add_unique(dense_results, dense_quota)
         elif mentioned_entities:
             # Named entity query, no power intent
-            # k=18 typical split: 12 keyword + 6 dense
             keyword_quota = int(k * 0.65)
             dense_quota = k - keyword_quota
             _add_unique(keyword_results, keyword_quota)
             _add_unique(dense_results, dense_quota)
         elif is_power_query:
             # Power optimization without a specific fellow
-            # k=18 typical split: 10 domain + 8 dense
-            domain_quota = int(k * 0.55)
+            domain_quota = n_domains + 2
             dense_quota = k - domain_quota
             _add_unique(domain_results, domain_quota)
             _add_unique(dense_results, dense_quota)
