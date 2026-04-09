@@ -90,7 +90,7 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "anthropic").lower()
 
 # Anthropic / Claude Configuration
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6-20250514")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5-20241022")
 
 # Groq Configuration (legacy/fallback)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
