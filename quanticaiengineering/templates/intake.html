@@ -239,18 +239,13 @@
         </div>
         <div class="body">
             <div class="intro">
-                Quick onboarding for guild members new to Fellow Power optimization.
-                Fill this out and you'll get a prioritized action plan based on your current account.
-                Takes ~1 minute. This assumes you're already level 45+.
+                Tell us about your account and we'll generate a prioritized action plan.
+                Takes ~1 minute. Assumes level 45+.
             </div>
 
             <form id="intakeForm">
                 <div class="field">
-                    <label for="account_level">Account level</label>
-                    <input type="number" id="account_level" name="account_level" min="45" max="200" required placeholder="e.g., 58">
-                </div>
-                <div class="field">
-                    <label for="main_typing">Main typing focus</label>
+                    <label for="main_typing">Your main typing</label>
                     <select id="main_typing" name="main_typing" required>
                         <option value="">-- Select --</option>
                         <option value="Brave">Brave</option>
@@ -262,15 +257,15 @@
                     </select>
                 </div>
                 <div class="field">
-                    <label for="top_fellow">Your most powerful fellow (name)</label>
-                    <input type="text" id="top_fellow" name="top_fellow" required placeholder="e.g., Amaterasu, Neptune, Mio">
+                    <label for="top_fellow">Your main carry fellow (name)</label>
+                    <input type="text" id="top_fellow" name="top_fellow" required placeholder="e.g., Freesia, Master Tongxuan, Amaterasu, Aegle, Orivita">
                 </div>
                 <div class="field">
-                    <label for="current_power">Approximate Fellow Power of your top fellow</label>
-                    <input type="text" id="current_power" name="current_power" required placeholder="e.g., 12B, 250M, 1.4T">
+                    <label for="current_power">Approximate Fellow Power of your main carry</label>
+                    <input type="text" id="current_power" name="current_power" required placeholder="e.g., 12B, 250M, 1.4T, 5T">
                 </div>
                 <div class="field">
-                    <label for="awakening_stars">Awakening stars on your top fellow</label>
+                    <label for="awakening_stars">Awakening stars on main carry</label>
                     <select id="awakening_stars" name="awakening_stars" required>
                         <option value="">-- Select --</option>
                         <option value="0">0★ (not awakened)</option>
@@ -283,32 +278,53 @@
                     </select>
                 </div>
                 <div class="field">
-                    <label for="stella_level">Stella level on your top fellow (approximate)</label>
+                    <label for="stella_level">Stella level on main carry</label>
                     <input type="text" id="stella_level" name="stella_level" required placeholder="e.g., Lv 5, Lv 10, Lv 20, not unlocked">
+                </div>
+                <div class="field">
+                    <label for="spending">Spending level</label>
+                    <select id="spending" name="spending" required>
+                        <option value="">-- Select --</option>
+                        <option value="F2P">F2P (no real money spent)</option>
+                        <option value="Low spender">Low spender (monthly pass, occasional purchase)</option>
+                        <option value="Mid spender">Mid spender (buy event passes, some gacha)</option>
+                        <option value="Whale">Whale (VIP 5+, buy most offers)</option>
+                    </select>
                 </div>
                 <div class="field">
                     <label for="goal">What are you trying to improve?</label>
                     <select id="goal" name="goal" required>
                         <option value="">-- Select --</option>
                         <option value="Fellow Power (overall)">Fellow Power (overall)</option>
-                        <option value="Single-carry power">Single-carry power</option>
-                        <option value="Village earnings">Village earnings</option>
+                        <option value="Village earnings / gold income">Village earnings / gold income</option>
                         <option value="Siege Warfare ranking">Siege Warfare ranking</option>
-                        <option value="Expo / Negotiation income">Expo / Negotiation income</option>
-                        <option value="Banquet popularity">Banquet popularity</option>
-                        <option value="Fishing rewards">Fishing rewards</option>
-                        <option value="Event rankings">Event rankings</option>
-                        <option value="Family blessings output">Family blessings output</option>
-                        <option value="Not sure">Not sure — general advice</option>
+                        <option value="Blessing point income">Blessing point income</option>
+                        <option value="Fishing optimization">Fishing optimization</option>
+                        <option value="Awakening gate preparation">Awakening gate preparation</option>
+                        <option value="Event strategy">Event strategy (which events to prioritize)</option>
+                        <option value="Not sure">Not sure — full assessment</option>
                     </select>
                 </div>
                 <div class="field">
-                    <label for="goal_detail">Extra context on your goal (optional)</label>
-                    <textarea id="goal_detail" name="goal_detail" placeholder="e.g., want to hit 1T fellow power, cracking top 10 in next siege, stuck at 2M/day village earnings..."></textarea>
+                    <label for="bottleneck">What feels like your biggest bottleneck right now?</label>
+                    <select id="bottleneck" name="bottleneck" required>
+                        <option value="">-- Select --</option>
+                        <option value="Don't know what to focus on">Don't know what to focus on</option>
+                        <option value="Low fellow power growth">Fellow power growing too slowly</option>
+                        <option value="Stuck on adventure stages">Stuck on adventure stages</option>
+                        <option value="Not enough Skill Pearls">Not enough Skill Pearls</option>
+                        <option value="Not enough Acquaint Stones">Not enough Acquaint Stones for awakening</option>
+                        <option value="Not enough crystals">Not enough crystals</option>
+                        <option value="Not enough gold">Not enough gold for buildings/training</option>
+                        <option value="Don't know which families to push">Don't know which families to push</option>
+                        <option value="Fishing feels slow">Fishing feels slow</option>
+                        <option value="Not sure which fellow to main">Not sure which fellow to main</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <div class="field">
-                    <label for="resources">Resources you have stockpiled (optional)</label>
-                    <textarea id="resources" name="resources" placeholder="e.g., 500 EXP stones, 200 Skill Pearls, 50 Stella fragments..."></textarea>
+                    <label for="extra">Anything else? (optional)</label>
+                    <textarea id="extra" name="extra" placeholder="e.g., I have Curren and Mors families unlocked, my fish is at level 500+, I just pulled Beelzebub..."></textarea>
                 </div>
 
                 <button type="submit" id="submitBtn">Generate Action Plan</button>

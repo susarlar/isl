@@ -185,8 +185,9 @@ def intake():
         return render_template("intake.html", username=_current_user())
 
     data = request.get_json(silent=True) or {}
-    required = ["account_level", "main_typing", "top_fellow",
-                "current_power", "awakening_stars", "stella_level", "goal"]
+    required = ["main_typing", "top_fellow",
+                "current_power", "awakening_stars", "stella_level",
+                "spending", "goal", "bottleneck"]
     missing = [f for f in required if not str(data.get(f, "")).strip()]
     if missing:
         return jsonify({"error": f"Missing fields: {', '.join(missing)}", "status": "error"}), 400
@@ -196,22 +197,47 @@ def intake():
     except RuntimeError as exc:
         return jsonify({"error": str(exc), "status": "error"}), 503
 
-    # Build a structured, goal-oriented prompt that the RAG system can retrieve
-    # against. The goal field is used as the primary retrieval anchor so that
-    # advice is scoped to what the player actually wants to improve.
+    # Build a structured prompt that maximizes retrieval AND LLM synthesis.
+    # The prompt is deliberately verbose and names the fellow explicitly so
+    # the hybrid retrieval's keyword boost pulls fellow-specific chunks.
+    # The spending level gates which fellows/events are accessible.
+    fellow_name = data['top_fellow'].strip()
+    typing = data['main_typing']
+    spending = data['spending']
+    goal = data['goal']
+    bottleneck = data['bottleneck']
+    extra = data.get('extra') or 'none'
+
     question = (
-        f"I am a guild member new to optimization. My goal is: {data['goal']}. "
-        "Give me a PRIORITIZED, numbered action plan (top 5 steps) tailored to that goal. "
-        "Use specific numbers, formulas, and citations from the knowledge base.\n\n"
-        f"- Account level: {data['account_level']}\n"
-        f"- Main typing focus: {data['main_typing']}\n"
-        f"- Most powerful fellow: {data['top_fellow']}\n"
-        f"- Fellow Power of top fellow: {data['current_power']}\n"
-        f"- Awakening stars on top fellow: {data['awakening_stars']}\n"
-        f"- Stella level on top fellow: {data['stella_level']}\n"
-        f"- Primary goal: {data['goal']}\n"
-        f"- Goal context: {data.get('goal_detail') or 'not specified'}\n"
-        f"- Stockpiled resources: {data.get('resources') or 'not specified'}\n"
+        f"Give me a comprehensive, prioritized action plan for a {typing} main "
+        f"whose main carry is {fellow_name}.\n\n"
+        f"PLAYER PROFILE:\n"
+        f"- Main carry: {fellow_name}\n"
+        f"- Main typing: {typing}\n"
+        f"- Current Fellow Power: {data['current_power']}\n"
+        f"- Awakening stars: {data['awakening_stars']}★\n"
+        f"- Stella level: {data['stella_level']}\n"
+        f"- Spending level: {spending}\n"
+        f"- Goal: {goal}\n"
+        f"- Biggest bottleneck: {bottleneck}\n"
+        f"- Extra context: {extra}\n\n"
+        f"INSTRUCTIONS FOR THE ADVISOR:\n"
+        f"1. Look up {fellow_name} in the knowledge base — identify their rarity, "
+        f"group, Stella pattern, and base aptitude. If {fellow_name} is not a viable "
+        f"main carry (wrong rarity, not recommended), say so and suggest alternatives.\n"
+        f"2. Look up which FAMILIES bless {fellow_name} in families-roster.md — list "
+        f"them by rarity (UR first, then SSR) and recommend which to push first.\n"
+        f"3. Address the player's GOAL ({goal}) and BOTTLENECK ({bottleneck}) specifically.\n"
+        f"4. Cover ALL relevant power domains: aptitude slots + skill pearls, "
+        f"fish (name specific fish for {typing}), family stella, artifacts "
+        f"(tier hierarchy, awakening vs leveling, materia + breakthrough gate), "
+        f"fellow stella (Pattern A if applicable), awakening gates, costumes, "
+        f"buildings ({typing}-typed), consumable items, black pearls.\n"
+        f"5. If spending level is F2P, do NOT recommend VIP-gated fellows "
+        f"(Neptune, Shlomo, Mammon, Trady, Mescal) or expensive crystal sinks.\n"
+        f"6. If spending level is Whale, mention VIP perks and direct-purchase "
+        f"Stella options (e.g., Olympics for Heracles).\n"
+        f"7. Use specific numbers from the knowledge base. Cite sources.\n"
     )
 
     try:
