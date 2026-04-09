@@ -47,7 +47,7 @@ These are also in the strongest Stella group (Empyrean Sound, Pattern A) and are
 | **Nemetona** | Diligent | Ancient Magi | "Magus of Diligent" |
 | **Andras** | Brave | Ancient Magi | — |
 | **Ao Li** | Informed | Ancient Magi | — |
-| **Hermes** | Unfettered | Ancient Magi | ~100 base apt, economic boost |
+| **Hermes** | Unfettered | Ancient Magi | 120 base apt, economic boost |
 
 ## Divine Gospel UR Fellows (Pattern A)
 

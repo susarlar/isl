@@ -288,13 +288,15 @@ Same alternating pattern as Pattern B but with **half the values** (+1M personal
 
 ### Ancient Magi (UR fellows)
 
-| Fellow | Type |
-|--------|------|
-| Andras | Brave |
-| Phanes | Inspiring |
-| Ao Li | Informed |
-| Nemetona | Diligent |
-| Hermes | Unfettered |
+**All 5 Ancient Magi UR members are 120 base aptitude.** Same tier as the top Empyrean Sound URs (Amaterasu, Sunna, Leon, Orivita, Heracles). This is the baseline for the "all Empyrean Sound and Ancient Magi URs are 120 base apt" rule.
+
+| Fellow | Type | Base Apt |
+|--------|------|----------|
+| Andras | Brave | 120 |
+| Phanes | Inspiring | 120 |
+| Ao Li | Informed | 120 |
+| Nemetona | Diligent | 120 |
+| Hermes | Unfettered | 120 |
 
 ### Divine Gospel
 

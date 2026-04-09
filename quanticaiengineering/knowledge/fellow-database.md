@@ -103,9 +103,9 @@ This base value is multiplied through the entire power formula, so higher = bett
 
 | Tier | Base Apt | Fellows |
 |------|----------|---------|
-| Highest | 120 | Amaterasu, Sunna, **Master Tongxuan**, Leon, Neptune, Orivita, Heracles |
+| Highest | 120 | Amaterasu, Sunna, **Master Tongxuan**, Leon, Neptune, Orivita, Heracles, **Hermes** (and all other Ancient Magi URs: Phanes, Nemetona, Andras, Ao Li) |
 | High | ~110 | Shlomo |
-| High | ~100 | Hermes, Mescal |
+| High | ~100 | Mescal |
 | Mid | ~90 | Trady |
 | Mid | ~80 | Mammon, Iori, Tigirl, Paat, Black |
 | Standard | ~75 | Avar, Lux, Super, Ira, Acedia, Kaye, Stephanie, Nip, Salvo, Avril |
@@ -324,7 +324,7 @@ This base value is multiplied through the entire power formula, so higher = bett
 | Fellow | Group | Notes |
 |--------|-------|-------|
 | Orivita | Empyrean Sound | Top tier (~120 apt) |
-| Hermes | Ancient Magi | (~100 apt), economic boost |
+| Hermes | Ancient Magi | 120 base apt, economic boost |
 | Beelzebub | Empyrean Sound | |
 | Gale | Empyrean Sound | |
 | Tomoe | Moonlit Visitor | TSUKIMICHI collab |

@@ -105,14 +105,22 @@ Each cave has different typing affinities — pick the cave that boosts your mai
 
 When choosing where to hunt (after collecting everything at least once), **only hunt in the cave that has the antique of your main typing**.
 
-## Antique Upgrade Currencies
+## Antique Upgrade Currencies & Leveling Cost Curve
 
-You upgrade antiques in three tiers:
-1. **Bronze points** (lowest tier upgrade)
-2. **Silver points** (mid tier)
-3. **Gold points** (highest tier)
+Antiques level up by spending **Museum Coins**, which come in three tiers — Bronze, Silver, Gold. You earn them by converting **Museum Cards** (from in-game shops + excavation minigame, 3 per completed game).
 
-**Diminishing returns** apply — each tier gives less per point spent than the previous, so spend bronze freely but save gold for your best antiques.
+### How Leveling An Antique Works
+
+You **start with Bronze coins** on an antique's lower levels, then **switch to Silver** once Bronze stops being accepted at a certain level threshold, then **switch to Gold** at a higher threshold. Each antique progresses through all three tiers as its level climbs.
+
+**Cost per level increases per level.** The first level of awakening costs ~100 coins; each subsequent level costs exponentially more. This is NOT linear growth — spending Bronze freely early is cheap, but trying to push the same antique deep into Silver or Gold territory becomes rapidly expensive.
+
+### Strategic Implication
+- **Spend Bronze freely across many antiques at low levels** — low-level upgrades are cheap and broadly distributed
+- **Save Silver for priority antiques** — mid-level upgrades on your main typing's antique + the 3 all-fellow event pass antiques
+- **Reserve Gold exclusively for your main typing's antique** — because of the exponential cost curve, Gold upgrades should go to the single highest-ROI target, not spread across many antiques
+
+Do not try to push a non-main-typing antique deep — the exponential cost makes it a bad investment compared to pushing a low-level Bronze upgrade on a different antique.
 
 ## Celebration Banquets (from Ironhead Turtle awakening)
 

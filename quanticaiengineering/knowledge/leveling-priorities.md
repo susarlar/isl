@@ -4,15 +4,25 @@
 
 ## Main Typing — Push Hard
 
-Once your fishing bonus starts to kick in, your main typing fellows will start to **outscale other characters including UR fellows of other types**.
+Once your fishing bonus starts to kick in, your main typing fellows will start to **outscale other characters including UR fellows of other types**. This is verified empirically — on a well-invested account, even N rarity fellows of the main typing can outpower SSR and UR fellows of other typings because the typing-wide multipliers (Fish %, Family %, Category Stella, costume essence tracks, Museum antique, typing-matched building bonuses) all stack on the main-typing fellows and none of them stack on the off-typing fellows.
 
-### Main Typing Targets
+### Main Typing Leveling Priority (Strongest First)
+
+Do NOT level every main-typing fellow simultaneously. Follow this order:
+
+1. **Your most-invested fellow first** (your main carry — the one you've been feeding Skill Pearls, artifacts, and family blessings). Push them to the highest level you can support (aim for Lv 700 → Lv 750 for the big multiplier jumps).
+2. **Your second/third most-invested main-typing fellows next** (usually your SSRs that fill awakening gate slots or operate priority buildings). Push them to ~600-650.
+3. **Only after your top-invested fellows are at target level**, start spreading EXP to the lower-rarity main-typing roster. This is where you push even your N/R/SR main-typing fellows to ~600.
+4. **Non-main-typing fellows** only to the gate-requirement level (usually 450-550), never higher unless they serve a specific purpose.
+
+### Main Typing Targets (Once You're Spreading)
 | Rarity | Target Level | Notes |
 |--------|-------------|-------|
-| Main typing SSR | 600, then 650 slowly | Push these first |
-| Main typing N/R/SR | 600 down the line | Yes, even N rarities of your main typing |
+| Main typing UR | 700 → 750 | The main carry; push aggressively |
+| Main typing SSR | 600 → 650 | After the main carry is at target level |
+| Main typing N / R / SR | 600 down the line | Yes, even N rarities of your main typing — but only AFTER your invested top fellows are at target level |
 
-**Key insight:** When sorted by power, your lower-rarity main typing fellows will eventually pass UR fellows of other typings — the typing-wide multipliers (Fish, Family, Stella, costumes) compound enough that even an N main-typing fellow can outpower a non-main UR.
+**Key insight:** When sorted by power, your lower-rarity main typing fellows will eventually pass UR fellows of other typings — the typing-wide multipliers (Fish, Family, Stella, costumes) compound enough that even an N main-typing fellow can outpower a non-main UR. This is observed on real accounts. **But this only holds if your typing-wide multipliers are already developed** — leveling an N main-typing fellow early in progression doesn't give the same payoff because there's nothing for them to scale into.
 
 ### Sorting Tip
 Always sort fellows by power and unequip all artifacts first to get accurate comparisons.

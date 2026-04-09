@@ -1,13 +1,39 @@
 # Museum — Building Guide
 
-> **Note:** Public wiki data on the Museum is sparse. Most details below need in-game verification. Player input welcome.
+> For the **Quick Answer on which antiques to max**, see `museum-antiques.md`. This doc focuses on the Museum as a *building* (gold income, fellow operating slots, trophies) — it does NOT cover antique leveling mechanics.
 
-## Overview
+## Two Completely Separate Economies — Don't Confuse Them
 
-The Museum is a building in your village that houses cultural relics and trophies earned from events. It serves three main purposes:
-1. **Gold earnings** over time (like other buildings)
-2. **Hosts the Museum Minigame**
-3. **Stores Museum Trophies and Exhibits** earned from events
+The Museum ties into two distinct economies that share the name "Museum" but are mechanically independent:
+
+### 1. Museum as a Village Building (Generates In-Game Gold)
+Like every other building in your village, the Museum generates **in-game Gold** over time. This Gold is used for village-wide things:
+- **Field trips** (up to 2,000 per day, RNG-target like random Succubus Tonic dates — you don't pick the family. Each trip gives **+1 to +2 Blessing Power** to whichever family RNG hits, plus random items. Field trips are also what trigger the **Bear-Eared Seal** museum antique's awake effect at 100 trips per tick.)
+- **Stages** (leveling up through adventure stages — gives items and early-game building unlocks. Stage clearing is **capped by your fellow power** — the higher your power, the more stages you can clear.)
+- **Trading post negotiations** (boosting your fellow power in negotiation battles for Trade Post Coins)
+- **Building upgrades via Blueprints** (Blueprint upgrades of the Museum building raise its gold-per-employee-per-second, which contributes to MORE in-game Gold income — not museum coins)
+- **Training buildings** for typing-matched % boosts, aptitude boosts, and flat power increases (see `buildings.md`)
+
+### 2. Museum Coins (Bronze / Silver / Gold) — Currency for Upgrading Antiques
+These are an entirely separate currency from in-game Gold. They are **only** used to upgrade museum antiques and trophies — nothing else.
+
+- **Bronze coins** → lowest-tier antique upgrades (cheapest)
+- **Silver coins** → mid-tier antique upgrades
+- **Gold coins** → top-tier antique upgrades (save for your main-typing antique)
+- **Museum Cards** are how you earn these coins. You get Museum Cards from **in-game shops** and from the **excavation minigame** (3 Museum Cards per completed excavation game). Trading in Museum Cards yields the bronze/silver/gold coins.
+
+**Do not confuse:**
+- Blueprints → boost the Museum's *building level* → more in-game Gold income
+- Museum Cards → convert to coins → upgrade *antiques*
+
+These are unrelated progression tracks that happen to both involve the Museum.
+
+## Overview (Museum as a Building)
+
+The Museum is a village building. Like other village buildings it:
+1. **Generates gold earnings** over time (proportional to employees hired + building level)
+2. **Hosts the excavation minigame** (which is ALSO the only way to get antiques — the minigame is the entry point to the separate antiques system; see `museum-antiques.md`)
+3. **Stores Museum Trophies and Exhibits** earned from events — these give their own power bonuses via the trophy track
 
 ## Unlock Requirements
 
@@ -127,7 +153,8 @@ The Museum's **Debt Ledger** has been mentioned in patch notes (skill descriptio
 ### Building Priority
 - The Museum unlocks at Stage 153-6 (mid-game)
 - As an Informed-type building, assign Informed fellows for max earnings
-- Cimitir is the specialty fellow but generally low-tier — better Informed fellows include Augustine, Stephanie, Super, and any UR Informed (Neptune, Ao Li, Aegle)
+- Cimitir is the specialty fellow but generally low-tier — better Informed fellows include Augustine, Stephanie, Super, and any UR Informed (**Aegle** is the top pick; Ao Li, Athena, Nierus, Umbra also work)
+- **Do NOT assign Neptune** — she's not recommended for investment (see `fellow-database.md`)
 
 ### Trophy Collection
 - **Participate in every mega event** that awards a trophy — they're permanent collection items

@@ -4,14 +4,24 @@
 
 Base Aptitude is the single most important innate stat. It multiplies with everything via the level multiplier.
 
-### ~120 Aptitude (Highest Tier — All Empyrean Sound UR)
-| Fellow | Type | Notes |
-|--------|------|-------|
-| Amaterasu | Inspiring | Best ecosystem support (2 Cat Stella + most family blessings) |
-| Sunna | Diligent | Stella also boosts Building Earnings massively |
-| Leon | Brave | Strongest Brave option |
-| Neptune | Informed | VIP 8, solo Divine Gospel Stella owner |
-| Orivita | Unfettered | Pairs with Hermes for double UR Unfettered |
+### 120 Aptitude (Highest Tier — All Empyrean Sound + Ancient Magi UR)
+| Fellow | Typing | Group | Notes |
+|--------|--------|-------|-------|
+| Amaterasu | Inspiring | Empyrean Sound | Top Inspiring carry, 7 families blessing her, stacks with Rani+Elise Category Stella for +60% Inspiring |
+| Sunna | Diligent | Empyrean Sound | Top Diligent carry (tied with Master Tongxuan) |
+| Master Tongxuan | Diligent | Empyrean Sound | Top Diligent carry (tied with Sunna). Better event (Penglai) than Sunna (Northern Odyssey). |
+| Leon | Brave | Empyrean Sound | Top Brave carry, 6 families. Sandtopia event is rare nowadays. |
+| Heracles | Brave | Empyrean Sound | Tied with Leon mechanically. Olympics event, best whale option. 6 families. |
+| Freesia | Brave | Empyrean Sound | 7 families including 3 UR. Best practical new-main Brave pick (Frantic Forest event runs often). |
+| Aegle | Informed | Empyrean Sound | **Top Informed carry** — F2P-friendly Stella 10 path, 6 families including Hestia custom slot |
+| Ao Li | Informed | Ancient Magi | Strong Informed alternative to Aegle |
+| Orivita | Unfettered | Empyrean Sound | Top Unfettered carry |
+| Hermes | Unfettered | Ancient Magi | Top Unfettered alternative to Orivita, economic boost |
+| Phanes | Inspiring | Ancient Magi | 5 families (3 UR) |
+| Nemetona | Diligent | Ancient Magi | 6 families |
+| Andras | Brave | Ancient Magi | 5 families |
+
+**⚠️ Neptune (Divine Gospel Informed, 120 base apt) is NOT recommended as a main carry** despite her aptitude tier. She's VIP-gated, has a 5/week fragment cap shared with Nirvana, her Divine Gospel group Stella bonus is weaker in practice, and community consensus is against her. For Informed mains, recommend **Aegle** instead. See `fellow-database.md` "Why Neptune Is Not Recommended" for details.
 
 ### ~110 Aptitude
 | Fellow | Type | Notes |
@@ -21,7 +31,6 @@ Base Aptitude is the single most important innate stat. It multiplies with every
 ### ~100 Aptitude
 | Fellow | Type | Notes |
 |--------|------|-------|
-| Hermes | Unfettered | UR Ancient Magi, economic boost |
 | Mescal | Unfettered | Divine Gospel group, Tier SS combat |
 
 ### ~90 Aptitude
@@ -47,7 +56,12 @@ Emosen, Ida, Jewlry, Augustine, Anne, Loya, Mulberry, Bubo (Followers)
 ### ~60 and below
 Remaining fellows. Avoid heavy investment for endgame.
 
-## Power Tier List (Combat / Total Output)
+## Power Tier List (Combat / Siege / Raw Output)
+
+> **What this list measures:** direct combat/siege/raw-output performance at specific account stages — NOT "best endgame main carry" and NOT "best Category Stella source". A fellow can be Tier SS for combat AND simultaneously be non-ideal as a main carry target (e.g., Mescal is SSR and thus has less aptitude headroom than a 120-apt UR). Use this list for team composition and siege picks, not for deciding who to invest Skill Pearls / Awakening / Family Stella on long-term.
+>
+> **Rani, Elise, Liz, Angie** are absent from the Tier SS/S positions because they're not direct combat fellows — they're Category Stella boosters that silently multiply everyone else's power. Their **Category Stella contribution is essential** (+30% or +60% to their typing) but they're not meant to be dropped into a siege team slot. See `stella.md` for their real value.
+
 
 ### Tier SS — Strongest
 | Fellow | Group | Why |
@@ -85,11 +99,11 @@ Bjornson, Lincale, Woolf, Kaity, Boatter, Hawker, Belle, etc. — don't invest p
 
 | Group | Stella Pattern | Currency | Members |
 |-------|---------------|----------|---------|
-| Empyrean Sound | A (UR, +175%) | Personal fragments | Amaterasu, Sunna, Leon, Orivita, +18 more |
-| Ancient Magi | A (UR, +175%) | Magi Shards (shared random) | Phanes, Nemetona, Andras, Ao Li, Hermes |
-| Divine Gospel | A (UR, +175%) | Personal fragments | Neptune (only Stella unlocked), Mammon, Trady, Mescal, Shlomo |
-| Archdemons | B (SSR, +50%/+100% Lv20) | Purple Stars (shared) | Lux, Acedia, Ira, Super, Avar |
-| Otherworld Valiants | B (SSR, +50%/+100% Lv20) | Insignias (shared) | Avril, Kaye, Salvo, Stephanie, Nip |
+| Empyrean Sound | A (UR) — Lv 10 group +175%, Lv 11+ ramps to +235% | Per-fellow character fragments | Amaterasu, Sunna, Master Tongxuan, Leon, Heracles, Orivita, Aegle, +16 more (all 120 base apt) |
+| Ancient Magi | A (UR) — same structure as Empyrean Sound | **Per-fellow** Magi tokens (NOT a shared pool — each Magi has their own tokens) | Phanes, Nemetona, Andras, Ao Li, Hermes (all 120 base apt) |
+| Divine Gospel | A (UR for Neptune only) / C (Pattern C for Mammon/Trady/Mescal/Shlomo) | Personal fragments, VIP-gated | Neptune (UR, not recommended), Mammon (SSR Brave), Trady (SSR Diligent), Mescal (SSR Unfettered), Shlomo (SSR Inspiring). Very rare fragments; skip unless whale. |
+| Archdemons | B (SSR) — alternating group/fellow per level, extends to Lv 40 | **Purple Stars (shared pool)** — widely available from events/gacha/shops | Lux, Acedia, Ira, Super, Avar. See `stella-tables.md` Lv 21-40 verified data. |
+| Otherworld Valiants | B (SSR) — same alternating structure, verified Lv 1-20 | **Insignias (shared pool)** — widely available | Avril, Kaye, Salvo, Stephanie, Nip |
 | The Elites | B (SSR, +50%) | Personal fragments | 10 fellows from various events |
 | Diligent Dynamo | B (SSR, +50%) | Personal fragments | Tigirl, Iori, Paat, Eter & NAL, Onikiri, Flos |
 | Moonlit Visitor | B (SSR, +50%) | Personal fragments | Tomoe, Mio, Shiki, Emma the Ork |
@@ -102,14 +116,17 @@ Bjornson, Lincale, Woolf, Kaity, Boatter, Hawker, Belle, etc. — don't invest p
 ## Investment Strategy for Level 45+ Players
 
 ### Single Carry Meta
-1. Pick your highest-aptitude fellow (ideally 120 apt UR)
-2. Stack ALL multipliers on them: Awakening, Artifacts, Advanced Blessing, Stella
-3. This one fellow should represent 30-50% of your total power
+1. Pick your highest-aptitude fellow (ideally 120 apt UR — Empyrean Sound or Ancient Magi)
+2. Stack ALL multipliers on them: Skill Pearls, Fish, Family Stella, Artifacts, Advanced Blessing, Fellow Stella, Costumes, Awakening
+3. This one fellow becomes a significantly larger contributor to your total power than any other fellow. **The exact ratio varies by account** — concentrated investment accounts can have their main carry be an order of magnitude ahead of second-string; more-spread accounts see a smaller gap. Don't treat any fixed "X% of total power" number as universal.
+
+**Prioritize URs when possible**, but keep in mind **SSR fellows are more accessible** (easier gacha rates, more frequent event drops). A well-invested SSR can be a solid bridge main while you work toward your preferred UR.
 
 ### Roster Building for Awakening Gates
 1. Get 15+ SSR/UR fellows to 3★ for the 4★ awakening gate
-2. Archdemons are the cheapest gate-fillers (75 apt + shared Purple Stars)
-3. Otherworld Valiants too (75 apt + shared Insignias)
+2. Awakening uses **Acquaint Stones**, which cost the same per fellow regardless of group — Archdemons and Otherworld Valiants are NOT cheaper to awaken than other fellows.
+3. Their **shared-currency Stella** (Purple Stars / Insignias) does make them cheaper to spread Stella across, not Awakening. Don't conflate the two systems.
+4. What matters for gate-filling is what you get out of awakening each sub-fellow — prefer fellows of your main typing whose awakening skills have lasting value.
 
 ### Stella Investment Order
 1. **Pattern A UR Stellas matching your main carry's group** — highest ROI
@@ -123,19 +140,19 @@ Bjornson, Lincale, Woolf, Kaity, Boatter, Hawker, Belle, etc. — don't invest p
 **Important:** "120 apt" refers to the BASE aptitude component, not total aptitude. Total aptitude includes Skill Pearls, Artifacts, Costumes, Fish, Family, etc. and can reach 32,000+ on a fully invested fellow.
 
 Real verified comparison:
-- **Amaterasu (Base 120, fully invested):** Total aptitude 32,823, Total Power 48.47B
+- **Endgame UR Carry (Base 120, fully invested, Lv 750, 5★):** Total aptitude 32,823, Total Power 48.47B
 - **Black (Base 80, well invested):** Total aptitude 6,274, Total Power ~4.25B
-- **Power gap: ~11x**, primarily from Amaterasu's massive aptitude investment
+- **Power gap: ~11x**, primarily from the concentrated aptitude investment on the endgame reference
 
 The 120 base only adds 45 points more than Black's 80 — the real gap comes from concentrated investment. But that base 120 IS the foundation that all the aptitude sources stack on top of.
 
 **Bottom line:** A 120 base fellow with full investment will always beat an 80 base fellow with full investment, but only if you commit the same level of investment to both. The gap is meaningful but not insurmountable.
 
 ### Type Comparison for Max Power
-| Type | Best Carry | Has Cat Stella? | Multiplier Sources | Verdict |
+| Type | Best Carry | SR Category Stella? | Multiplier Sources | Verdict |
 |------|-----------|-----------------|-------------------|---------|
-| Inspiring | Amaterasu | YES (Rani + Elise) | Most | **Best max power** |
-| Diligent | Sunna | YES (Liz) | High | Strong, Sunna doubles as economy |
-| Informed | Neptune | YES (Angie) | High | Solo Divine Gospel = no fragment competition |
-| Brave | Leon | NO | Medium | Permanent -30% category gap |
-| Unfettered | Orivita | NO | Medium | Has 2 URs (Orivita + Hermes) but no Cat Stella |
+| Inspiring | Amaterasu | **YES (Rani + Elise, stack to +60%)** | Most | **Best max power** — the two stacking Category Stella boosters are unique to Inspiring |
+| Diligent | Sunna / Master Tongxuan | YES (Liz, +30%) | High | Strong, with two equivalent 120-apt carries to choose from |
+| Informed | **Aegle** | YES (Angie, +30%) | High | Aegle is F2P-friendly Stella 10. **Do NOT use Neptune** despite her 120 apt. |
+| Brave | Leon / Heracles / Freesia | NO | Medium | Permanent -60% gap vs Inspiring (no SR Cat Stella). Freesia is best practical pick. |
+| Unfettered | Orivita / Hermes | NO | Medium | Permanent -60% gap vs Inspiring. Has 2 equivalent 120-apt URs (both Empyrean Sound / Ancient Magi). |
