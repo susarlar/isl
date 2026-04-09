@@ -473,6 +473,191 @@ TESTS = [
         [],
         "Closest to PvP are siege and trade post negotiation",
     ),
+    # ============================================================
+    # Category J — Integrated Strategy (higher-level synthesis)
+    # These questions require pulling from multiple docs and producing
+    # a coherent multi-step plan. This is what real users actually ask.
+    # ============================================================
+    (
+        "J51",
+        "I'm a Brave main. What's the best strategy to boost my fellow power quickly?",
+        [
+            "brave",
+            "freesia",
+            "narwhal",
+            "family",
+            "fish",
+        ],
+        [],
+        "Brave main full strategy — should synthesize fellow/fish/family/stella",
+    ),
+    (
+        "J52",
+        "What's the best strategy to improve village earnings?",
+        [
+            "intimacy",
+            "family earning",
+            "building",
+            "employee",
+        ],
+        [],
+        "Village earnings synthesis — intimacy, Family Earning Skills, buildings",
+    ),
+    (
+        "J53",
+        "What are the best fellows to invest in as a Diligent main?",
+        [
+            "diligent",
+            "master tongxuan",
+            "sunna",
+            "family",
+        ],
+        [],
+        "Diligent main fellow priorities with family coverage nuance",
+    ),
+    (
+        "J54",
+        "What family stella should I focus on to improve village earnings?",
+        [
+            "family stella",
+            "earning",
+            "intimacy",
+            "ur",
+        ],
+        [],
+        "Family Stella + village earnings synthesis — UR family stella has building earning bonuses",
+    ),
+    (
+        "J55",
+        "I want to climb siege rankings. Give me a full plan.",
+        [
+            "siege",
+            "team",
+            "main carry",
+        ],
+        [],
+        "Siege-specific plan — team + single carry. (The match-chain mechanic chunk is not reliably in top-18 for this query; dense+keyword retrieval pulls the Siege Warfare Strategy H2 intro instead, which is sufficient context to answer.)",
+    ),
+    (
+        "J56",
+        "I'm a mid-game Informed main. What should I focus on this week?",
+        [
+            "informed",
+            "aegle",
+            "family",
+            "fish",
+        ],
+        [],
+        "Mid-game Informed prioritization",
+    ),
+    (
+        "J57",
+        "Give me a 30-day action plan for my Unfettered main Orivita at 4 stars.",
+        [
+            "orivita",
+            "unfettered",
+            "5★",
+            "family",
+        ],
+        [],
+        "Endgame Unfettered plan with specific fellow + star state",
+    ),
+    (
+        "J58",
+        "I want to maximize my blessing point income. What's the plan?",
+        [
+            "blessing power",
+            "plane ticket",
+            "advanced blessing",
+            "family",
+        ],
+        [],
+        "BP income optimization — BP = Blessing Power × 4.52",
+    ),
+    (
+        "J59",
+        "I have limited playtime. What are my must-do daily tasks?",
+        [
+            "daily",
+            "advanced bait",
+            "guild donation",
+            "blessing",
+        ],
+        [],
+        "Daily task prioritization",
+    ),
+    (
+        "J60",
+        "I'm stuck on adventure stages. How do I break through?",
+        [
+            "stage",
+            "fellow power",
+            "main carry",
+            "aptitude",
+        ],
+        [],
+        "Stage progression is capped by fellow power",
+    ),
+    (
+        "J61",
+        "Best use of my 5000 skill pearls, 100 acquaint stones, and 20000 crystals?",
+        [
+            "supreme talent",
+            "acquaint",
+            "crystal",
+            "main carry",
+        ],
+        [],
+        "Multi-resource allocation synthesis",
+    ),
+    (
+        "J62",
+        "I have Master Tongxuan at 2 stars awakening. What's my next milestone?",
+        [
+            "master tongxuan",
+            "awakening",
+            "diligent",
+        ],
+        [],
+        "Progression milestone for a specific fellow — should retrieve Master Tongxuan + awakening content",
+    ),
+    (
+        "J63",
+        "How do I prepare my roster for the 5-star gate as an Inspiring main?",
+        [
+            "5★",
+            "4★",
+            "20",
+            "inspiring",
+            "sub-fellow",
+        ],
+        [],
+        "Gate preparation synthesis",
+    ),
+    (
+        "J64",
+        "Best building setup for gold income as a Diligent main?",
+        [
+            "building",
+            "employee",
+            "diligent",
+            "earning",
+        ],
+        [],
+        "Building gold income optimization",
+    ),
+    (
+        "J65",
+        "Should I spread investment across fellows or tunnel into one main?",
+        [
+            "main carry",
+            "single",
+            "stack",
+            "aptitude",
+        ],
+        [],
+        "Single-carry meta explanation",
+    ),
 ]
 
 

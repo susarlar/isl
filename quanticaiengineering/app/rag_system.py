@@ -365,6 +365,12 @@ class IsekaiRAGSystem:
         "4 star", "5 star", "6 star", "awakening gate",
         # Resource / pearl queries
         "skill pearl",  # safe: not repeated in tables like "fellow power"
+        # Dating / blessing
+        "blessing point", "plane ticket", "succubus tonic", "crystal travel",
+        # Siege / PvP
+        "siege", "trade post", "negotiation",
+        # Village earnings system
+        "village earning", "building earning", "family earning",
     }
 
     # Triggers that indicate the query is about maximizing / improving /
