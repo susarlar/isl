@@ -251,6 +251,9 @@ class IsekaiRAGSystem:
     # grows — only the names that actually appear in both the query AND at
     # least one chunk will have effect, so false positives are harmless.
     _KEYWORD_ENTITIES = {
+        # The 5 typings — essential for typing-scoped queries like
+        # "unfettered fishing strategy" or "best brave family"
+        "inspiring", "diligent", "brave", "informed", "unfettered",
         # Top-tier 120-apt UR fellows
         "amaterasu", "sunna", "master tongxuan", "tongxuan", "leon", "heracles",
         "orivita", "aegle", "neptune", "phanes", "nemetona", "andras", "ao li",
@@ -268,6 +271,11 @@ class IsekaiRAGSystem:
         "rani", "elise", "liz", "angie",
         # Low-rarity fellows users might ask about
         "fifi", "woolf", "maxim", "pump", "belle", "prim", "nalu",
+        # Specific fish names (for fishing queries)
+        "sea angel", "drakenberg monster", "goddess sponge", "sperm whale",
+        "giant squid", "helicoprion", "mosasaurus", "barreleye", "pirarucu",
+        "snow leopard", "narwhal", "fin whale", "axolotl", "megakarp",
+        "nudibranch", "dumbo octopus", "piranhape", "megalodon",
         # UR families
         "phantanyl", "tsukuyomi", "namiko", "mors", "mia", "curren", "nirvana",
         "skogul", "usuri", "cranelia", "wadjetta", "shuna",
@@ -281,16 +289,23 @@ class IsekaiRAGSystem:
     }
 
     # Triggers that indicate the query is about maximizing / improving /
-    # optimizing fellow power. When any of these appear in the query, we
-    # run multi-domain expansion retrieval to pull in chunks from every
-    # power source (fish, family, aptitude, artifacts, etc.) even if the
-    # query doesn't mention those domains explicitly.
+    # optimizing fellow power OR asking for a strategy / priority / action.
+    # When any of these appear in the query, we run multi-domain expansion
+    # retrieval to pull in chunks from every power source (fish, family,
+    # aptitude, artifacts, etc.) even if the query doesn't mention those
+    # domains explicitly.
     _POWER_QUERY_TRIGGERS = {
+        # Power optimization intents
         "most power", "max power", "maximum power", "optimize", "optimise",
         "improve", "increase power", "boost", "biggest", "best way",
         "push power", "maximize", "maximise", "stronger", "strongest",
-        "fellow power", "main carry", "action plan", "priority", "prioritize",
+        "fellow power", "main carry", "action plan",
         "how to power", "how do i", "how do you", "help me improve",
+        # Strategy / planning / priority intents (broader)
+        "strategy", "what should", "what next", "where should", "what to do",
+        "priority", "prioritize", "prioritise", "spending", "invest", "spend",
+        "recommend", "suggestion", "advice", "plan", "focus on",
+        "best for", "good for", "worth it", "what fish", "which fish",
     }
 
     # Canonical sub-queries to run when a power-optimization intent is
@@ -344,10 +359,24 @@ class IsekaiRAGSystem:
             logger.info(f"Query mentions entities: {sorted(mentioned_entities)}")
             for chunk in self.vector_store.chunks:
                 chunk_lower = chunk.content.lower()
-                hits = sum(1 for name in mentioned_entities if name in chunk_lower)
-                if hits > 0:
-                    keyword_score = min(0.55 + 0.08 * (hits - 1), 0.80)
-                    keyword_results.append((chunk, keyword_score))
+                # Score = distinct entity hits + occurrence density.
+                # distinct_hits counts how many different mentioned entities
+                # the chunk contains. occurrence_hits counts total mentions
+                # (so a fish table with "Unfettered" repeated 10 times beats
+                # a generic chunk with "unfettered" once).
+                distinct_hits = sum(1 for name in mentioned_entities if name in chunk_lower)
+                if distinct_hits == 0:
+                    continue
+                occurrence_hits = sum(chunk_lower.count(name) for name in mentioned_entities)
+                # Base 0.55 for any distinct hit, +0.05 per distinct entity above 1,
+                # +0.02 per additional occurrence above distinct count, capped at 0.85.
+                keyword_score = min(
+                    0.55
+                    + 0.05 * (distinct_hits - 1)
+                    + 0.02 * (occurrence_hits - distinct_hits),
+                    0.85,
+                )
+                keyword_results.append((chunk, keyword_score))
             keyword_results.sort(key=lambda x: x[1], reverse=True)
             keyword_results = keyword_results[:dense_k]
 
