@@ -340,40 +340,62 @@ class IsekaiRAGSystem:
     }
 
     # Domain concepts (not named entities) that should trigger keyword boost
-    # when present in the query. These are multi-word phrases unlike fellow
-    # names — important for questions that scope to a system rather than a
-    # specific fellow/family.
+    # when present in the query. Covers EVERY game system so no domain-specific
+    # query hits zero keyword matches.
     #
     # WARNING: Do NOT add phrases that appear many times in table-heavy chunks
     # (e.g., "fellow power" appears dozens of times in fishing.md fish tables).
-    # Over-broad keywords cause scoring saturation where table chunks dominate
-    # every query that happens to mention the phrase. Keep phrases specific
-    # enough that they identify the actual topic, not any chunk that references
-    # the concept in passing.
+    # Over-broad keywords cause scoring saturation. Keep phrases specific
+    # enough that they identify the actual topic.
+    #
+    # SYSTEMATIC COVERAGE (every game system represented):
     _KEYWORD_DOMAIN_PHRASES = {
+        # --- Stella groups & patterns ---
         "empyrean sound", "ancient magi", "divine gospel",
-        "family stella", "fellow stella",
-        "fish tank", "advanced blessing", "fellow blessing",
-        "family blessing", "limit break",
-        "aptitude slot", "aptitude cap", "level cap",
-        "museum antique", "museum coin", "museum card",
-        "power formula",
-        # Talent tiers
+        "family stella", "fellow stella", "stella level", "pattern a",
+        "pattern b", "pattern c", "pattern d", "category stella",
+        # --- Aptitude / talent system ---
         "supreme talent", "outstanding talent", "ordinary talent",
-        # Awakening system
-        "acquaint stone", "sub-fellow", "star gate", "4-star", "5-star", "6-star",
-        "4 star", "5 star", "6 star", "awakening gate",
-        # Resource / pearl queries
-        "skill pearl",  # safe: not repeated in tables like "fellow power"
-        # Dating / blessing
+        "aptitude slot", "aptitude cap", "level cap",
+        "skill pearl",
+        "insight", "alraune", "proficiency",
+        "bazaar scroll", "farm point",
+        # --- Awakening system ---
+        "acquaint stone", "sub-fellow", "star gate", "awakening gate",
+        "4-star", "5-star", "6-star", "4 star", "5 star", "6 star",
+        "limit break",
+        # --- Fishing system ---
+        "fish tank", "advanced bait", "normal bait", "bait production",
+        "gold crown", "fish skill",
+        # --- Family / blessing / dating ---
+        "family blessing", "fellow blessing", "advanced blessing",
         "blessing point", "plane ticket", "succubus tonic", "crystal travel",
-        # Siege / PvP
-        "siege", "trade post", "negotiation",
-        # Village earnings system
-        "village earning", "building earning", "family earning",
-        # Artifact system
+        "bond", "student rarity", "field trip", "date point",
+        # --- Artifact system ---
         "artifact", "materia", "magic ore", "quenching stone",
         "reforge oil", "breakthrough materia", "magic lamp", "kanna plush",
+        # --- Costume system ---
+        "costume", "fellow costume", "family costume", "costume essence",
+        "costume shop", "quintessence",
+        # --- Building / village system ---
+        "village earning", "building earning", "family earning",
+        "service level", "building training", "building upgrade",
+        "blueprint", "hire card", "study note",
+        # --- Museum system ---
+        "museum antique", "museum coin", "museum card", "museum trophy",
+        "excavation", "glory road",
+        # --- Pearl currencies ---
+        "white pearl", "black pearl",
+        # --- Siege / PvP ---
+        "siege", "trade post", "negotiation",
+        # --- Other power sources ---
+        "resonance power", "compendium", "scrapbook",
+        "figure", "user avatar",
+        "familiar", "familiar tower",
+        "expo",
+        "roaming", "bazaar", "fame",
+        # --- Economy ---
+        "power formula", "vip",
     }
 
     # Triggers that indicate the query is about maximizing / improving /

@@ -76,6 +76,20 @@ When a user asks "how to maximize / improve / get the most fellow power for [fel
 
 **Never give a fellow-power optimization answer that only covers 1-2 of these domains.** If the retrieved context doesn't have content for all 10, list what you DO have and explicitly name which domains you're missing context on.
 
+📊 INTEGRATE NUMBERS ACROSS SYSTEMS:
+When advising on fellow power optimization, don't just LIST what each system does — COMBINE the numbers to show the total impact. You have specific per-level values in the retrieved context:
+
+- **Stella tables** show exact power/aptitude per level (e.g., Empyrean Sound Lv 10 = +175% group power, +140 aptitude)
+- **Family Stella tables** show SSR (+33% power, +56 aptitude at max Lv 10) vs UR (+120% power, +220 aptitude at max Lv 10)
+- **Fish** scales at ~+5% per level for category fish, less for All-Fellow fish
+- **Skill Pearls** give +3/+2/+1 aptitude per level depending on talent tier
+- **Costumes** give +1 (3★), +2 (4★), or +30 (5★) typing aptitude per essence level
+- **Building Training** gives +1 aptitude per training level per building
+
+When you have these numbers, DO THE MATH. Show the user their approximate combined Σ% and aptitude from all sources. Example: "Your 3 UR families at max give +360% Fellow Power and +660 aptitude. Combined with Fish at ~2,000%+ and Artifacts at ~500%+, your total Σ% pool would be approximately X,000%. At your aptitude level, that means each additional aptitude point is worth approximately Y power."
+
+This kind of integrated numerical answer is what distinguishes expert advice from generic "push fish and family" platitudes. If the numbers are in the retrieved chunks, USE them to build a combined picture.
+
 🚫 NEVER CLAIM PERCENTAGE BONUSES "STACK MULTIPLICATIVELY":
 All percentage bonuses in this game are **ADDITIVE**. They sum into one big Σ% number, which then multiplies Base Power. Do NOT write phrases like:
 - "X stacks multiplicatively with Y"
