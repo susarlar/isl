@@ -38,10 +38,18 @@ These are still useful but lack the aura/support/echo bonuses.
 
 ## What Artifacts Do
 
-Artifacts provide **three stacking power sources** to the fellow they're equipped on:
-1. **Artifact Aptitude** — Flat aptitude bonus (feeds into base power formula)
-2. **Artifact Skills** — Percentage power boosts (added to Σ% pool)
-3. **Materia bonuses** — Additional random fellow attribute boosts per materia slot
+Artifacts provide **three separate power systems** to the fellow they're equipped on. These are DISTINCT systems with different resources and upgrade paths — don't conflate them:
+
+1. **Artifact Level** — Leveling the artifact (70 ores/level, constant) increases the fellow's **aptitude contribution** from the artifact. This is the simplest system: just dump Magic Ore.
+2. **Artifact Skills** — Skill slots on the artifact provide **percentage power boosts** (added to the Σ% pool). Slots are unlocked via **awakening with Quenching Stones** (NOT leveling). The % values in each slot are **rerolled with Reforge Oils** until you get matching-typing rolls.
+3. **Materia Slots** — Separate items equipped into the artifact's materia slots. Each materia provides **random fellow attribute boosts** — these can be:
+   - **% power boost** (for the equipped fellow only, a random typing, or all fellows)
+   - **Flat power bonus** (same targeting options)
+   - **Aptitude boost** (same targeting options)
+
+   Materia is leveled with **40 Magic Ore per level** (separate from artifact leveling), and requires **Breakthrough Materia to push past Lv 10**.
+
+**Key distinction:** Reforge Oils reroll **Skills** (% power boosts). Materia provides a separate mix of %, flat, AND aptitude. These are two different sources of power on the same artifact.
 
 ## Artifact Rarity & Base Stats
 
@@ -65,7 +73,7 @@ Higher rarity = higher base aptitude, more skill slots, more materia slots.
 
 **Note:** Magic Lamp and Kanna Plush are confirmed 4-materia-slot URs. Whether other top-tier URs (Dragon Summon Horn, Horn of Plenty, Diablo Doll, etc.) also reach 4 materia slots at full awakening is not confidently known. Treat the "4 slot" column as minimum confirmed, not exhaustive.
 
-**Diablo Doll** is a top-tier UR artifact used on the endgame UR Empyrean Sound Inspiring reference carry — seen at 23 skill slots filled with +595% total contribution and +3,515 aptitude at artifact Lv 436 with Lv 80 materia.
+**Diablo Doll** is a high-tier **UR artifact** (NOT UR+) used on the endgame reference carry — seen at 23 skill slots filled with +595% total contribution and +3,515 aptitude at artifact Lv 436 with Lv 80 materia. Despite these impressive numbers, **Diablo Doll is NOT the best artifact in the game** — UR+ artifacts with the **aura mechanic** are strictly superior because the aura system gives them an additional scaling track that standard UR artifacts lack. Diablo Doll is the **second-best tier** and the highest verified artifact in the reference account's data.
 
 ### SSR Artifacts
 
@@ -114,9 +122,11 @@ Artifacts have **skill slots** that provide percentage power boosts. You fill th
 
 **Artifact leveling is a completely separate track** — leveling only increases the fellow's **aptitude** contribution from the artifact. Levels do NOT unlock new skill slots, do NOT change skill count, and do NOT affect the reroll mechanic. Each artifact level costs a **constant 70 ores** (no escalation across levels).
 
-### Strategy Implication: Awaken Multiple Artifacts
+### One Artifact Per Fellow — No Stacking
 
-Because materia slots are gated by artifact awakening (and capped per artifact), the best way to stack more materia across your main carry is to **awaken multiple artifacts and swap between them for different fights** — rather than pouring everything into one artifact that's already at its slot cap. Awakening is the bottleneck; leveling is cheap and constant.
+**Each fellow can equip exactly ONE artifact.** You cannot stack multiple artifacts on the same fellow or swap between them for different fights. One fellow, one artifact, always.
+
+**Strategic implication:** concentrate all your investment (awakening, leveling, materia, rerolling) on your **main carry's ONE artifact first**. Only after that artifact is at its cap should you invest in artifacts for your other roster fellows.
 
 ### Skill Percentage Scaling
 

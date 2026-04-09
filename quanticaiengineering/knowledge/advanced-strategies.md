@@ -134,10 +134,10 @@ With +2,019% from Family on the endgame reference, every family that blesses you
 
 ## Artifacts Are The Third Biggest
 
-With +788% from the top artifact (Diablo Doll on the endgame reference), artifacts are a major endgame investment.
+With +788% from the endgame reference artifact (Diablo Doll, a standard UR — UR+ artifacts with aura are even stronger), artifacts are a major endgame investment.
 
 ### Artifact Priority
-1. **Equip a high-slot UR artifact** (Magic Lamp, Kanna Plush, or a high-awakening Diablo Doll-tier)
+1. **Equip a UR+ artifact with aura if available** (best in slot). Otherwise a high-slot UR (Magic Lamp, Kanna Plush, or similar). **Each fellow equips ONE artifact only — no stacking.**
 2. **Level artifact to high levels** — each level is a constant 70 ores and increases aptitude contribution
 3. **Awaken the artifact with Quenching Stones** — this is what unlocks MORE skill slots (not leveling). Each artifact type has a hard slot cap.
 4. **Level materia to 80** — 40 ores/level constant, breakthrough materia required past Lv 10
