@@ -92,6 +92,15 @@ LLM_PROVIDER = os.getenv("LLM_PROVIDER", "anthropic").lower()
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
 
+# Agentic RAG Configuration
+# =========================
+# Two-stage LLM pipeline: cheap Haiku reranks/critiques, expensive Sonnet synthesizes
+AGENTIC_RAG_ENABLED = os.getenv("AGENTIC_RAG", "true").lower() == "true"
+RERANKER_MODEL = os.getenv("RERANKER_MODEL", "claude-haiku-4-5-20251001")
+RERANKER_INITIAL_K = int(os.getenv("RERANKER_INITIAL_K", "50"))  # chunks to pull for Haiku to rerank
+RERANKER_FINAL_K = int(os.getenv("RERANKER_FINAL_K", "15"))  # chunks Haiku selects for Sonnet
+CRITIC_ENABLED = os.getenv("CRITIC_ENABLED", "true").lower() == "true"
+
 # Groq Configuration (legacy/fallback)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")

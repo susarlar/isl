@@ -165,17 +165,31 @@ class IsekaiRAGSystem:
         """
         Query the RAG system.
 
-        Args:
-            question: User's question
-            top_k: Number of chunks to retrieve (overrides default)
-            return_metadata: Whether to return detailed metadata
+        When AGENTIC_RAG is enabled, uses a multi-stage pipeline:
+          1. Retrieve a large pool of chunks (RERANKER_INITIAL_K = 50)
+          2. Haiku reranks/filters to the best RERANKER_FINAL_K chunks
+          3. Sonnet generates the answer from the curated chunks
+          4. (Optional) Haiku critiques the answer for hallucinations
 
-        Returns:
-            Dictionary with answer, sources, and optional metadata
+        When AGENTIC_RAG is disabled, falls back to the original single-stage
+        pipeline with hybrid retrieval + direct generation.
         """
+        from config import (
+            AGENTIC_RAG_ENABLED, RERANKER_MODEL, RERANKER_INITIAL_K,
+            RERANKER_FINAL_K, CRITIC_ENABLED,
+        )
+
         start_time = time.time()
         k = top_k or self.top_k
 
+        if AGENTIC_RAG_ENABLED:
+            return self._query_agentic(
+                question, k, return_metadata, start_time,
+                RERANKER_MODEL, RERANKER_INITIAL_K, RERANKER_FINAL_K,
+                CRITIC_ENABLED,
+            )
+
+        # --- Original (non-agentic) path ---
         # Step 1: Retrieve relevant chunks
         logger.info(f"Retrieving top-{k} chunks...")
         retrieved_chunks, retrieval_time = self._retrieve(question, k)
@@ -718,6 +732,208 @@ class IsekaiRAGSystem:
         except Exception as e:
             logger.error(f"Error generating answer: {e}")
             return f"Error generating answer: {str(e)}", time.time() - start_time
+
+    # ===================================================================
+    # Agentic RAG Pipeline
+    # ===================================================================
+
+    def _query_agentic(
+        self, question, k, return_metadata, start_time,
+        reranker_model, initial_k, final_k, critic_enabled,
+    ):
+        """
+        Multi-stage agentic pipeline:
+        1. Retrieve large pool (initial_k chunks)
+        2. Haiku reranks to best final_k
+        3. Sonnet generates answer
+        4. Haiku critiques (optional)
+        """
+        from anthropic import Anthropic
+
+        # Stage 1: Wide retrieval
+        logger.info(f"[Agentic] Stage 1: Retrieving top-{initial_k} chunks...")
+        all_chunks, retrieval_time = self._retrieve(question, initial_k)
+
+        if not all_chunks:
+            return {
+                "answer": "I couldn't find relevant information in the game knowledge base.",
+                "sources": [], "confidence": 0.0,
+                "retrieval_time": retrieval_time, "generation_time": 0.0,
+                "total_time": time.time() - start_time,
+            }
+
+        # Stage 2: Haiku reranker — reads all chunks and selects the best ones
+        logger.info(f"[Agentic] Stage 2: Haiku reranking {len(all_chunks)} → {final_k}...")
+        reranker_client = Anthropic(api_key=self.api_key)
+
+        # Format chunks for Haiku with numbered IDs
+        chunk_listing = ""
+        for i, (chunk, score) in enumerate(all_chunks):
+            source = chunk.metadata.get("filename", "?")
+            heading = chunk.metadata.get("heading", "") or ""
+            preview = chunk.content[:400]
+            chunk_listing += f"\n---\n[CHUNK {i}] source={source} heading=\"{heading}\"\n{preview}\n"
+
+        rerank_prompt = f"""You are a relevance filter for a game knowledge RAG system.
+
+QUESTION: {question}
+
+Below are {len(all_chunks)} retrieved chunks. Select the {final_k} MOST RELEVANT chunks
+for answering this question comprehensively. Consider:
+- Does the chunk directly address the question's topic?
+- Does it contain specific numbers, formulas, or mechanics the answer needs?
+- Does it cover a power domain (fish, family, artifacts, stella, aptitude, costumes,
+  buildings, museum, pearls, awakening) that a comprehensive answer should include?
+- Prefer chunks with SPECIFIC DATA over generic overviews.
+
+CHUNKS:
+{chunk_listing}
+
+Return ONLY a JSON array of the chunk numbers you selected, in order of relevance.
+Example: [3, 7, 0, 15, 22, 8, 1, 12, 5, 9, 14, 6, 11, 4, 10]
+
+Selected chunks (JSON array):"""
+
+        try:
+            t0 = time.time()
+            rerank_response = reranker_client.messages.create(
+                model=reranker_model,
+                system="You are a retrieval reranker. Return only a JSON array of chunk numbers. No explanation.",
+                messages=[{"role": "user", "content": rerank_prompt}],
+                max_tokens=200,
+                temperature=0,
+            )
+            rerank_text = rerank_response.content[0].text.strip()
+            rerank_time = time.time() - t0
+            logger.info(f"[Agentic] Haiku rerank completed in {rerank_time:.2f}s")
+
+            # Parse the JSON array
+            import json
+            # Handle cases where Haiku wraps in markdown code blocks
+            if "```" in rerank_text:
+                rerank_text = rerank_text.split("```")[1].strip()
+                if rerank_text.startswith("json"):
+                    rerank_text = rerank_text[4:].strip()
+            selected_ids = json.loads(rerank_text)
+
+            # Map back to chunks
+            curated_chunks = []
+            for idx in selected_ids[:final_k]:
+                if 0 <= idx < len(all_chunks):
+                    curated_chunks.append(all_chunks[idx])
+
+            if not curated_chunks:
+                logger.warning("[Agentic] Reranker returned no valid chunks, falling back to top-k")
+                curated_chunks = all_chunks[:final_k]
+
+            logger.info(f"[Agentic] Curated {len(curated_chunks)} chunks from {len(all_chunks)}")
+
+        except Exception as e:
+            logger.error(f"[Agentic] Reranker failed: {e}, falling back to top-k")
+            curated_chunks = all_chunks[:final_k]
+            rerank_time = 0.0
+
+        # Stage 3: Sonnet generates the answer from curated chunks
+        logger.info("[Agentic] Stage 3: Sonnet generating answer...")
+        answer, generation_time = self._generate(question, curated_chunks)
+
+        # Stage 4: Haiku critic (optional)
+        critic_feedback = None
+        if critic_enabled:
+            logger.info("[Agentic] Stage 4: Haiku critiquing answer...")
+            try:
+                t0 = time.time()
+                critic_response = reranker_client.messages.create(
+                    model=reranker_model,
+                    system="You are a quality checker for a game advisor bot. Be concise.",
+                    messages=[{"role": "user", "content": f"""Review this answer for quality issues.
+
+QUESTION: {question}
+
+ANSWER:
+{answer[:3000]}
+
+Check for:
+1. Does it say "stacks multiplicatively" or "compound exponentially" about % bonuses? (WRONG — they're additive)
+2. Does it recommend Neptune as a main carry without warning? (WRONG — Neptune is not recommended)
+3. Does it claim Fifi/Woolf/N-rarity fellows can have Stella? (WRONG — only SSR+ and 4 named SRs)
+4. Does it say "I don't have information" about something that's actually in the answer? (CONTRADICTION)
+5. Does it cover multiple power domains or is it narrowly focused on just 1-2?
+6. Does it use specific numbers from the game data or just give vague advice?
+
+If the answer is GOOD, respond with exactly: PASS
+If there are issues, respond with: FAIL followed by a brief list of problems."""}],
+                    max_tokens=300,
+                    temperature=0,
+                )
+                critic_text = critic_response.content[0].text.strip()
+                critic_time = time.time() - t0
+                logger.info(f"[Agentic] Critic verdict: {critic_text[:50]}... ({critic_time:.2f}s)")
+
+                if critic_text.startswith("FAIL"):
+                    critic_feedback = critic_text
+                    logger.warning(f"[Agentic] Critic flagged issues — re-prompting Sonnet")
+
+                    # Re-prompt Sonnet with critique feedback
+                    retry_question = (
+                        f"{question}\n\n"
+                        f"[SELF-CRITIQUE FEEDBACK — your previous answer had these issues:\n"
+                        f"{critic_text}\n"
+                        f"Please fix these issues in your revised answer.]"
+                    )
+                    answer, retry_time = self._generate(retry_question, curated_chunks)
+                    generation_time += retry_time
+                    logger.info(f"[Agentic] Sonnet revised answer in {retry_time:.2f}s")
+
+            except Exception as e:
+                logger.error(f"[Agentic] Critic failed: {e}, using original answer")
+
+        # Validate + extract sources
+        validation = check_answer_validity(answer)
+        sources = self._extract_sources(curated_chunks)
+        confidence = self._calculate_confidence(curated_chunks)
+
+        response = {
+            "answer": answer,
+            "sources": sources,
+            "confidence": confidence,
+            "retrieval_time": retrieval_time,
+            "generation_time": generation_time,
+            "total_time": time.time() - start_time,
+            "is_valid": validation["is_valid"],
+            "is_refusal": validation["is_refusal"],
+            "agentic": True,
+            "chunks_retrieved": len(all_chunks),
+            "chunks_curated": len(curated_chunks),
+            "critic_feedback": critic_feedback,
+        }
+
+        if return_metadata:
+            response["metadata"] = {
+                "chunks_retrieved": len(all_chunks),
+                "chunks_curated": len(curated_chunks),
+                "top_k": initial_k,
+                "final_k": final_k,
+                "model": self.model_name,
+                "reranker_model": reranker_model,
+                "critic_enabled": critic_enabled,
+                "critic_feedback": critic_feedback,
+                "reranking_enabled": True,
+                "reranking_time": rerank_time,
+                "validation": validation,
+                "retrieved_chunks": [
+                    {
+                        "chunk_id": chunk.chunk_id,
+                        "score": score,
+                        "source": chunk.metadata.get("filename"),
+                        "heading": chunk.metadata.get("heading"),
+                        "preview": chunk.content[:100] + "...",
+                    }
+                    for chunk, score in curated_chunks
+                ],
+            }
+
+        return response
 
     def _extract_sources(
         self, chunks_with_scores: List[Tuple[Chunk, float]]
