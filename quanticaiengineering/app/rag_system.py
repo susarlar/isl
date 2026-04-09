@@ -57,7 +57,7 @@ class IsekaiRAGSystem:
         top_k: int = TOP_K_DOCUMENTS,
         enable_reranking: bool = False,
         temperature: float = 0.1,
-        max_tokens: int = 3000,
+        max_tokens: int = 4096,
         provider: Optional[str] = None,
     ):
         """
@@ -371,6 +371,9 @@ class IsekaiRAGSystem:
         "siege", "trade post", "negotiation",
         # Village earnings system
         "village earning", "building earning", "family earning",
+        # Artifact system
+        "artifact", "materia", "magic ore", "quenching stone",
+        "reforge oil", "breakthrough materia", "magic lamp", "kanna plush",
     }
 
     # Triggers that indicate the query is about maximizing / improving /
@@ -402,6 +405,9 @@ class IsekaiRAGSystem:
         "fish tank percent power fish skills ocean top category",
         "family stella blessing power aptitude to blessed fellow",
         "artifacts awakening quenching stone materia oils reforge",
+        "artifact tier hierarchy UR+ support echo magic lamp kanna plush",
+        "materia leveling breakthrough refine magic ore artifact level 70",
+        "reforge oils skill slots artifact awakening quenching stone cap",
         "awakening stars gates limit break aptitude slot",
         "costume essence typing boost fellow power",
         "building service level training diligent inspiring brave informed unfettered",
