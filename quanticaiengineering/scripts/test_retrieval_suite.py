@@ -321,6 +321,158 @@ TESTS = [
         [],
         "Custom slot family mechanic",
     ),
+    # ============================================================
+    # Category F — Mechanic Deep Dives
+    # ============================================================
+    (
+        "F31",
+        "What's the difference between normal and gold crown fish?",
+        ["gold crown", "normal", "variant", "skill"],
+        [],
+        "Gold Crown variant mechanic (not a 'next level')",
+    ),
+    (
+        "F32",
+        "What does a limit break give my fellow?",
+        ["limit break", "aptitude", "level cap"],
+        [],
+        "Limit break is flat aptitude + level cap raise, NOT a multiplier",
+    ),
+    (
+        "F33",
+        "Explain the Resonance Power mechanic",
+        ["resonance", "top-tier", "final"],
+        [],
+        "Resonance Power is a final-multiplier top-tier mechanic",
+    ),
+    (
+        "F34",
+        "What's the difference between Magic Ore and Breakthrough Materia?",
+        ["magic ore", "breakthrough", "materia", "10"],
+        [],
+        "Breakthrough Materia gates past Lv 10, Magic Ore is the leveling currency",
+    ),
+    (
+        "F35",
+        "How do Reforge Oils work?",
+        ["reforge", "oil", "reroll", "skill"],
+        [],
+        "Reforge Oils reroll artifact skill slots",
+    ),
+    # ============================================================
+    # Category G — Rare / Specific Fellows
+    # ============================================================
+    (
+        "G36",
+        "Can I awaken my SR fellow Fawna?",
+        ["fawna", "sr", "awaken", "ssr"],
+        [],
+        "SR fellows cannot be awakened — Rarity Capability Matrix",
+    ),
+    (
+        "G37",
+        "Tell me about Beryl",
+        ["beryl", "brave", "ur+"],
+        [],
+        "Beryl is UR+ Brave",
+    ),
+    (
+        "G38",
+        "Who is Gabrael?",
+        ["gabrael", "uncrowned", "informed"],
+        [],
+        "Gabrael is UR+ Informed in Uncrowned group",
+    ),
+    (
+        "G39",
+        "How does Lokia upgrade from SSR to UR?",
+        ["lokia", "upgrade", "empyrean sound"],
+        [],
+        "Lokia is SSR Diligent upgradeable to UR Empyrean Sound",
+    ),
+    (
+        "G40",
+        "List the Dragon Maid collab fellows",
+        ["dragon maid", "tohru", "kanna", "fafnir", "elma"],
+        [],
+        "Dragon Maid collab roster",
+    ),
+    # ============================================================
+    # Category H — Account State / Multi-Part Queries
+    # ============================================================
+    (
+        "H41",
+        "I'm a new Diligent main at level 45. Give me my first action plan.",
+        ["diligent", "master tongxuan", "family", "fish", "stella"],
+        [],
+        "Comprehensive Diligent main guidance",
+    ),
+    (
+        "H42",
+        "I have Skill Pearls saved up. Where should I spend them?",
+        ["skill pearl", "supreme talent", "main carry"],
+        [],
+        "Skill pearl allocation priority",
+    ),
+    (
+        "H43",
+        "What do I need to reach 6-star awakening on my main carry?",
+        ["6", "star", "acquaint", "gate"],
+        [],
+        "6-star gate requirements",
+    ),
+    (
+        "H44",
+        "How do I fill the 4-star awakening gate?",
+        ["4", "star", "15", "sub-fellow"],
+        [],
+        "4-star gate requires 15 3-star sub-fellows",
+    ),
+    (
+        "H45",
+        "The Museum is an Informed building — which fellows should operate it?",
+        ["museum", "informed", "cimitir", "aegle"],
+        [],
+        "Museum building is Informed-typed; Aegle is recommended",
+    ),
+    # ============================================================
+    # Category I — Meta / Negative / Tricky
+    # ============================================================
+    (
+        "I46",
+        "What should I NOT spend crystals on?",
+        ["crystal", "dates", "not"],
+        [],
+        "Crystal negative advice — don't spend on dates",
+    ),
+    (
+        "I47",
+        "Which events give the best rewards?",
+        ["cloud kingdom", "olympics", "penglai", "rewards"],
+        [],
+        "Event ranking — Olympics and Penglai are top",
+    ),
+    (
+        "I48",
+        "How does Siege Warfare work?",
+        ["siege", "team", "1%", "match chain"],
+        [],
+        "Siege mechanic — 1% loss per win in match chain",
+    ),
+    (
+        "I49",
+        "What's the difference between Fellow Blessing and Advanced Blessing?",
+        ["fellow blessing", "advanced blessing", "flat", "%"],
+        [],
+        "Fellow Blessing is flat, Advanced Blessing is %",
+    ),
+    (
+        "I50",
+        "Does this game have PvP? Explain siege and trade post battles.",
+        ["siege", "trade post"],
+        [],
+        "Closest to PvP are siege and trade post negotiation",
+    ),
 ]
 
 

@@ -271,6 +271,8 @@ class IsekaiRAGSystem:
         "rani", "elise", "liz", "angie",
         # Low-rarity fellows users might ask about
         "fifi", "woolf", "maxim", "pump", "belle", "prim", "nalu",
+        # UR+ and other notable fellows
+        "beryl", "fawna", "rudeus", "aisha greyrat",
         # Specific fish names (for fishing queries)
         "sea angel", "drakenberg monster", "goddess sponge", "sperm whale",
         "giant squid", "helicoprion", "mosasaurus", "barreleye", "pirarucu",
@@ -316,6 +318,25 @@ class IsekaiRAGSystem:
         "ixchel": "ixtchel",
         "ictchel": "ixtchel",
         "neptnune": "neptune",
+        # Star notation: docs use unicode "6★" but users type "6-star" / "6 star"
+        "6-star": "6★",
+        "6 star": "6★",
+        "6star": "6★",
+        "5-star": "5★",
+        "5 star": "5★",
+        "5star": "5★",
+        "4-star": "4★",
+        "4 star": "4★",
+        "4star": "4★",
+        "3-star": "3★",
+        "3 star": "3★",
+        "3star": "3★",
+        # Awakening phrasing — user types "awakening" but doc sections often
+        # use "Acquaint Stone" or "Awakening Gate". Map as aliases so both
+        # types of query boost the right chunks.
+        "awakening gate": "awakening gate",
+        "awaken fellow": "awakening",
+        "awakening requirement": "acquaint stone",
     }
 
     # Domain concepts (not named entities) that should trigger keyword boost
@@ -337,6 +358,13 @@ class IsekaiRAGSystem:
         "aptitude slot", "aptitude cap", "level cap",
         "museum antique", "museum coin", "museum card",
         "power formula",
+        # Talent tiers
+        "supreme talent", "outstanding talent", "ordinary talent",
+        # Awakening system
+        "acquaint stone", "sub-fellow", "star gate", "4-star", "5-star", "6-star",
+        "4 star", "5 star", "6 star", "awakening gate",
+        # Resource / pearl queries
+        "skill pearl",  # safe: not repeated in tables like "fellow power"
     }
 
     # Triggers that indicate the query is about maximizing / improving /
